@@ -1,5 +1,7 @@
+import { Container } from "./common/Container";
+
 function App() {
-  return <div>Hello World!</div>;
+  return <Container>Hello World!</Container>;
 }
 
 export default App;
