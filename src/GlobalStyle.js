@@ -13,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
 
   .body {
     font-family: "Inter", sans-serif;
-    color: ${({ theme }) => theme.color.white};
-    background-color: ${({ theme }) => theme.color.mineShaft};
+    color: ${({ theme }) => theme.color.mineShaft};
+    background-color: ${({ theme }) => theme.color.whiteLilac};
     font-size: ${({ theme }) => theme.size.medium}px;
   }
 `;
