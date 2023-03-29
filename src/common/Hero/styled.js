@@ -5,7 +5,7 @@ export const StyledHero = styled.section`
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
-  margin: 8px -8px 64px;
+  margin: 8px 0 64px;
 `;
 
 export const Title = styled.h1`
@@ -36,12 +36,11 @@ export const ExtraHeaderContent = styled.p`
 `;
 
 export const Header = styled.header`
-  padding: 0 64px;
+  padding: 0 72px;
 `;
 
 export const Aside = styled.aside`
   max-width: 400px;
-  padding: 8px;
   min-height: 56px;
   width: 25vw;
 `;
