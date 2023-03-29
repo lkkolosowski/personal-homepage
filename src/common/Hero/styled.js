@@ -69,11 +69,15 @@ export const Button = styled.button`
   border-radius: 4px;
   width: 100%;
   max-width: 397px;
-  transition: box-shadow .3s ease;
+  transition: box-shadow 0.3s ease;
 
   &:hover {
     cursor: pointer;
     box-shadow: ${({ theme }) => theme.color.anakiwa} 0px 0px 0px 2px;
+  }
+
+  &:active {
+    box-shadow: ${({ theme }) => theme.color.parsley} 0px 2px 0px 0px inset;
   }
 `;
 
