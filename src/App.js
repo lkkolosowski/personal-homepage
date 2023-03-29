@@ -1,13 +1,13 @@
 import Container from "./common/Container";
 import Hero from "./common/Hero";
-import Section from "./common/Section";
+import { skills } from "./common/Skills/skillsData";
 import { Skills } from "./common/Skills";
 
 function App() {
   return (
     <Container>
       <Hero />
-      <Section title="My skillset includes" body={<Skills />} />
+      <Skills title="My skillset includes" skills={skills} />
     </Container>
   );
 }

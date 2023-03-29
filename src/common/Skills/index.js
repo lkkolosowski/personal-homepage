@@ -1,13 +1,15 @@
-import { skills } from "./skillsData";
-import { Eclipse, Item, List } from "./styled";
+import { StyledSection, Title, Eclipse, Item, List } from "./styled";
 
-export const Skills = () => (
-  <List>
-    {skills.map((skill) => (
-      <Item key={skill}>
-        <Eclipse />
-        {skill}
-      </Item>
-    ))}
-  </List>
+export const Skills = ({ title, skills }) => (
+  <StyledSection>
+    <Title>{title}</Title>
+    <List>
+      {skills.map((skill) => (
+        <Item key={skill}>
+          <Eclipse />
+          {skill}
+        </Item>
+      ))}
+    </List>
+  </StyledSection>
 );
