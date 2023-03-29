@@ -5,7 +5,6 @@ export const StyledHero = styled.section`
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
-  margin: 8px 0 64px;
 `;
 
 export const Title = styled.h1`
@@ -85,5 +84,4 @@ export const Icon = styled(MessageIcon)`
   color: ${({ theme }) => theme.color.white};
   position: relative;
   top: 1px;
-  align-items: center;
 `;
