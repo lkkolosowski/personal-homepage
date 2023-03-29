@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import { Main } from "./styled";
 
-export const Container = styled.div`
-  max-width: 1216px;
-  margin: 100px auto;
-`;
+const Container = ({ children }) => <Main>{children}</Main>;
+
+export default Container;
