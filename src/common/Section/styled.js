@@ -21,6 +21,5 @@ export const Title = styled.h2`
 `;
 
 export const SectionBody = styled.div`
-  padding: 20px;
   min-height: 56px;
 `;
