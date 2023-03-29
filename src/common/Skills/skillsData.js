@@ -23,3 +23,11 @@ export const skills = [
   "CSS Flexbox",
 ];
 
+export const nextSkills = [
+  "React Context",
+  "Cypress",
+  "TypeScript",
+  "Node.js",
+  "Unit testing",
+  "JS classes",
+];
