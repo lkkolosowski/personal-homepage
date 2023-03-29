@@ -5,18 +5,27 @@ export const StyledHero = styled.section`
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Title = styled.h1`
   font-weight: 900;
   font-size: 38px;
-  line-height: 46px;
+  line-height: 1.2;
   margin: 0;
   padding-bottom: 3px;
   letter-spacing: 0.05em;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 22px;
+  }
 `;
 
 export const Subtitle = styled.div`
+  margin-top: 12px;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 12px;
@@ -28,20 +37,29 @@ export const Subtitle = styled.div`
 export const ExtraHeaderContent = styled.p`
   margin: 32px 0;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 1.4;
   letter-spacing: 0.05em;
   max-width: 640px;
   color: ${({ theme }) => theme.color.slateGray};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 17px;
+    margin: 16px 0 32px;
+  }
 `;
 
 export const Header = styled.header`
   padding: 0 72px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    padding: 0;
+  }
 `;
 
 export const Aside = styled.aside`
+  width: 40vw;
+  min-width: 128px;
   max-width: 400px;
-  min-height: 56px;
-  width: 25vw;
 `;
 
 export const ProfilePicture = styled.img`
@@ -49,12 +67,17 @@ export const ProfilePicture = styled.img`
   display: block;
   border-radius: 50%;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+  pointer-events: none;
+
+  &::selection {
+    background: none;
+  }
 `;
 
 export const Button = styled.button`
   font-weight: 600;
   font-size: 20px;
-  line-height: 24px;
+  line-height: 1.2;
   letter-spacing: 0.05em;
   display: flex;
   flex-direction: row;
@@ -77,6 +100,11 @@ export const Button = styled.button`
 
   &:active {
     box-shadow: ${({ theme }) => theme.color.parsley} 0px 2px 0px 0px inset;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 18px;
+    width: auto;
   }
 `;
 

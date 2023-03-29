@@ -29,6 +29,14 @@ export const List = styled.ul`
   padding: 0;
   list-style: none;
   letter-spacing: 0.05em;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Item = styled.li`
