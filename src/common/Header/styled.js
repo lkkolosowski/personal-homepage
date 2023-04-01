@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import picture from "../../images/profile-picture.jpg";
 import { ReactComponent as MessageIcon } from "../../icons/message.svg";
 
-export const StyledHero = styled.section`
+export const StyledHeader = styled.header`
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
+  gap: 0 72px;
+  color: ${({ theme }) => theme.color.slateGray};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     grid-template-columns: 1fr;
@@ -16,10 +19,10 @@ export const Title = styled.h1`
   font-size: 38px;
   line-height: 1.2;
   margin: 0;
-  padding-bottom: 3px;
   letter-spacing: 0.05em;
+  color: ${({ theme }) => theme.color.mineShaft};
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 22px;
   }
 `;
@@ -31,46 +34,52 @@ export const Subtitle = styled.div`
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.color.slateGray};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    margin-bottom: 8px;
+  }
 `;
 
 export const ExtraHeaderContent = styled.p`
-  margin: 32px 0;
+  margin: 35px 0 32px;
   font-size: 20px;
   line-height: 1.4;
   letter-spacing: 0.05em;
-  max-width: 640px;
-  color: ${({ theme }) => theme.color.slateGray};
+  max-width: 630px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 17px;
-    margin: 16px 0 32px;
+    max-width: 530px;
   }
-`;
-
-export const Header = styled.header`
-  padding: 0 72px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    padding: 0;
+    margin: 16px 0 24px;
+    max-width: 530px;
   }
 `;
 
-export const Aside = styled.aside`
+export const HeaderContent = styled.div`
+  padding-right: 32px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    padding-right: 16px;
+  }
+`;
+
+export const ProfilePicture = styled.div`
   width: 40vw;
   min-width: 128px;
   max-width: 400px;
-`;
-
-export const ProfilePicture = styled.img`
-  width: 100%;
-  display: block;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
-  box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-  pointer-events: none;
+  background-image: url(${picture});
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: ${({ theme }) => theme.shadow.thin};
 
-  &::selection {
-    background: none;
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    width: 15vw;
   }
 `;
 
@@ -90,7 +99,7 @@ export const Button = styled.button`
   border: 1px solid ${({ theme }) => theme.color.semiTransparentIron};
   border-radius: 4px;
   width: 100%;
-  max-width: 397px;
+  max-width: 400px;
   transition: box-shadow 0.3s ease;
 
   &:hover {
@@ -102,14 +111,17 @@ export const Button = styled.button`
     box-shadow: ${({ theme }) => theme.color.parsley} 0px 2px 0px 0px inset;
   }
 
+  &::selection {
+    background: none;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;
-    width: auto;
+    max-width: 235px;
   }
 `;
 
 export const Icon = styled(MessageIcon)`
-  color: ${({ theme }) => theme.color.white};
   position: relative;
   top: 1px;
 `;
