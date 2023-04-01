@@ -16,5 +16,9 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.color.mineShaft};
     background-color: ${({ theme }) => theme.color.whiteLilac};
     font-size: ${({ theme }) => theme.size.medium}px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+      font-size: ${({ theme }) => theme.size.small}px;
+    }
   }
 `;
