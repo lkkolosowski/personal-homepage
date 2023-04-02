@@ -33,6 +33,7 @@ export const Subtitle = styled.div`
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
@@ -58,14 +59,6 @@ export const ExtraHeaderContent = styled.p`
   }
 `;
 
-export const HeaderContent = styled.div`
-  padding-right: 32px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    padding-right: 16px;
-  }
-`;
-
 export const ProfilePicture = styled.div`
   width: 40vw;
   min-width: 128px;
@@ -77,10 +70,6 @@ export const ProfilePicture = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: ${({ theme }) => theme.shadow.thin};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    width: 15vw;
-  }
 `;
 
 export const Button = styled.button`
@@ -99,7 +88,6 @@ export const Button = styled.button`
   border: 1px solid ${({ theme }) => theme.color.semiTransparentIron};
   border-radius: 4px;
   width: 100%;
-  max-width: 400px;
   transition: box-shadow 0.3s ease;
 
   &:hover {
@@ -117,7 +105,6 @@ export const Button = styled.button`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;
-    max-width: 235px;
   }
 `;
 

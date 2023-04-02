@@ -54,17 +54,19 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   margin-bottom: 8px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   line-height: 1.4;
 `;
 
 export const Eclipse = styled(EclipseIcon)`
   width: 9px;
-  height: auto;
+  height: calc(18px * 1.4);
   margin-right: 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     width: 6px;
+    height: calc(14px * 1.4);
     margin-right: 8px;
   }
 `;

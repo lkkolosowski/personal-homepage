@@ -4,7 +4,6 @@ import {
   Title,
   Subtitle,
   ExtraHeaderContent,
-  HeaderContent,
   Button,
   Icon,
 } from "./styled";
@@ -12,9 +11,9 @@ import {
 const Header = () => (
   <StyledHeader>
     <ProfilePicture />
-    <HeaderContent>
+    <div>
       <Subtitle>
-        <span>This is</span>
+        <span>Hello, my name is</span>
       </Subtitle>
       <Title>Łukasz Kołosowski</Title>
       <ExtraHeaderContent>
@@ -25,7 +24,7 @@ const Header = () => (
         <Icon />
         Hire Me
       </Button>
-    </HeaderContent>
+    </div>
   </StyledHeader>
 );
 
