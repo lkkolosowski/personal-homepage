@@ -2,16 +2,12 @@ export const skills = [
   "Semantic & accessible HTML",
   "Responsive Web Design",
   "Teamwork",
-  "Markdown",
-  "Immutability",
   "CSS BEM convention",
-  "CSS Grid",
-  "CSS Flexbox",
+  "CSS Flexbox, Grid",
   "React Router",
   "Redux-Saga",
   "Redux (Toolkit)",
   "React Hooks",
-  "Error handling",
   "Working with API (fetch, axios)",
   "JavaScript ES6+",
   "Promises, Async/Await",
@@ -19,8 +15,6 @@ export const skills = [
   "Trello",
   "Scrum",
   "NPM",
-  "React",
-  "Git",
 ];
 
 export const nextSkills = [
@@ -30,4 +24,9 @@ export const nextSkills = [
   "Node.js",
   "Unit testing",
   "JS classes",
+  "Tanstack Query",
+  "SolidJS",
+  "Vue",
+  "Jest, RTL",
+  "Vite Tool",
 ];
