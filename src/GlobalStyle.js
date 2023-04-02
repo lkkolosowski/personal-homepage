@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.color.mineShaft};
     background-color: ${({ theme }) => theme.color.whiteLilac};
     font-size: ${({ theme }) => theme.size.medium}px;
+    letter-spacing: 0.05em;
     user-select: none;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
