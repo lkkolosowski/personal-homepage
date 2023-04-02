@@ -22,7 +22,6 @@ export const Title = styled.h2`
   font-size: 30px;
   font-weight: 900;
   line-height: 1.2;
-  letter-spacing: 0.05em;
   margin: 0;
   padding-bottom: 15px;
   border-bottom: 1px solid
@@ -37,10 +36,9 @@ export const Title = styled.h2`
 export const List = styled.ul`
   columns: 3;
   margin-top: 32px;
-  margin-bottom: -8px;
+  margin-bottom: 0;
   padding: 0;
   list-style: none;
-  letter-spacing: 0.05em;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     columns: 2;
