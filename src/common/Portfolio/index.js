@@ -1,129 +1,36 @@
-import { Tile } from "../Tile";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   StyledPortfolio,
-  Repositories,
   Header,
   Icon,
   Title,
   Subtitle,
-  Description,
-  List,
-  Item,
-  Link,
 } from "./styled";
+import {
+  fetchReposStart,
+  selectRepos,
+  selectReposStatus,
+} from "../../reposSlice";
+import { Repositories } from "../Repositories";
 
-export const Portfolio = () => (
-  <StyledPortfolio>
-    <Header>
-      <Icon />
-      <Title>Portfolio</Title>
-      <Subtitle>My recent projects</Subtitle>
-    </Header>
-    <Repositories>
-      <Tile
-        title={<Link href={"test"}>Movies Browser</Link>}
-        content={
-          <>
-            <Description>
-              Project description, e.g. website where you can search for
-              favourite movies and people. Project description, e.g.
-              website where you can search.
-            </Description>
-            <List>
-              <Item>
-                <span>Demo:</span>
-                <span>
-                  <Link href={"test"}>https://link.demo.com</Link>
-                </span>
-              </Item>
-              <Item>
-                <span>Code:</span>
-                <span>
-                  <Link href={"test"}>https://link.code.com</Link>
-                </span>
-              </Item>
-            </List>
-          </>
-        }
-      />
-      <Tile
-        title={<Link href={"test"}>Movies Browser</Link>}
-        content={
-          <>
-            <Description>
-              Project description, e.g. website where you can search for
-              favourite movies and people. Project description, e.g.
-              website where you can search.
-            </Description>
-            <List>
-              <Item>
-                <span>Demo:</span>
-                <span>
-                  <Link href={"test"}>https://link.demo.com</Link>
-                </span>
-              </Item>
-              <Item>
-                <span>Code:</span>
-                <span>
-                  <Link href={"test"}>https://link.code.com</Link>
-                </span>
-              </Item>
-            </List>
-          </>
-        }
-      />
-      <Tile
-        title={<Link href={"test"}>Movies Browser</Link>}
-        content={
-          <>
-            <Description>
-              Project description, e.g. website where you can search for
-              favourite movies and people. Project description, e.g.
-              website where you can search.
-            </Description>
-            <List>
-              <Item>
-                <span>Demo:</span>
-                <span>
-                  <Link href={"test"}>https://link.demo.com</Link>
-                </span>
-              </Item>
-              <Item>
-                <span>Code:</span>
-                <span>
-                  <Link href={"test"}>https://link.code.com</Link>
-                </span>
-              </Item>
-            </List>
-          </>
-        }
-      />
-      <Tile
-        title={<Link href={"test"}>Movies Browser</Link>}
-        content={
-          <>
-            <Description>
-              Project description, e.g. website where you can search for
-              favourite movies and people. Project description, e.g.
-              website where you can search.
-            </Description>
-            <List>
-              <Item>
-                <span>Demo:</span>
-                <span>
-                  <Link href={"test"}>https://link.demo.com</Link>
-                </span>
-              </Item>
-              <Item>
-                <span>Code:</span>
-                <span>
-                  <Link href={"test"}>https://link.code.com</Link>
-                </span>
-              </Item>
-            </List>
-          </>
-        }
-      />
-    </Repositories>
-  </StyledPortfolio>
-);
+export const Portfolio = () => {
+  const dispatch = useDispatch();
+  const repos = useSelector(selectRepos);
+  const status = useSelector(selectReposStatus);
+
+  useEffect(() => {
+    dispatch(fetchReposStart());
+  }, [dispatch]);
+
+  return (
+    <StyledPortfolio>
+      <Header>
+        <Icon />
+        <Title>Portfolio</Title>
+        <Subtitle>My recent projects</Subtitle>
+      </Header>
+      {status==="loading" ? `ładowanie` : status==="success" ? <Repositories repositories={repos} /> : status==="error" ? `błąd` : `oo`}
+    </StyledPortfolio>
+  );
+};

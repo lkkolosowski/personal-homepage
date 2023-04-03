@@ -37,49 +37,6 @@ export const Subtitle = styled.div`
   }
 `;
 
-export const Repositories = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-`;
-
-export const Description = styled.p`
-  margin: 24px 0;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    margin: 16px 0;
-  }
-`;
-
-export const List = styled.ul`
-  display: grid;
-  gap: 8px;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-`;
-
-export const Item = styled.li`
-  display: grid;
-  grid-template-columns: 4em 1fr;
-`;
-
-export const Link = styled.a`
-  color: ${({ theme }) => theme.color.scienceBlue};
-  text-decoration: none;
-  border-bottom: 1px solid
-    ${({ theme }) => theme.color.semiTransparentIron};
-
-  &:hover {
-    color: ${({ theme }) => theme.color.dodgerBlue};
-  }
-`;
-
 export const Icon = styled(GithubIcon)`
   width: 40px;
   height: 40px;
