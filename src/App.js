@@ -1,8 +1,8 @@
 import Container from "./common/Container";
 import Header from "./common/Header";
 import { skills, nextSkills } from "./common/Skills/skillsData";
-import { Skills } from "./common/Skills";
-import { Portfolio } from "./common/Portfolio";
+import Skills from "./common/Skills";
+import Portfolio from "./common/Portfolio";
 
 function App() {
   return (
