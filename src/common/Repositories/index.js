@@ -1,4 +1,4 @@
-import { Tile } from "../Tile";
+import Tile from "../Tile";
 import {
   StyledRepositories,
   Description,
@@ -7,7 +7,7 @@ import {
   Link,
 } from "./styled";
 
-export const Repositories = ({ repositories }) => {
+const Repositories = ({ repositories }) => {
   function capitalizeWords(string) {
     return string
       .split("-")
@@ -21,7 +21,11 @@ export const Repositories = ({ repositories }) => {
         ({ id, name, description, homepage, html_url }) => (
           <Tile
             key={id}
-            title={<Link href={"test"}>{capitalizeWords(name)}</Link>}
+            title={
+              <Link target={"_blank"} href={html_url}>
+                {capitalizeWords(name)}
+              </Link>
+            }
             content={
               <>
                 <Description>{description}</Description>
@@ -29,13 +33,17 @@ export const Repositories = ({ repositories }) => {
                   <Item>
                     <span>Demo:</span>
                     <span>
-                      <Link target={"_blank"} href={homepage}>https://{name}.demo</Link>
+                      <Link target={"_blank"} href={homepage}>
+                        https://{name}.demo
+                      </Link>
                     </span>
                   </Item>
                   <Item>
                     <span>Code:</span>
                     <span>
-                      <Link target={"_blank"} href={html_url}>https://{name}.code</Link>
+                      <Link target={"_blank"} href={html_url}>
+                        https://{name}.code
+                      </Link>
                     </span>
                   </Item>
                 </List>
@@ -47,3 +55,5 @@ export const Repositories = ({ repositories }) => {
     </StyledRepositories>
   );
 };
+
+export default Repositories;
