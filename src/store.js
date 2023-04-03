@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import createSagaMiddleware from "redux-saga";
-import reposReducer from "./reposSlice";
-import reposSaga from "./reposSaga";
+import reposReducer from "./features/Portfolio/Repositories/reposSlice";
+import reposSaga from "./features/Portfolio/Repositories/reposSaga";
 
 const rootReducer = combineReducers({
   repos: reposReducer,

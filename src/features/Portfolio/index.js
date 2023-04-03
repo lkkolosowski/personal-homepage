@@ -5,7 +5,7 @@ import {
   fetchReposStart,
   selectRepos,
   selectReposStatus,
-} from "../../reposSlice";
+} from "./Repositories/reposSlice";
 import Repositories from "./Repositories";
 import Loader from "./Loader";
 import Failure from "./Failure";
