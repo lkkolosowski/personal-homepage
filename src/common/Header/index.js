@@ -1,4 +1,5 @@
-import ButtonLink from "../ButtonLink";
+import { ButtonLink } from "../Link";
+import { name, description, email } from "../../nameplate";
 import {
   StyledHeader,
   ProfilePicture,
@@ -11,22 +12,15 @@ import {
 const Header = () => (
   <StyledHeader>
     <ProfilePicture />
-    <div>
-      <Subtitle>
-        <span>Hello, my name is</span>
-      </Subtitle>
-      <Title>Łukasz Kołosowski</Title>
-      <HeaderParagraph>
-        Looking for the perfect frontend development? You are in the right
-        place. Get the professional results you're looking for. Your work
-        will be done on time and according to your requirements. Just
-        contact me and tell me about your needs.
-      </HeaderParagraph>
-      <ButtonLink hero>
+    <section>
+      <Subtitle>Hello, my name is</Subtitle>
+      <Title>{name}</Title>
+      <HeaderParagraph>{description}</HeaderParagraph>
+      <ButtonLink hero href={`mailto:${email}`}>
         <Icon />
         Contact me
       </ButtonLink>
-    </div>
+    </section>
   </StyledHeader>
 );
 
