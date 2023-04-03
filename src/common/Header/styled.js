@@ -55,7 +55,7 @@ export const HeaderParagraph = styled.p`
   }
 `;
 
-export const ProfilePicture = styled.div`
+export const ProfilePicture = styled.aside`
   width: 40vw;
   min-width: 128px;
   max-width: 400px;
