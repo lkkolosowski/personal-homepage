@@ -6,9 +6,14 @@ export const StyledTile = styled.article`
   border-radius: 4px;
   border: 6px solid ${({ theme }) => theme.color.semiTransparentIron};
   padding: 50px;
+  transition: border-color 0.3s ease;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     padding: 24px;
+  }
+
+  &:hover {
+    border-color: ${({ theme }) => theme.color.semiTransparentScienceBlue};
   }
 `;
 
