@@ -1,5 +1,5 @@
-import Tile from "../Tile";
-import {TextLink } from "../Link";
+import Tile from "../../../common/Tile";
+import {TextLink } from "../../../common/Link";
 import { StyledRepositories, Description, List, Item } from "./styled";
 
 const Repositories = ({ repositories }) => {

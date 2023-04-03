@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as DangerIcon } from "../../icons/message.svg";
+import { ReactComponent as DangerIcon } from "../../../icons/message.svg";
 
 export const Wrapper = styled.div`
   display: flex;

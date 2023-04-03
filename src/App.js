@@ -1,14 +1,14 @@
 import Container from "./common/Container";
-import Header from "./common/Header";
+import Hero from "./features/Hero";
 import { skills, goals } from "./nameplate";
-import Skillset from "./common/Skillset";
-import Portfolio from "./common/Portfolio";
-import Contact from "./common/Contact";
+import Skillset from "./features/Skillset";
+import Portfolio from "./features/Portfolio";
+import Contact from "./features/Contact";
 
 function App() {
   return (
     <Container>
-      <Header />
+      <Hero />
       <Skillset
         title={<>My skillset includes&nbsp;🛠️</>}
         skills={skills}

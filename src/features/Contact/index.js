@@ -1,5 +1,5 @@
 import { description, email, github, linkedin } from "../../nameplate";
-import {TextLink} from "../Link";
+import {TextLink} from "../../common/Link";
 import { ReactComponent as GithubIcon } from "../../icons/github2.svg";
 import { ReactComponent as LinkedinIcon } from "../../icons/linkedin.svg";
 import {

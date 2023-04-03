@@ -6,9 +6,9 @@ import {
   selectRepos,
   selectReposStatus,
 } from "../../reposSlice";
-import Repositories from "../Repositories";
-import Loader from "../Loader";
-import Failure from "../Failure";
+import Repositories from "./Repositories";
+import Loader from "./Loader";
+import Failure from "./Failure";
 
 const Portfolio = () => {
   const dispatch = useDispatch();

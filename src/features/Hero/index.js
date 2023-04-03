@@ -1,4 +1,4 @@
-import { ButtonLink } from "../Link";
+import { ButtonLink } from "../../common/Link";
 import { name, description, email } from "../../nameplate";
 import {
   StyledHeader,
@@ -9,7 +9,7 @@ import {
   Icon,
 } from "./styled";
 
-const Header = () => (
+const Hero = () => (
   <StyledHeader>
     <ProfilePicture />
     <section>
@@ -24,4 +24,4 @@ const Header = () => (
   </StyledHeader>
 );
 
-export default Header;
+export default Hero;
