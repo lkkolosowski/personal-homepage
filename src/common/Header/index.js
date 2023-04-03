@@ -1,10 +1,10 @@
+import Button from "../Button";
 import {
   StyledHeader,
   ProfilePicture,
   Title,
   Subtitle,
   ExtraHeaderContent,
-  Button,
   Icon,
 } from "./styled";
 
@@ -22,7 +22,7 @@ const Header = () => (
         will be done on time and according to your requirements. Just reach
         out and let me know your needs.
       </ExtraHeaderContent>
-      <Button>
+      <Button hero>
         <Icon />
         Hire Me
       </Button>

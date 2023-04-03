@@ -43,7 +43,6 @@ export const ExtraHeaderContent = styled.p`
   margin: 35px 0 32px;
   font-size: 20px;
   line-height: 1.4;
-  max-width: 630px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 17px;
@@ -67,41 +66,6 @@ export const ProfilePicture = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: ${({ theme }) => theme.shadow.thin};
-`;
-
-export const Button = styled.button`
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 16px;
-  gap: 16px;
-  background: #0366d6;
-  color: ${({ theme }) => theme.color.white};
-  border: 1px solid ${({ theme }) => theme.color.semiTransparentIron};
-  border-radius: 4px;
-  width: 100%;
-  transition: box-shadow 0.3s ease;
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: ${({ theme }) => theme.color.anakiwa} 0px 0px 0px 2px;
-  }
-
-  &:active {
-    box-shadow: ${({ theme }) => theme.color.parsley} 0px 2px 0px 0px inset;
-  }
-
-  &::selection {
-    background: none;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    font-size: 18px;
-  }
 `;
 
 export const Icon = styled(MessageIcon)`
