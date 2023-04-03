@@ -1,10 +1,10 @@
-# Personal Homepage
-
-This is my personal homepage.
-
 ## DEMO
 
 https://lkkolosowski.github.io/personal-homepage/
+
+## Personal Homepage
+
+Looking for the perfect frontend development? You are in the right place. Get the professional results you're looking for. Your work will be done on time and according to your requirements. Just reach out and let me know your needs.
 
 ## Getting Started with Create React App
 
