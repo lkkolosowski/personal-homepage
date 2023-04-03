@@ -1,20 +1,16 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  StyledPortfolio,
-  Header,
-  Icon,
-  Title,
-  Subtitle,
-} from "./styled";
+import { StyledPortfolio, Header, Icon, Title, Subtitle } from "./styled";
 import {
   fetchReposStart,
   selectRepos,
   selectReposStatus,
 } from "../../reposSlice";
-import { Repositories } from "../Repositories";
+import Repositories from "../Repositories";
+import Loader from "../Loader";
+import Failure from "../Failure";
 
-export const Portfolio = () => {
+const Portfolio = () => {
   const dispatch = useDispatch();
   const repos = useSelector(selectRepos);
   const status = useSelector(selectReposStatus);
@@ -30,7 +26,17 @@ export const Portfolio = () => {
         <Title>Portfolio</Title>
         <Subtitle>My recent projects</Subtitle>
       </Header>
-      {status==="loading" ? `ładowanie` : status==="success" ? <Repositories repositories={repos} /> : status==="error" ? `błąd` : `oo`}
+      {status === "loading" ? (
+        <Loader />
+      ) : status === "success" ? (
+        <Repositories repositories={repos} />
+      ) : status === "error" ? (
+        <Failure />
+      ) : (
+        console.error(`incorrect status: ${status}`)
+      )}
     </StyledPortfolio>
   );
 };
+
+export default Portfolio;
