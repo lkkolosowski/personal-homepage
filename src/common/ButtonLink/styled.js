@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const StyledButton = styled.a`
+export const StyledButtonLink = styled.a`
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;

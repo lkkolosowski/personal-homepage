@@ -1,4 +1,4 @@
-import Button from "../Button";
+import ButtonLink from "../ButtonLink";
 import { Wrapper, Title, Paragraph, Icon } from "./styled";
 
 const Failure = () => (
@@ -9,9 +9,9 @@ const Failure = () => (
       Sorry, failed to load Github projects. You can check them directly on
       Github.
     </Paragraph>
-    <Button target="_blank" href="https://github.com/lkkolosowski">
+    <ButtonLink target="_blank" href="https://github.com/lkkolosowski">
       Go to Github
-    </Button>
+    </ButtonLink>
   </Wrapper>
 );
 

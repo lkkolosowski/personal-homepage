@@ -1,3 +1,12 @@
+export const about = {
+  name: "Łukasz Kołosowski",
+  description:
+    "Looking for the perfect frontend development? You are in the right place. Get the professional results you're looking for. Your work will be done on time and according to your requirements. Just contact me and tell me about your needs.",
+  email: "lkkolosowski@gmail.com",
+  github: "https://github.com/lkkolosowski",
+  linkedin: "https://www.linkedin.com/in/%C5%82ukasz-ko%C5%82osowski-12a213235/",
+};
+
 export const skills = [
   "Semantic & accessible HTML",
   "Responsive Web Design",
@@ -17,7 +26,7 @@ export const skills = [
   "NPM",
 ];
 
-export const nextSkills = [
+export const goals = [
   "React Context",
   "Cypress",
   "TypeScript",

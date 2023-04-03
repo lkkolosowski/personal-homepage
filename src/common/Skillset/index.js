@@ -7,7 +7,7 @@ import {
   List,
 } from "./styled";
 
-const Skills = ({ title, skills }) => (
+const Skillset = ({ title, skills }) => (
   <StyledSection>
     <Title>{title}</Title>
     <SectionBody>
@@ -23,4 +23,4 @@ const Skills = ({ title, skills }) => (
   </StyledSection>
 );
 
-export default Skills;
+export default Skillset;

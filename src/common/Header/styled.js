@@ -39,7 +39,7 @@ export const Subtitle = styled.div`
   }
 `;
 
-export const ExtraHeaderContent = styled.p`
+export const HeaderParagraph = styled.p`
   margin: 35px 0 32px;
   font-size: 20px;
   line-height: 1.4;
