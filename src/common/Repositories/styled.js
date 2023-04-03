@@ -31,14 +31,3 @@ export const Item = styled.li`
   display: grid;
   grid-template-columns: 4em 1fr;
 `;
-
-export const Link = styled.a`
-  color: ${({ theme }) => theme.color.scienceBlue};
-  text-decoration: none;
-  border-bottom: 1px solid
-    ${({ theme }) => theme.color.semiTransparentIron};
-
-  &:hover {
-    color: ${({ theme }) => theme.color.dodgerBlue};
-  }
-`;

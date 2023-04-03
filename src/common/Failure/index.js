@@ -1,4 +1,5 @@
-import ButtonLink from "../ButtonLink";
+import { ButtonLink } from "../Link";
+import { github } from "../../nameplate";
 import { Wrapper, Title, Paragraph, Icon } from "./styled";
 
 const Failure = () => (
@@ -9,7 +10,7 @@ const Failure = () => (
       Sorry, failed to load Github projects. You can check them directly on
       Github.
     </Paragraph>
-    <ButtonLink target="_blank" href="https://github.com/lkkolosowski">
+    <ButtonLink target="_blank" href={github}>
       Go to Github
     </ButtonLink>
   </Wrapper>

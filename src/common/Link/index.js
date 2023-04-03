@@ -1,6 +1,17 @@
 import styled, { css } from "styled-components";
 
-export const StyledButtonLink = styled.a`
+export const TextLink = styled.a`
+  color: ${({ theme }) => theme.color.scienceBlue};
+  text-decoration: none;
+  border-bottom: 1px solid
+    ${({ theme }) => theme.color.semiTransparentIron};
+
+  &:hover {
+    color: ${({ theme }) => theme.color.dodgerBlue};
+  }
+`;
+
+export const ButtonLink = styled.a`
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
@@ -14,6 +25,7 @@ export const StyledButtonLink = styled.a`
   color: ${({ theme }) => theme.color.white};
   border: 1px solid ${({ theme }) => theme.color.semiTransparentIron};
   border-radius: 4px;
+  text-decoration: none;
   transition: box-shadow 0.3s ease;
 
   ${({ hero }) =>

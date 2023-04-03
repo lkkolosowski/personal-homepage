@@ -1,11 +1,6 @@
 import Tile from "../Tile";
-import {
-  StyledRepositories,
-  Description,
-  List,
-  Item,
-  Link,
-} from "./styled";
+import {TextLink } from "../Link";
+import { StyledRepositories, Description, List, Item } from "./styled";
 
 const Repositories = ({ repositories }) => {
   function capitalizeWords(string) {
@@ -22,9 +17,9 @@ const Repositories = ({ repositories }) => {
           <Tile
             key={id}
             title={
-              <Link target={"_blank"} href={html_url}>
+              <TextLink target={"_blank"} href={html_url}>
                 {capitalizeWords(name)}
-              </Link>
+              </TextLink>
             }
             content={
               <>
@@ -33,17 +28,17 @@ const Repositories = ({ repositories }) => {
                   <Item>
                     <span>Demo:</span>
                     <span>
-                      <Link target={"_blank"} href={homepage}>
+                      <TextLink target={"_blank"} href={homepage}>
                         https://{name}.demo
-                      </Link>
+                      </TextLink>
                     </span>
                   </Item>
                   <Item>
                     <span>Code:</span>
                     <span>
-                      <Link target={"_blank"} href={html_url}>
+                      <TextLink target={"_blank"} href={html_url}>
                         https://{name}.code
-                      </Link>
+                      </TextLink>
                     </span>
                   </Item>
                 </List>
