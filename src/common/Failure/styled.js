@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 `;
 
 export const Title = styled.h3`
@@ -17,9 +18,12 @@ export const Title = styled.h3`
 `;
 
 export const Paragraph = styled.p`
+  font-size: 20px;
   margin: 32px 0;
+  max-width: 417px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 14px;
     margin: 16px 0;
   }
 `;
