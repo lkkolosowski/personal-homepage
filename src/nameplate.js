@@ -1,6 +1,6 @@
 export const name = "Łukasz Kołosowski";
 export const description =
-  "Looking for the perfect frontend development? You are in the right place. Get the professional results you're looking for. Your work will be done on time and according to your requirements. Just contact me and tell me about your needs.";
+  "Trying to find the ideal frontend development? You're in the proper spot. Get the expert outcomes you're searching for. Your job will be completed on schedule and to your specifications. Simply contact me and tell me about your needs.";
 export const email = "lkkolosowski@gmail.com";
 export const github = "https://github.com/lkkolosowski";
 export const linkedin =
