@@ -19,7 +19,6 @@ export const Title = styled.h1`
   font-size: 38px;
   line-height: 1.2;
   margin: 0;
-  letter-spacing: 0.05em;
   color: ${({ theme }) => theme.color.mineShaft};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
@@ -33,7 +32,6 @@ export const Subtitle = styled.div`
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
@@ -45,7 +43,6 @@ export const ExtraHeaderContent = styled.p`
   margin: 35px 0 32px;
   font-size: 20px;
   line-height: 1.4;
-  letter-spacing: 0.05em;
   max-width: 630px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
@@ -76,7 +73,6 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.05em;
   display: flex;
   flex-direction: row;
   justify-content: center;
