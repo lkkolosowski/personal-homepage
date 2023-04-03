@@ -17,8 +17,10 @@ const Header = () => (
       </Subtitle>
       <Title>Łukasz Kołosowski</Title>
       <ExtraHeaderContent>
-        I'm a passionate Frontend Developer in love with React, currently
-        looking for new job opportunities.
+        Looking for the perfect frontend development? You are in the right
+        place. Get the professional results you're looking for. Your work
+        will be done on time and according to your requirements. Just reach
+        out and let me know your needs.
       </ExtraHeaderContent>
       <Button>
         <Icon />
