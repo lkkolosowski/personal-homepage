@@ -26,15 +26,17 @@ const Portfolio = () => {
         <Title>Portfolio</Title>
         <Subtitle>My recent projects</Subtitle>
       </Header>
-      {status === "loading" ? (
-        <Loader />
-      ) : status === "success" ? (
-        <Repositories repositories={repos} />
-      ) : status === "error" ? (
-        <Failure />
-      ) : (
-        console.error(`incorrect status: ${status}`)
-      )}
+      {(() => {
+        if (status === "loading") {
+          return <Loader />;
+        }
+
+        if (status === "error") {
+          return <Failure />;
+        }
+
+        return <Repositories repositories={repos} />;
+      })()}
     </StyledPortfolio>
   );
 };
