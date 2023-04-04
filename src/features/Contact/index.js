@@ -11,7 +11,7 @@ import {
 } from "./styled";
 
 const Contact = () => (
-  <section>
+  <footer>
     <Subtitle>Let’s talk!</Subtitle>
     <Title>
       <TextLink href={`mailto:${email}`}>{email}</TextLink>
@@ -25,7 +25,7 @@ const Contact = () => (
         <LinkedinIcon />
       </IconLink>
     </Socials>
-  </section>
+  </footer>
 );
 
 export default Contact;
