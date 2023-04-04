@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const TextLink = styled.a`
-  color: ${({ theme }) => theme.color.scienceBlue};
+  color: ${({ theme }) => theme.link.text};
   text-decoration: none;
   border-bottom: 1px solid
-    ${({ theme }) => theme.color.semiTransparentIron};
+    ${({ theme }) => theme.link.underline};
 
   &:hover {
-    color: ${({ theme }) => theme.color.dodgerBlue};
+    color: ${({ theme }) => theme.link.hover};
   }
 `;
 
@@ -21,9 +21,9 @@ export const ButtonLink = styled.a`
   align-items: center;
   padding: 12px 16px;
   gap: 16px;
-  background-color: ${({ theme }) => theme.color.scienceBlue};
-  color: ${({ theme }) => theme.color.white};
-  border: 1px solid ${({ theme }) => theme.color.semiTransparentIron};
+  background-color: ${({ theme }) => theme.button.background};
+  color: ${({ theme }) => theme.button.text};
+  border: 1px solid ${({ theme }) => theme.button.border};
   border-radius: 4px;
   text-decoration: none;
   transition: box-shadow 0.3s ease;
@@ -36,11 +36,11 @@ export const ButtonLink = styled.a`
 
   &:hover {
     cursor: pointer;
-    box-shadow: ${({ theme }) => theme.color.anakiwa} 0px 0px 0px 2px;
+    box-shadow: ${({ theme }) => theme.button.hover} 0px 0px 0px 2px;
   }
 
   &:active {
-    box-shadow: ${({ theme }) => theme.color.parsley} 0px 2px 0px 0px inset;
+    box-shadow: ${({ theme }) => theme.button.active} 0px 2px 0px 0px inset;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {

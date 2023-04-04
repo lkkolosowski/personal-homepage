@@ -7,9 +7,9 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledLoader = styled.div`
-  border: 12px solid ${({ theme }) => theme.color.semiTransparentIron};
+  border: 12px solid ${({ theme }) => theme.border};
   border-radius: 50%;
-  border-right: 12px solid ${({ theme }) => theme.color.scienceBlue};
+  border-right: 12px solid ${({ theme }) => theme.primary};
   width: 160px;
   max-width: 75%;
   aspect-ratio: 1 / 1;

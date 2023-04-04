@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledTile = styled.article`
-  background-color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) => theme.tile.background};
   box-shadow: ${({ theme }) => theme.shadow.thick};
   border-radius: 4px;
-  border: 6px solid ${({ theme }) => theme.color.semiTransparentIron};
+  border: 6px solid ${({ theme }) => theme.tile.border};
   padding: 50px;
   transition: border-color 0.3s ease;
 
@@ -13,12 +13,12 @@ export const StyledTile = styled.article`
   }
 
   &:hover {
-    border-color: ${({ theme }) => theme.color.semiTransparentScienceBlue};
+    border-color: ${({ theme }) => theme.tile.hover};
   }
 `;
 
 export const TileBody = styled.div`
-  color: ${({ theme }) => theme.color.slateGray};
+  color: ${({ theme }) => theme.textAlternative};
 `;
 
 export const Title = styled.h2`

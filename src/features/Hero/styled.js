@@ -7,7 +7,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   grid-template-columns: auto 1fr;
   gap: 0 72px;
-  color: ${({ theme }) => theme.color.slateGray};
+  color: ${({ theme }) => theme.textAlternative};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     grid-template-columns: 1fr;
@@ -19,7 +19,7 @@ export const Title = styled.h1`
   font-size: 38px;
   line-height: 1.2;
   margin: 0;
-  color: ${({ theme }) => theme.color.mineShaft};
+  color: ${({ theme }) => theme.textPrimary};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 22px;
@@ -65,7 +65,7 @@ export const ProfilePicture = styled.aside`
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: ${({ theme }) => theme.shadow.thin};
+  box-shadow: ${({ theme }) => theme.shadow.thick};
 `;
 
 export const Icon = styled(MessageIcon)`
