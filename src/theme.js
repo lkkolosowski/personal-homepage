@@ -57,7 +57,7 @@ export const theme = {
   },
   icon: {
     background: color.white,
-    hover: color.scienceBlue,
+    hover: color.dodgerBlue,
   },
 };
 

@@ -42,6 +42,10 @@ export const Icon = styled(GithubIcon)`
   height: 40px;
   margin-bottom: 12px;
 
+  & > path {
+    fill: ${({ theme }) => theme.primary};
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     width: 32px;
     height: 32px;

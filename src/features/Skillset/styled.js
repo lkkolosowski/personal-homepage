@@ -24,8 +24,7 @@ export const Title = styled.h2`
   line-height: 1.2;
   margin: 0;
   padding-bottom: 15px;
-  border-bottom: 1px solid
-    ${({ theme }) => theme.underline};
+  border-bottom: 1px solid ${({ theme }) => theme.underline};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;
@@ -61,6 +60,9 @@ export const Eclipse = styled(EclipseIcon)`
   width: 9px;
   height: calc(18px * 1.4);
   margin-right: 16px;
+  & > circle {
+    fill: ${({ theme }) => theme.primary};
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     width: 6px;
