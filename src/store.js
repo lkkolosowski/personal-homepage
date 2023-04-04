@@ -1,20 +1,17 @@
+import createSagaMiddleware from "@redux-saga/core";
 import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers } from "redux";
-import createSagaMiddleware from "redux-saga";
-import reposReducer from "./features/Portfolio/Repositories/reposSlice";
-import reposSaga from "./features/Portfolio/Repositories/reposSaga";
-
-const rootReducer = combineReducers({
-  repos: reposReducer,
-});
+import reposSlice from "./features/Portfolio/Repositories/reposSlice";
+import saga from "./saga";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    repos: reposSlice,
+  },
   middleware: [sagaMiddleware],
 });
 
-sagaMiddleware.run(reposSaga);
+sagaMiddleware.run(saga);
 
 export default store;
