@@ -28,7 +28,7 @@ const color = {
   mercury: "#E5E5E5",
 };
 
-export const theme = {
+export const dark = {
   ...common,
   primary: color.dodgerBlue,
   alternative: color.scienceBlue,
@@ -61,35 +61,35 @@ export const theme = {
   },
 };
 
-// export const theme = {
-//   ...common,
-//   primary: color.scienceBlue,
-//   alternative: color.dodgerBlue,
-//   textPrimary: color.mineShaft,
-//   textAlternative: color.slateGray,
-//   background: color.whiteLilac,
-//   border: color.semiTransparentIron,
-//   underline: color.semiTransparentIron,
-//   tile: {
-//     background: color.white,
-//     border: color.semiTransparentIron,
-//     hover: color.semiTransparentScienceBlue,
-//   },
-//   button: {
-//     text: color.white,
-//     background: color.scienceBlue,
-//     border: color.semiTransparentIron,
-//     hover: color.anakiwa,
-//     active: color.parsley,
-//   },
-//   link: {
-//     text: color.scienceBlue,
-//     underline: color.semiTransparentIron,
-//     hover: color.dodgerBlue,
-//     active: color.parsley,
-//   },
-//   icon: {
-//     background: color.mineShaft,
-//     hover: color.scienceBlue,
-// },
-// };
+export const light = {
+  ...common,
+  primary: color.scienceBlue,
+  alternative: color.dodgerBlue,
+  textPrimary: color.mineShaft,
+  textAlternative: color.slateGray,
+  background: color.whiteLilac,
+  border: color.semiTransparentIron,
+  underline: color.semiTransparentIron,
+  tile: {
+    background: color.white,
+    border: color.semiTransparentIron,
+    hover: color.semiTransparentScienceBlue,
+  },
+  button: {
+    text: color.white,
+    background: color.scienceBlue,
+    border: color.semiTransparentIron,
+    hover: color.anakiwa,
+    active: color.parsley,
+  },
+  link: {
+    text: color.scienceBlue,
+    underline: color.semiTransparentIron,
+    hover: color.dodgerBlue,
+    active: color.parsley,
+  },
+  icon: {
+    background: color.mineShaft,
+    hover: color.scienceBlue,
+  },
+};
