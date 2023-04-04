@@ -1,16 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectTheme, toggleTheme } from "./themeSlice";
+import { StyledThemeSwitch, Wrapper } from "./styled";
 
 const ThemeSwitch = () => {
   const theme = useSelector(selectTheme);
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <button onClick={() => dispatch(toggleTheme())}>
+    <Wrapper>
+      <StyledThemeSwitch onClick={() => dispatch(toggleTheme())}>
         Dark mode {theme === "light" ? "off" : "on"}
-      </button>
-    </div>
+      </StyledThemeSwitch>
+    </Wrapper>
   );
 };
 

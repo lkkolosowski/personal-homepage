@@ -20,6 +20,7 @@ export const Title = styled.h1`
   line-height: 1.2;
   margin: 0;
   color: ${({ theme }) => theme.textPrimary};
+  transition: color 2.4s cubic-bezier(0, 0, 0.2, 1) 0s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 22px;
@@ -33,6 +34,7 @@ export const Subtitle = styled.div`
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+  transition: color 2.4s cubic-bezier(0, 0, 0.2, 1) 0s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin-bottom: 8px;
@@ -43,6 +45,7 @@ export const HeaderParagraph = styled.p`
   margin: 35px 0 32px;
   font-size: 20px;
   line-height: 1.4;
+  transition: color 2.4s cubic-bezier(0, 0, 0.2, 1) 0s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 17px;

@@ -7,6 +7,7 @@ export const StyledSection = styled.section`
   border-radius: 4px;
   margin-top: 72px;
   padding: 32px;
+  transition: background-color 1.2s cubic-bezier(0, 0, 0.2, 1) 0s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin-top: 50px;
