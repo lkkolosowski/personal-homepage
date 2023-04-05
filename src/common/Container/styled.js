@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Main = styled.main`
   position: relative;
-  max-width: 1248px;
+  max-width: 1232px;
   margin: 0 auto;
   padding: 120px 16px;
 

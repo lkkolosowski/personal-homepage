@@ -61,7 +61,7 @@ export const HeaderParagraph = styled.p`
 export const ProfilePicture = styled.aside`
   width: 40vw;
   min-width: 128px;
-  max-width: 400px;
+  max-width: 384px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-image: url(${picture});
