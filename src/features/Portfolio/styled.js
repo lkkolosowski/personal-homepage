@@ -2,7 +2,12 @@ import styled from "styled-components";
 import { ReactComponent as GithubIcon } from "../../icons/github.svg";
 
 export const StyledPortfolio = styled.section`
-  margin-top: 72px;
+  margin: 72px 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 18px;
+    margin: 48px 0;
+  }
 `;
 
 export const Header = styled.div`
