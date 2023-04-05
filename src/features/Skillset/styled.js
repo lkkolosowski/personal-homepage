@@ -7,7 +7,7 @@ export const StyledSection = styled.section`
   border-radius: 4px;
   margin-top: 72px;
   padding: 32px;
-  transition: background-color 0.3s;
+  transition: background-color ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin-top: 50px;
@@ -17,7 +17,7 @@ export const StyledSection = styled.section`
 
 export const SectionBody = styled.div`
   color: ${({ theme }) => theme.textAlternative};
-  transition: color 0.3s;
+  transition: color ${({ theme }) => theme.themeAnimation};
 `;
 
 export const Title = styled.h2`
@@ -27,7 +27,7 @@ export const Title = styled.h2`
   margin: 0;
   padding-bottom: 15px;
   border-bottom: 1px solid ${({ theme }) => theme.underline};
-  transition: color 0.3s, border-bottom 0.3s;
+  transition: color ${({ theme }) => theme.themeAnimation}, border-bottom ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;
@@ -65,6 +65,7 @@ export const Eclipse = styled(EclipseIcon)`
   margin-right: 16px;
   & > circle {
     fill: ${({ theme }) => theme.primary};
+    transition: ${({ theme }) => theme.themeAnimation};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {

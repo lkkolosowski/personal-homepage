@@ -18,7 +18,7 @@ export const Title = styled.h2`
   text-align: center;
   margin-top: 0;
   margin-bottom: 8px;
-  transition: color 0.3s;
+  transition: color ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;
@@ -32,7 +32,7 @@ export const Subtitle = styled.div`
   line-height: 1.4;
   text-align: center;
   margin-bottom: 24px;
-  transition: color 0.3s;
+  transition: color ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 17px;
@@ -46,7 +46,7 @@ export const Icon = styled(GithubIcon)`
 
   & > path {
     fill: ${({ theme }) => theme.primary};
-    transition: 0.3s;
+    transition: ${({ theme }) => theme.themeAnimation};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {

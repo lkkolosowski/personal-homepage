@@ -8,6 +8,10 @@ const common = {
     thick: `0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03)`,
   },
+  white: "#FFFFFF",
+  animation: "0.3s",
+  themeAnimation: "1s 0.2s",
+  switchAnimation: "0.6s cubic-bezier(0.68, -0.60, 0.68, 0.90) 0s",
 };
 
 const color = {
@@ -26,6 +30,16 @@ const color = {
   dodgerBlue: "#2188FF",
   shipCove: "#6D93BE",
   mercury: "#E5E5E5",
+};
+
+const transform = {
+  left: "translateX(0)",
+  right: "translateX(100%)",
+};
+
+const opacity = {
+  visible: 1,
+  invisible: 0,
 };
 
 export const dark = {
@@ -59,6 +73,15 @@ export const dark = {
     background: color.white,
     hover: color.dodgerBlue,
   },
+  switch: {
+    background: color.semiTransparentMineShaft,
+    border: color.white,
+    switcher: color.white,
+    translate: transform.right,
+    icon: color.mineShaft,
+    textModeOff: opacity.visible,
+    textModeOn: opacity.invisible,
+  },
 };
 
 export const light = {
@@ -91,5 +114,14 @@ export const light = {
   icon: {
     background: color.mineShaft,
     hover: color.scienceBlue,
+  },
+  switch: {
+    background: color.mercury,
+    border: color.slateGray,
+    switcher: color.slateGray,
+    translate: transform.left,
+    icon: color.white,
+    textModeOff: opacity.invisible,
+    textModeOn: opacity.visible,
   },
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as DangerIcon } from "../../../icons/message.svg";
+import { ReactComponent as DangerIcon } from "../../../icons/danger.svg";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -30,6 +30,13 @@ export const Paragraph = styled.p`
 
 export const Icon = styled(DangerIcon)`
   margin-bottom: 24px;
+  & > path {
+    stroke: ${({ theme }) => theme.icon.background};
+  }
+
+  & > path:first-child {
+    fill: ${({ theme }) => theme.icon.background};
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin-bottom: 12px;

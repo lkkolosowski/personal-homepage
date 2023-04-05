@@ -4,7 +4,7 @@ export const TextLink = styled.a`
   color: ${({ theme }) => theme.link.text};
   text-decoration: none;
   border-bottom: 1px solid ${({ theme }) => theme.link.underline};
-  transition: border-bottom 0.3s;
+  transition: border-bottom ${({ theme }) => theme.themeAnimation}, color ${({ theme }) => theme.animation};
 
   &:hover {
     color: ${({ theme }) => theme.link.hover};
@@ -27,7 +27,8 @@ export const ButtonLink = styled.a`
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
-  transition: box-shadow 0.3s, background-color 0.3s;
+  transition: box-shadow ${({ theme }) => theme.animation},
+    background-color ${({ theme }) => theme.animation};
 
   ${({ hero }) =>
     hero &&
