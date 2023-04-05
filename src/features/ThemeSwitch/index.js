@@ -15,7 +15,7 @@ const ThemeSwitch = () => {
 
   return (
     <Positioned>
-      <Text overlay>Dark mode on</Text>
+      <Text overlayed>Dark mode on</Text>
       <Wrapper>
         <Text>Dark mode off</Text>
         <StyledThemeSwitch onClick={() => dispatch(toggleTheme())}>

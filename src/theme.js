@@ -4,14 +4,14 @@ const common = {
     large: 1200,
   },
   shadow: {
-    thin: "0px 4px 12px rgba(186, 199, 213, 0.5)",
+    thin: "0px 4px 12px rgba(186, 199, 213, 0.1)",
     thick: `0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03)`,
   },
   white: "#FFFFFF",
   animation: "0.3s",
-  themeAnimation: "1s 0.2s",
-  switchAnimation: "0.6s cubic-bezier(0.68, -0.60, 0.68, 0.90) 0s",
+  themeAnimation: "0.5s 0.25s",
+  switchAnimation: "0.6s cubic-bezier(0.66, -0.60, 0.66, 0.90) 0s",
 };
 
 const color = {
@@ -67,6 +67,7 @@ export const dark = {
     text: color.dodgerBlue,
     underline: color.semiTransparentLighterIron,
     hover: color.scienceBlue,
+    underlineHover: color.dodgerBlue,
     active: color.parsley,
   },
   icon: {
@@ -109,6 +110,7 @@ export const light = {
     text: color.scienceBlue,
     underline: color.semiTransparentIron,
     hover: color.dodgerBlue,
+    underlineHover: color.semiTransparentDarkerScienceBlue,
     active: color.parsley,
   },
   icon: {

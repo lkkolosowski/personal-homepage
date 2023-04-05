@@ -37,8 +37,8 @@ export const Text = styled.span`
   transition: ${({ theme }) => theme.themeAnimation};
   opacity: ${({ theme }) => theme.switch.textModeOff};
 
-  ${({ overlay }) =>
-    overlay &&
+  ${({ overlayed }) =>
+    overlayed &&
     css`
       position: absolute;
       opacity: ${({ theme }) => theme.switch.textModeOn};

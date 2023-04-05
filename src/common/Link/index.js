@@ -4,10 +4,12 @@ export const TextLink = styled.a`
   color: ${({ theme }) => theme.link.text};
   text-decoration: none;
   border-bottom: 1px solid ${({ theme }) => theme.link.underline};
-  transition: border-bottom ${({ theme }) => theme.themeAnimation}, color ${({ theme }) => theme.animation};
+  transition: border-bottom ${({ theme }) => theme.animation},
+    color ${({ theme }) => theme.animation};
 
   &:hover {
     color: ${({ theme }) => theme.link.hover};
+    border-bottom: 1px solid ${({ theme }) => theme.link.underlineHover};
   }
 `;
 
