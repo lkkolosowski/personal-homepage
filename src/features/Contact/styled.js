@@ -6,6 +6,7 @@ export const Title = styled.h2`
   line-height: 1.2;
   margin: 0;
   color: ${({ theme }) => theme.textPrimary};
+  transition: color 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 18px;
@@ -20,6 +21,7 @@ export const Subtitle = styled.div`
   line-height: 16px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.textAlternative};
+  transition: color 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin-bottom: 8px;
@@ -31,6 +33,7 @@ export const Paragraph = styled.p`
   font-size: 18px;
   line-height: 1.4;
   max-width: 670px;
+  transition: color 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 14px;
@@ -41,6 +44,7 @@ export const Paragraph = styled.p`
 export const IconLink = styled.a`
   & > svg > path {
     fill: ${({ theme }) => theme.icon.background};
+    transition: 0.3s;
   }
 
   &:hover > svg > path {

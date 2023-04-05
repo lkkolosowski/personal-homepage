@@ -7,7 +7,7 @@ export const StyledSection = styled.section`
   border-radius: 4px;
   margin-top: 72px;
   padding: 32px;
-  transition: background-color 1.2s cubic-bezier(0, 0, 0.2, 1) 0s;
+  transition: background-color 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin-top: 50px;
@@ -17,6 +17,7 @@ export const StyledSection = styled.section`
 
 export const SectionBody = styled.div`
   color: ${({ theme }) => theme.textAlternative};
+  transition: color 0.3s;
 `;
 
 export const Title = styled.h2`
@@ -26,6 +27,7 @@ export const Title = styled.h2`
   margin: 0;
   padding-bottom: 15px;
   border-bottom: 1px solid ${({ theme }) => theme.underline};
+  transition: color 0.3s, border-bottom 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;

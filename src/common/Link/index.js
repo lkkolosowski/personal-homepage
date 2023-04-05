@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 export const TextLink = styled.a`
   color: ${({ theme }) => theme.link.text};
   text-decoration: none;
-  border-bottom: 1px solid
-    ${({ theme }) => theme.link.underline};
+  border-bottom: 1px solid ${({ theme }) => theme.link.underline};
+  transition: border-bottom 0.3s;
 
   &:hover {
     color: ${({ theme }) => theme.link.hover};
@@ -26,7 +26,8 @@ export const ButtonLink = styled.a`
   border: 1px solid ${({ theme }) => theme.button.border};
   border-radius: 4px;
   text-decoration: none;
-  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  transition: box-shadow 0.3s, background-color 0.3s;
 
   ${({ hero }) =>
     hero &&
@@ -35,7 +36,6 @@ export const ButtonLink = styled.a`
     `};
 
   &:hover {
-    cursor: pointer;
     box-shadow: ${({ theme }) => theme.button.hover} 0px 0px 0px 2px;
   }
 

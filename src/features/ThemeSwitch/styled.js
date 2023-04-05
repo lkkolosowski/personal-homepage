@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 16px;
+  top: 120px;
+  right: 16px;
 `;
 
 export const StyledThemeSwitch = styled.button`

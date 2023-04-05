@@ -6,7 +6,7 @@ export const StyledTile = styled.article`
   border-radius: 4px;
   border: 6px solid ${({ theme }) => theme.tile.border};
   padding: 50px;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s, background-color 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     padding: 24px;
@@ -19,6 +19,7 @@ export const StyledTile = styled.article`
 
 export const TileBody = styled.div`
   color: ${({ theme }) => theme.textAlternative};
+  transition: color 0.3s;
 `;
 
 export const Title = styled.h2`
