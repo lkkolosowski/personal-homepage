@@ -79,8 +79,8 @@ export const dark = {
     switcher: color.white,
     translate: transform.right,
     icon: color.mineShaft,
-    textModeOff: opacity.visible,
-    textModeOn: opacity.invisible,
+    textModeOff: opacity.invisible,
+    textModeOn: opacity.visible,
   },
 };
 
@@ -121,7 +121,7 @@ export const light = {
     switcher: color.slateGray,
     translate: transform.left,
     icon: color.white,
-    textModeOff: opacity.invisible,
-    textModeOn: opacity.visible,
+    textModeOff: opacity.visible,
+    textModeOn: opacity.invisible,
   },
 };

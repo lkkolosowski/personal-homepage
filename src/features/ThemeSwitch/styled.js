@@ -43,6 +43,10 @@ export const Text = styled.span`
       position: absolute;
       opacity: ${({ theme }) => theme.switch.textModeOn};
     `};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    display: none;
+  }
 `;
 
 export const StyledThemeSwitch = styled.button`
