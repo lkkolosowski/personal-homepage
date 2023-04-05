@@ -2,13 +2,49 @@
 
 https://lkkolosowski.github.io/personal-homepage/
 
-## Personal Homepage
+## Preview
 
-Looking for the perfect frontend development? You are in the right place. Get the professional results you're looking for. Your work will be done on time and according to your requirements. Just reach out and let me know your needs.
+![personal homepage preview](preview.gif)
+
+## Description
+
+Here is my personal homepage – virtual business card.  If you have any questions, do not hesitate to send me a message! I also
+invite you to visit my social media profiles
 
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technologies
+
+### Basics
+- Semantic HTML
+- normalize.css
+- CSS Flex
+- CSS Grid
+- JS Objects
+- JS Array
+- Immutability
+
+### Useful Libraries
+- Babel
+- WebPack
+- styled-components
+
+### React
+- Create React App
+- useState, useEffect
+- Custom Hooks
+- React-Redux
+
+### Redux
+- Redux-Saga
+- Redux-Router
+- Redux (Toolkit)
+
+### Others
+- localStorage
+- Generator function*
 
 ## Available Scripts
 
