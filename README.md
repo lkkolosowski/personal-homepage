@@ -8,7 +8,7 @@ https://lkkolosowski.github.io/personal-homepage/
 
 ## Description
 
-Here is my personal homepage – virtual business card.  If you have any questions, do not hesitate to send me a message! I also
+Here is my personal homepage – virtual business card. If you have any questions, do not hesitate to send me a message! I also
 invite you to visit my social media profiles
 
 ## Getting Started with Create React App
