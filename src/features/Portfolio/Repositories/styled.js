@@ -5,7 +5,7 @@ export const StyledRepositories = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 32px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     grid-template-columns: 1fr;
     gap: 16px;
   }
