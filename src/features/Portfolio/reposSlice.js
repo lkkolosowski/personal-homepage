@@ -5,22 +5,21 @@ export const reposSlice = createSlice({
   initialState: {
     status: "initial",
     repos: [],
-    error: null,
+    repositories: null,
   },
   reducers: {
-    fetchReposStart: (state) => {
-      state.status = "loading";
-    },
-    fetchReposSuccess: (state, action) => {
-      state.status = "success";
-      state.repos = action.payload;
-      state.error = null;
-    },
-    fetchReposFailure: (state, action) => {
-      state.status = "error";
-      state.repos = [];
-      state.error = action.payload;
-    },
+    fetchReposStart: () => ({
+      status: "loading",
+      repos: null,
+    }),
+    fetchReposSuccess: (_, { payload: repositories }) => ({
+      status: "success",
+      repos: repositories,
+    }),
+    fetchReposFailure: () => ({
+      status: "error",
+      repos: null,
+    }),
   },
 });
 

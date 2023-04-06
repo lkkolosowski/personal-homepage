@@ -1,5 +1,6 @@
-import { ButtonLink } from "../../../common/Link";
-import { github } from "../../../nameplate";
+
+import { ButtonLink } from "../../../../common/Link";
+import { github } from "../../../../nameplate";
 import { Wrapper, Title, Paragraph, Icon } from "./styled";
 
 const Failure = () => (

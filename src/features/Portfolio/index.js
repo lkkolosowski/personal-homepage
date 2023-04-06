@@ -2,15 +2,19 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ReactComponent as GithubIcon } from "../../icons/github2.svg";
 import { github } from "../../nameplate";
-import { StyledPortfolio, Header, Title, Subtitle, IconLink } from "./styled";
+import {
+  StyledPortfolio,
+  Header,
+  Title,
+  Subtitle,
+  IconLink,
+} from "./styled";
 import {
   fetchReposStart,
   selectRepos,
   selectReposStatus,
-} from "./Repositories/reposSlice";
-import Repositories from "./Repositories";
-import Loader from "./Loader";
-import Failure from "./Failure";
+} from "./reposSlice";
+import Content from "./Content";
 
 const Portfolio = () => {
   const dispatch = useDispatch();
@@ -30,17 +34,7 @@ const Portfolio = () => {
         <Title>Portfolio</Title>
         <Subtitle>My recent projects</Subtitle>
       </Header>
-      {(() => {
-        if (status === "loading") {
-          return <Loader />;
-        }
-
-        if (status === "error") {
-          return <Failure />;
-        }
-
-        return <Repositories repositories={repos} />;
-      })()}
+      <Content status={status} repositories={repos} />
     </StyledPortfolio>
   );
 };

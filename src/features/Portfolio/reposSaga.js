@@ -1,18 +1,18 @@
-import getRepos from "./getRepos";
 import { call, delay, put, takeLatest } from "redux-saga/effects";
 import {
   fetchReposStart,
   fetchReposSuccess,
   fetchReposFailure,
 } from "./reposSlice";
+import getRepos from "./getRepos";
 
-function* fetchReposHandler(action) {
+function* fetchReposHandler() {
   try {
-    yield delay(1900);
-    const repos = yield call(getRepos, action.token);
+    yield delay(2000);
+    const repos = yield call(getRepos);
     yield put(fetchReposSuccess(repos));
   } catch (error) {
-    yield put(fetchReposFailure(error));
+    yield put(fetchReposFailure());
   }
 }
 
