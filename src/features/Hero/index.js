@@ -16,7 +16,7 @@ const Hero = () => (
       <Subtitle>Hello, my name is</Subtitle>
       <Title>{name}</Title>
       <HeaderParagraph>{description}</HeaderParagraph>
-      <ButtonLink hero href={`mailto:${email}`}>
+      <ButtonLink hero title={email} href={`mailto:${email}`}>
         <Icon />
         Hire me
       </ButtonLink>
