@@ -34,6 +34,7 @@ export const Subtitle = styled.div`
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+  letter-spacing: normal;
   transition: color ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {

@@ -19,6 +19,7 @@ export const Subtitle = styled.div`
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
+  letter-spacing: normal;
   color: ${({ theme }) => theme.textAlternative};
   transition: color ${({ theme }) => theme.themeAnimation};
 
