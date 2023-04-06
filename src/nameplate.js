@@ -18,6 +18,7 @@ export const email = "lkkolosowski@gmail.com";
 export const github = "https://github.com/lkkolosowski";
 export const linkedin =
   "https://www.linkedin.com/in/%C5%82ukasz-ko%C5%82osowski-12a213235/";
+export const instagram = "https://www.instagram.com/luki.kol/";
 
 export const skills = [
   "Semantic & accessible HTML",
