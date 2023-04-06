@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { StyledPortfolio, Header, Icon, Title, Subtitle } from "./styled";
+import { ReactComponent as GithubIcon } from "../../icons/github2.svg";
+import { github } from "../../nameplate";
+import { StyledPortfolio, Header, Title, Subtitle, IconLink } from "./styled";
 import {
   fetchReposStart,
   selectRepos,
@@ -22,7 +24,9 @@ const Portfolio = () => {
   return (
     <StyledPortfolio>
       <Header>
-        <Icon />
+        <IconLink target="_blank" href={github}>
+          <GithubIcon />
+        </IconLink>
         <Title>Portfolio</Title>
         <Subtitle>My recent projects</Subtitle>
       </Header>

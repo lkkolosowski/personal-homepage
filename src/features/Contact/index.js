@@ -8,7 +8,7 @@ const Contact = () => (
   <footer>
     <Subtitle>Let's talk!</Subtitle>
     <Title>
-      <TextLink href={`mailto:${email}`}>{email}</TextLink>
+      <TextLink text href={`mailto:${email}`}>{email}</TextLink>
     </Title>
     <Paragraph>{information}</Paragraph>
     <Socials>

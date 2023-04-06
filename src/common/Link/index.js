@@ -11,6 +11,12 @@ export const TextLink = styled.a`
     color: ${({ theme }) => theme.link.hover};
     border-bottom: 1px solid ${({ theme }) => theme.link.underlineHover};
   }
+
+  ${({ text }) =>
+    text &&
+    css`
+      color: ${({ theme }) => theme.textPrimary};
+    `};
 `;
 
 export const ButtonLink = styled.a`

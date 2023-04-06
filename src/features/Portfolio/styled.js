@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as GithubIcon } from "../../icons/github.svg";
 
 export const StyledPortfolio = styled.section`
   margin: 72px 0;
@@ -44,18 +43,23 @@ export const Subtitle = styled.div`
   }
 `;
 
-export const Icon = styled(GithubIcon)`
-  width: 40px;
-  height: 40px;
-  margin-bottom: 12px;
-
-  & > path {
-    fill: ${({ theme }) => theme.primary};
-    transition: ${({ theme }) => theme.themeAnimation};
+export const IconLink = styled.a`
+  & > svg > path {
+    fill: ${({ theme }) => theme.link.text};
+    transition: ${({ theme }) => theme.animation};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    width: 32px;
-    height: 32px;
+  &:hover > svg > path {
+    fill: ${({ theme }) => theme.link.hover};
+  }
+
+  & > svg {
+    width: 40px;
+    height: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+      width: 32px;
+      height: 32px;
+    }
   }
 `;
