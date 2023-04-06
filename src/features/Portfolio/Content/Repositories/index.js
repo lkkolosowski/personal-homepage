@@ -11,7 +11,7 @@ const Repositories = ({ repositories }) => {
           <Tile
             key={id}
             title={
-              <TextLink target={"_blank"} href={html_url}>
+              <TextLink target={"_blank"} href={homepage}>
                 {capitalizeWords(name)}
               </TextLink>
             }
