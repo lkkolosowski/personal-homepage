@@ -1,15 +1,9 @@
 import Tile from "../../../../common/Tile";
 import { TextLink } from "../../../../common/Link";
 import { StyledRepositories, Description, List, Item } from "./styled";
+import { capitalizeWords } from "./utils";
 
 const Repositories = ({ repositories }) => {
-  function capitalizeWords(string) {
-    return string
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  }
-
   return (
     <StyledRepositories>
       {repositories.map(
