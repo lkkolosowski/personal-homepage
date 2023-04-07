@@ -10,24 +10,3 @@ export const StyledRepositories = styled.div`
     gap: 16px;
   }
 `;
-
-export const Description = styled.p`
-  margin: 24px 0;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    margin: 16px 0;
-  }
-`;
-
-export const List = styled.ul`
-  display: grid;
-  gap: 8px;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-`;
-
-export const Item = styled.li`
-  display: grid;
-  grid-template-columns: 4em 1fr;
-`;
