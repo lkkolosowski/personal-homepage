@@ -8,13 +8,13 @@ import ThemeSwitch from "./features/ThemeSwitch";
 import { ThemeProvider } from "styled-components";
 import { light, dark } from "./theme";
 import { GlobalStyle } from "./GlobalStyle";
-import { selectTheme } from "./features/ThemeSwitch/themeSlice";
+import { selectIsDarkTheme } from "./features/ThemeSwitch/themeSlice";
 import { useSelector } from "react-redux";
 
 function App() {
-  const theme = useSelector(selectTheme);
+  const isDarkTheme = useSelector(selectIsDarkTheme);
   return (
-    <ThemeProvider theme={theme === "light" ? light : dark}>
+    <ThemeProvider theme={isDarkTheme ? dark : light}>
       <GlobalStyle />
       <Container>
         <ThemeSwitch />
