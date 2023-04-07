@@ -1,7 +1,6 @@
-import Tile from "../../../../common/Tile";
-import { TextLink } from "../../../../common/Link";
-import { StyledRepositories, Description, List, Item } from "./styled";
-import { capitalizeWords } from "./utils";
+import Tile from "./Tile";
+
+import { StyledRepositories } from "./styled";
 
 const Repositories = ({ repositories }) => {
   return (
@@ -10,34 +9,10 @@ const Repositories = ({ repositories }) => {
         ({ id, name, description, homepage, html_url }) => (
           <Tile
             key={id}
-            title={
-              <TextLink target={"_blank"} href={homepage}>
-                {capitalizeWords(name)}
-              </TextLink>
-            }
-            content={
-              <>
-                <Description>{description}</Description>
-                <List>
-                  <Item>
-                    <span>Demo:</span>
-                    <span>
-                      <TextLink target={"_blank"} href={homepage}>
-                        https://{name}.demo
-                      </TextLink>
-                    </span>
-                  </Item>
-                  <Item>
-                    <span>Code:</span>
-                    <span>
-                      <TextLink target={"_blank"} href={html_url}>
-                        https://{name}.code
-                      </TextLink>
-                    </span>
-                  </Item>
-                </List>
-              </>
-            }
+            name={name}
+            description={description}
+            homepage={homepage}
+            html_url={html_url}
           />
         )
       )}

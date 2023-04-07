@@ -6,7 +6,8 @@ export const StyledTile = styled.article`
   border-radius: 4px;
   border: 6px solid ${({ theme }) => theme.tile.border};
   padding: 50px;
-  transition: border-color ${({ theme }) => theme.animation}, background-color ${({ theme }) => theme.themeAnimation};
+  transition: border-color ${({ theme }) => theme.animation},
+    background-color ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     padding: 24px;
@@ -31,4 +32,25 @@ export const Title = styled.h2`
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 16px;
   }
+`;
+
+export const Description = styled.p`
+  margin: 24px 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    margin: 16px 0;
+  }
+`;
+
+export const List = styled.ul`
+  display: grid;
+  gap: 8px;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+`;
+
+export const Item = styled.li`
+  display: grid;
+  grid-template-columns: 4em 1fr;
 `;
