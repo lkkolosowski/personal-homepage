@@ -60,7 +60,7 @@ export const dark = {
     text: color.white,
     background: color.scienceBlue,
     border: color.semiTransparentIron,
-    hover: color.anakiwa,
+    hover: color.shipCove,
     active: color.parsley,
   },
   link: {
