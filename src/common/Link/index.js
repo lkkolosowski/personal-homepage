@@ -38,8 +38,8 @@ export const ButtonLink = styled.a`
   transition: box-shadow ${({ theme }) => theme.animation},
     background-color ${({ theme }) => theme.animation};
 
-  ${({ hero }) =>
-    hero &&
+  ${({ wide }) =>
+    wide &&
     css`
       display: flex;
     `};
