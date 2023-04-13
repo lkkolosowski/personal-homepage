@@ -1,5 +1,12 @@
 import { TextLink } from "../../../../../common/Link";
-import { StyledTile, Title, TileBody, Description, List, Item } from "./styled";
+import {
+  StyledTile,
+  Title,
+  TileBody,
+  Description,
+  List,
+  Item,
+} from "./styled";
 import { capitalizeWords } from "./utils";
 
 const Tile = ({ name, description, homepage, html_url }) => (
