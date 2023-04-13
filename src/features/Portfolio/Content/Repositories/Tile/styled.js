@@ -21,6 +21,10 @@ export const StyledTile = styled.article`
 export const TileBody = styled.div`
   color: ${({ theme }) => theme.textAlternative};
   transition: color ${({ theme }) => theme.themeAnimation};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 14px;
+  }
 `;
 
 export const Title = styled.h2`
