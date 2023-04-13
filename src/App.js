@@ -4,11 +4,11 @@ import { skills, goals } from "./nameplate";
 import Skillset from "./features/Skillset";
 import Portfolio from "./features/Portfolio";
 import Contact from "./features/Contact";
-import ThemeSwitch from "./features/ThemeSwitch";
+import ThemeSwitch from "./common/ThemeSwitch";
 import { ThemeProvider } from "styled-components";
 import { light, dark } from "./theme";
 import { GlobalStyle } from "./GlobalStyle";
-import { selectIsDarkTheme } from "./features/ThemeSwitch/themeSlice";
+import { selectIsDarkTheme } from "./common/ThemeSwitch/themeSlice";
 import { useSelector } from "react-redux";
 
 function App() {
