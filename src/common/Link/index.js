@@ -36,7 +36,7 @@ export const ButtonLink = styled.a`
   text-decoration: none;
   cursor: pointer;
   transition: box-shadow ${({ theme }) => theme.animation},
-    background-color ${({ theme }) => theme.animation};
+    background-color ${({ theme }) => theme.themeAnimation};
 
   ${({ wide }) =>
     wide &&

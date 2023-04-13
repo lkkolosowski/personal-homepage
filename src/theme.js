@@ -58,7 +58,7 @@ export const dark = {
   },
   button: {
     text: color.white,
-    background: color.scienceBlue,
+    background: color.dodgerBlue,
     border: color.semiTransparentIron,
     hover: color.shipCove,
     active: color.parsley,
