@@ -41,6 +41,7 @@ export const usePhrases = (props) => {
           }
         }
       }
+
       const spedUp = 40;
       const normalSpeed = 80;
       const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
