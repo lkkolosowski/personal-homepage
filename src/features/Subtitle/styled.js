@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledSubtitle = styled.div`
-  min-height: 16px;
   margin-top: 12px;
   margin-bottom: 12px;
   font-weight: 700;
@@ -22,7 +21,6 @@ export const Indicator = styled.span`
   height: 16px;
   width: 8px;
   margin: 0 0 -3px 1px;
-  background-color: ${({ theme }) => theme.indicator};
   transition: background-color ${({ theme }) => theme.themeAnimation};
   animation: blink 1s infinite;
 
@@ -34,10 +32,10 @@ export const Indicator = styled.span`
       background-color: transparent;
     }
     50% {
-      background-color: ${({ theme }) => theme.tile.hover};
+      background-color: ${({ theme }) => theme.indicator};
     }
     99% {
-      background-color: ${({ theme }) => theme.tile.hover};
+      background-color: ${({ theme }) => theme.indicator};
     }
     100% {
       background-color: transparent;
