@@ -15,14 +15,11 @@ export const information = (
   </>
 );
 export const welcomePhrases = [
-  "Hello, my name is Łukasz.",
+  "Hello, my name is Łukasz!",
   "I love to code.",
   "Contact me :)",
 ];
-export const goodbyePhrases = [
-  "Let's talk!",
-  "Send me a message :)",
-];
+export const goodbyePhrases = ["Let's talk!", "Check out my socials.", "Send me a message :)"];
 export const email = "lkkolosowski@gmail.com";
 export const github = "https://github.com/lkkolosowski";
 export const linkedin = "https://www.linkedin.com/in/lkkolosowski/";
@@ -33,7 +30,6 @@ export const skills = [
   "Responsive Web Design",
   "Teamwork",
   "CSS BEM convention",
-  "CSS Flexbox, Grid",
   "React Router",
   "Redux-Saga",
   "Redux (Toolkit)",
@@ -49,10 +45,8 @@ export const skills = [
 
 export const goals = [
   "React Context",
-  "Cypress",
   "TypeScript",
-  "Node.js",
-  "Unit testing",
+  "React Native",
   "JS classes",
   "Tanstack Query",
   "SolidJS",
