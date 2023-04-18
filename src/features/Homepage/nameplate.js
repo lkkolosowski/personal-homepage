@@ -29,6 +29,7 @@ export const github = "https://github.com/lkkolosowski";
 export const linkedin = "https://www.linkedin.com/in/lkkolosowski/";
 export const instagram = "https://www.instagram.com/luki.kol/";
 
+export const skillsTitle = <>My skillset includes&nbsp;🛠️</>;
 export const skills = [
   "Semantic & accessible HTML",
   "Responsive Web Design",
@@ -47,6 +48,7 @@ export const skills = [
   "NPM",
 ];
 
+export const goalsTitle = <>What I want to learn next&nbsp;🚀</>;
 export const goals = [
   "React Context",
   "TypeScript",

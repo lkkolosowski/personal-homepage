@@ -1,8 +1,8 @@
 import { styleIcon } from "./styled";
-import { github, linkedin, instagram } from "../../../nameplate";
-import { ReactComponent as GithubIcon } from "../../../icons/github.svg";
-import { ReactComponent as LinkedinIcon } from "../../../icons/linkedin.svg";
-import { ReactComponent as InstagramIcon } from "../../../icons/instagram.svg";
+import { github, linkedin, instagram } from "../../nameplate";
+import { ReactComponent as GithubIcon } from "../../../../icons/github.svg";
+import { ReactComponent as LinkedinIcon } from "../../../../icons/linkedin.svg";
+import { ReactComponent as InstagramIcon } from "../../../../icons/instagram.svg";
 
 export const socials = [
   {

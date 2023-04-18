@@ -1,5 +1,5 @@
-import { ButtonLink } from "../../common/Link";
-import { name, description, email, welcomePhrases } from "../../nameplate";
+import { ButtonLink } from "../../../common/Link";
+import { name, description, email, welcomePhrases } from "../nameplate";
 import Subtitle from "../Subtitle";
 import { usePhrases } from "../usePhrases";
 import {

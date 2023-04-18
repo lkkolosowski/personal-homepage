@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as EclipseIcon } from "../../icons/eclipse.svg";
+import { ReactComponent as EclipseIcon } from "../../../icons/eclipse.svg";
 
 export const StyledSection = styled.section`
   background-color: ${({ theme }) => theme.tile.background};
@@ -27,7 +27,8 @@ export const Title = styled.h2`
   margin: 0;
   padding-bottom: 15px;
   border-bottom: 1px solid ${({ theme }) => theme.underline};
-  transition: color ${({ theme }) => theme.themeAnimation}, border-bottom ${({ theme }) => theme.themeAnimation};
+  transition: color ${({ theme }) => theme.themeAnimation},
+    border-bottom ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;

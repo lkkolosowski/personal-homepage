@@ -1,5 +1,5 @@
-import { information, email, goodbyePhrases } from "../../nameplate";
-import { TextLink } from "../../common/Link";
+import { information, email, goodbyePhrases } from "../nameplate";
+import { TextLink } from "../../../common/Link";
 import Socials from "./Socials";
 import Subtitle from "../Subtitle";
 import { usePhrases } from "../usePhrases";

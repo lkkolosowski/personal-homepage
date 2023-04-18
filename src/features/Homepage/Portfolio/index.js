@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ReactComponent as GithubIcon } from "../../icons/github.svg";
-import { github } from "../../nameplate";
+import { ReactComponent as GithubIcon } from "../../../icons/github.svg";
+import { github } from "../nameplate";
 import {
   StyledPortfolio,
   Header,
