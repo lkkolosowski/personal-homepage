@@ -12,19 +12,22 @@ export const usePhrases = (props) => {
     let isEnd = false;
 
     const loop = () => {
+      const spedUp = 40;
+      const normalSpeed = 80;
+      const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+
       isEnd = false;
+      setPhrase(currentPhrase.join(""));
 
       if (i < phrases.length) {
         if (!isDeleting && j <= phrases[i].length) {
           currentPhrase.push(phrases[i][j]);
           j++;
-          setPhrase(currentPhrase.join(""));
         }
 
         if (isDeleting && j <= phrases[i].length) {
           currentPhrase.pop(phrases[i][j]);
           j--;
-          setPhrase(currentPhrase.join(""));
         }
 
         if (j === phrases[i].length) {
@@ -42,9 +45,6 @@ export const usePhrases = (props) => {
         }
       }
 
-      const spedUp = 40;
-      const normalSpeed = 80;
-      const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
       setTimeout(loop, time);
     };
 
