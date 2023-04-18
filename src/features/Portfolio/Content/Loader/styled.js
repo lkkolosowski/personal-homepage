@@ -14,6 +14,7 @@ export const StyledLoader = styled.div`
   max-width: 75%;
   aspect-ratio: 1 / 1;
   animation: spin 1.5s linear infinite;
+  transition: ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     border-width: 8px;
