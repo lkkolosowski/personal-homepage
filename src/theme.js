@@ -51,6 +51,7 @@ export const dark = {
   background: color.mineShaft,
   border: color.semiTransparentMineShaft,
   underline: color.semiTransparentLighterIron,
+  indicator: color.semiTransparentDarkerScienceBlue,
   tile: {
     background: color.semiTransparentMineShaft,
     border: color.semiTransparentLighterIron,
@@ -94,6 +95,7 @@ export const light = {
   background: color.whiteLilac,
   border: color.semiTransparentIron,
   underline: color.semiTransparentIron,
+  indicator: color.semiTransparentScienceBlue,
   tile: {
     background: color.white,
     border: color.semiTransparentIron,

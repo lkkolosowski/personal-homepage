@@ -27,21 +27,6 @@ export const Title = styled.h1`
   }
 `;
 
-export const Subtitle = styled.div`
-  margin-top: 12px;
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  text-transform: uppercase;
-  letter-spacing: normal;
-  transition: color ${({ theme }) => theme.themeAnimation};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    margin-bottom: 8px;
-  }
-`;
-
 export const HeaderParagraph = styled.p`
   margin: 35px 0 32px;
   font-size: 20px;

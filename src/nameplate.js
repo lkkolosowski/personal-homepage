@@ -14,10 +14,18 @@ export const information = (
     👇
   </>
 );
+export const welcomePhrases = [
+  "Hello, my name is Łukasz.",
+  "I love to code.",
+  "Contact me :)",
+];
+export const goodbyePhrases = [
+  "Let's talk!",
+  "Send me a message :)",
+];
 export const email = "lkkolosowski@gmail.com";
 export const github = "https://github.com/lkkolosowski";
-export const linkedin =
-  "https://www.linkedin.com/in/lkkolosowski/";
+export const linkedin = "https://www.linkedin.com/in/lkkolosowski/";
 export const instagram = "https://www.instagram.com/luki.kol/";
 
 export const skills = [

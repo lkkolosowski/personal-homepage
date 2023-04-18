@@ -1,27 +1,32 @@
 import { ButtonLink } from "../../common/Link";
-import { name, description, email } from "../../nameplate";
+import { name, description, email, welcomePhrases } from "../../nameplate";
+import Subtitle from "../Subtitle";
+import { usePhrases } from "../usePhrases";
 import {
   StyledHeader,
   ProfilePicture,
   Title,
-  Subtitle,
   HeaderParagraph,
   Icon,
 } from "./styled";
 
-const Hero = () => (
-  <StyledHeader>
-    <ProfilePicture />
-    <section>
-      <Subtitle>Hello, my name is</Subtitle>
-      <Title>{name}</Title>
-      <HeaderParagraph>{description}</HeaderParagraph>
-      <ButtonLink title={email} href={`mailto:${email}`}>
-        <Icon />
-        Hire me
-      </ButtonLink>
-    </section>
-  </StyledHeader>
-);
+const Hero = () => {
+  const phrase = usePhrases(welcomePhrases);
+
+  return (
+    <StyledHeader>
+      <ProfilePicture />
+      <section>
+        <Subtitle content={phrase} />
+        <Title>{name}</Title>
+        <HeaderParagraph>{description}</HeaderParagraph>
+        <ButtonLink title={email} href={`mailto:${email}`}>
+          <Icon />
+          Hire me
+        </ButtonLink>
+      </section>
+    </StyledHeader>
+  );
+};
 
 export default Hero;

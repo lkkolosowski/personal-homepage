@@ -13,21 +13,6 @@ export const Title = styled.h2`
   }
 `;
 
-export const Subtitle = styled.div`
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  text-transform: uppercase;
-  letter-spacing: normal;
-  color: ${({ theme }) => theme.textAlternative};
-  transition: color ${({ theme }) => theme.themeAnimation};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    margin-bottom: 8px;
-  }
-`;
-
 export const Paragraph = styled.p`
   margin: 24px 0 56px;
   font-size: 18px;
