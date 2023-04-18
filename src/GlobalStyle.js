@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 18px;
     letter-spacing: 0.05em;
     word-break: break-word;
-    user-select: none;
     background-color: ${({ theme }) => theme.background};
     transition: background-color ${({ theme }) => theme.themeAnimation};
 
