@@ -20,7 +20,7 @@ const Hero = () => {
         <Subtitle content={phrase} />
         <Title>{name}</Title>
         <HeaderParagraph>{description}</HeaderParagraph>
-        <ButtonLink title={email} href={`mailto:${email}`}>
+        <ButtonLink wide title={email} href={`mailto:${email}`}>
           <Icon />
           Hire me
         </ButtonLink>
