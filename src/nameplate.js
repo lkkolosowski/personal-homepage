@@ -19,7 +19,11 @@ export const welcomePhrases = [
   "I love to code.",
   "Contact me :)",
 ];
-export const goodbyePhrases = ["Let's talk!", "Check out my socials.", "Send me a message :)"];
+export const goodbyePhrases = [
+  "Let's talk!",
+  "Check out my socials.",
+  "Send me a message :)",
+];
 export const email = "lkkolosowski@gmail.com";
 export const github = "https://github.com/lkkolosowski";
 export const linkedin = "https://www.linkedin.com/in/lkkolosowski/";
