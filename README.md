@@ -11,8 +11,6 @@ https://lkkolosowski.github.io/personal-homepage/
 Here is my personal homepage – virtual business card. If you have any questions, do not hesitate to send me a message! I also
 invite you to visit my social media profiles.
 
-## Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Technologies
@@ -30,6 +28,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Babel
 - WebPack
 - styled-components
+- styled-normalize
 
 ### React
 - Create React App
@@ -39,7 +38,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Redux
 - Redux-Saga
-- Redux-Router
 - Redux (Toolkit)
 
 ### Others
