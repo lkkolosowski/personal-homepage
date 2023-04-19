@@ -17,11 +17,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Basics
 - Semantic HTML
-- normalize.css
-- CSS Flex
-- CSS Grid
-- JS Objects
-- JS Array
+- CSS Grid, Flex
+- JS Objects, Arrays
 - Immutability
 
 ### Useful Libraries
