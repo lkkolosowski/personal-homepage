@@ -16,12 +16,35 @@ export const IconLink = styled.a`
     transition: ${({ theme }) => theme.animation};
   }
 
+  & > svg {
+    border-radius: 50%;
+  }
+
+  &:hover > svg {
+    animation: shake 0.4s;
+  }
+
   &:hover > svg > path {
     fill: ${({ theme }) => theme.icon.hover};
   }
+
+  @keyframes shake {
+    20% {
+      transform: rotate(13deg);
+    }
+    40% {
+      transform: rotate(-12deg);
+    }
+    60% {
+      transform: rotate(6deg);
+    }
+    80% {
+      transform: rotate(-4deg);
+    }
+  }
 `;
 
-export const styleIcon = (Icon) => styled(Icon)`
+export const styledIcon = (Icon) => styled(Icon)`
   width: 48px;
   height: 48px;
 
