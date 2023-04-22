@@ -53,10 +53,10 @@ export const goals = [
   "React Context",
   "TypeScript",
   "React Native",
-  "JS classes",
   "Tanstack Query",
   "SolidJS",
   "Vue",
   "Jest, RTL",
   "Vite Tool",
+  "Next.js",
 ];
