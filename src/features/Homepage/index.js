@@ -3,15 +3,13 @@ import ThemeSwitch from "../../common/ThemeSwitch";
 import Contact from "./Contact";
 import Hero from "./Hero";
 import Portfolio from "./Portfolio";
-import Skillset from "./Skillset";
-import { skills, goals, skillsTitle, goalsTitle } from "./nameplate";
+import Skills from "./Skills";
 
 const Homepage = () => (
   <Container>
     <ThemeSwitch />
     <Hero />
-    <Skillset title={skillsTitle} skills={skills} />
-    <Skillset title={goalsTitle} skills={goals} />
+    <Skills />
     <Portfolio />
     <Contact />
   </Container>

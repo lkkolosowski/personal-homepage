@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as EclipseIcon } from "../../../icons/eclipse.svg";
+import { ReactComponent as EclipseIcon } from "../../../../icons/eclipse.svg";
 
 export const StyledSection = styled.section`
   background-color: ${({ theme }) => theme.tile.background};
