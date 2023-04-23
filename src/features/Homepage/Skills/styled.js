@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Icon = styled.div`
-  height: 40px;
-  line-height: 40px;
-  font-size: 40px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 36px;
   margin-bottom: 3px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
