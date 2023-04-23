@@ -30,33 +30,3 @@ export const linkedin = "https://www.linkedin.com/in/lkkolosowski/";
 export const instagram = "https://www.instagram.com/luki.kol/";
 
 export const skillsTitle = <>My skillset includes&nbsp;🛠️</>;
-export const skills = [
-  "Semantic & accessible HTML",
-  "Responsive Web Design",
-  "Teamwork",
-  "CSS BEM convention",
-  "React Router",
-  "Redux-Saga",
-  "Redux (Toolkit)",
-  "React Hooks",
-  "Working with API (fetch, axios)",
-  "JavaScript ES6+",
-  "Promises, Async/Await",
-  "GitHub Pull Requests & Review",
-  "Trello",
-  "Scrum",
-  "NPM",
-];
-
-export const goalsTitle = <>What I want to learn next&nbsp;🚀</>;
-export const goals = [
-  "React Context",
-  "TypeScript",
-  "React Native",
-  "Tanstack Query",
-  "SolidJS",
-  "Vue",
-  "Jest, RTL",
-  "Vite Tool",
-  "Next.js",
-];

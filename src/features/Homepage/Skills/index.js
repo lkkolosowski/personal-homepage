@@ -1,12 +1,12 @@
 import Skillset from "./Skillset";
-import { skills, goals } from "../nameplate";
+import { skills, goals } from "./skillsData";
 import { Icon } from "./styled";
 
 const Skills = () => (
   <>
     <Skillset
       icon={<Icon>🛠️</Icon>}
-      title={"Current"}
+      title={"Skills"}
       subtitle={"My skillset includes"}
       skills={skills}
     />
