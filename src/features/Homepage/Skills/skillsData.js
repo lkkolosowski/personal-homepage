@@ -37,7 +37,7 @@ export const skills = [
     color: "#20232a",
   },
   {
-    name: "JS E6+",
+    name: "JS ES6+",
     Icon: styledIcon(JavascriptIcon),
     color: "#323330",
   },
