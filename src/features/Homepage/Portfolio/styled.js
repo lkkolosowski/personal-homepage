@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const IconLink = styled.a`
+  line-height: 1;
+
   & > svg > path {
     fill: ${({ theme }) => theme.link.text};
     transition: ${({ theme }) => theme.animation};
