@@ -5,7 +5,8 @@ export const SectionBody = styled.div`
   transition: color ${({ theme }) => theme.themeAnimation};
 `;
 
-export const Name = styled.span`
+export const Text = styled.span`
+  text-transform: uppercase;
   font-weight: 600;
   font-size: 16px;
   line-height: 1;
@@ -40,7 +41,6 @@ export const Card = styled.li`
 `;
 
 export const CardFront = styled.div`
-  text-transform: uppercase;
   position: relative;
   display: flex;
   gap: 16px;
@@ -96,10 +96,10 @@ export const CardBackInner = styled.div`
   justify-content: center;
   align-items: center;
   transition: background-color ${({ theme }) => theme.themeAnimation};
-  padding: 11px 24px;
+  padding: 0 12px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    padding: 11px 16px;
+    padding: 0 8px;
   }
 `;
 

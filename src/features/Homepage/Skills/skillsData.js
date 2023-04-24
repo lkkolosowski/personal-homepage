@@ -8,53 +8,50 @@ import { ReactComponent as ReduxIcon } from "../../../icons/redux.svg";
 import { ReactComponent as TypescriptIcon } from "../../../icons/typescript.svg";
 import { ReactComponent as TanstackQueryIcon } from "../../../icons/react-query.svg";
 import { ReactComponent as NextjsIcon } from "../../../icons/nextjs.svg";
-import { ReactComponent as StarRating3Icon } from "../../../icons/star-rating-3.svg";
-import { ReactComponent as StarRating4Icon } from "../../../icons/star-rating-4.svg";
-import { ReactComponent as StarRating5Icon } from "../../../icons/star-rating-5.svg";
-import { styledIcon, styledRating } from "./Skillset/styled";
+import { styledIcon } from "./Skillset/styled";
 
 export const skills = [
   {
     name: "HTML 5",
     Icon: styledIcon(HtmlIcon),
     color: "#008db9",
-    Rating: styledRating(StarRating5Icon),
+    level: "✓ Advanced",
   },
   {
     name: "CSS 3",
     Icon: styledIcon(CssIcon),
     color: "#1572b6",
-    Rating: styledRating(StarRating5Icon),
+    level: "✓ Intermediate",
   },
   {
     name: "React Router",
     Icon: styledIcon(ReactRouterIcon),
     color: "#ca4245",
-    Rating: styledRating(StarRating3Icon),
+    level: "✓ Basics",
   },
   {
     name: "Redux",
     Icon: styledIcon(ReduxIcon),
     color: "#593d88",
-    Rating: styledRating(StarRating4Icon),
+    level: "✓ Basics",
   },
   {
     name: "React",
     Icon: styledIcon(ReactIcon),
     color: "#20232a",
-    Rating: styledRating(StarRating4Icon),
+    level: "✓ Basics",
   },
   {
     name: "JS ES6+",
     Icon: styledIcon(JavascriptIcon),
     color: "#323330",
-    Rating: styledRating(StarRating5Icon),
+    level: "✓ Intermediate",
   },
   {
     name: "styled-components",
     Icon: styledIcon(StyledComponentsIcon),
     color: "#db7093",
-    Rating: styledRating(StarRating5Icon),
+    level: "✓ Intermediate",
   },
 ];
 

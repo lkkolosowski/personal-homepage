@@ -8,7 +8,7 @@ import {
   CardBack,
   CardBackInner,
   List,
-  Name,
+  Text,
 } from "./styled";
 
 const Skillset = ({ title, icon, subtitle, skills }) => (
@@ -16,21 +16,21 @@ const Skillset = ({ title, icon, subtitle, skills }) => (
     <Header icon={icon} title={title} subtitle={subtitle} />
     <SectionBody>
       <List>
-        {skills.map(({ name, Icon, color, Rating }) => (
+        {skills.map(({ name, Icon, color, level }) => (
           <Card key={name}>
             <CardFront style={{ backgroundColor: color }}>
               <CardFrontInner>
                 <Icon />
-                <Name>{name}</Name>
+                <Text>{name}</Text>
               </CardFrontInner>
               <CardBack style={{ backgroundColor: color }}>
                 <CardBackInner>
-                  {Rating ? (
-                    <Rating />
+                  {level ? (
+                    <Text>{level}</Text>
                   ) : (
                     <>
                       <Icon />
-                      <Name>{name}</Name>
+                      <Text>{name}</Text>
                     </>
                   )}
                 </CardBackInner>
