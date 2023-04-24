@@ -3,9 +3,10 @@ import Section from "../../../../common/Section";
 import {
   SectionBody,
   Card,
-  CardInner,
-  CardBody,
-  CardBodyInner,
+  CardFront,
+  CardFrontInner,
+  CardBack,
+  CardBackInner,
   List,
   Name,
 } from "./styled";
@@ -15,18 +16,26 @@ const Skillset = ({ title, icon, subtitle, skills }) => (
     <Header icon={icon} title={title} subtitle={subtitle} />
     <SectionBody>
       <List>
-        {skills.map(({ name, Icon, color }) => (
+        {skills.map(({ name, Icon, color, Rating }) => (
           <Card key={name}>
-            <CardInner style={{ backgroundColor: color }}>
-              <Icon />
-              <Name>{name}</Name>
-              <CardBody style={{ backgroundColor: color }}>
-                <CardBodyInner>
-                  <Icon />
-                  <Name>{name}</Name>
-                </CardBodyInner>
-              </CardBody>
-            </CardInner>
+            <CardFront style={{ backgroundColor: color }}>
+              <CardFrontInner>
+                <Icon />
+                <Name>{name}</Name>
+              </CardFrontInner>
+              <CardBack style={{ backgroundColor: color }}>
+                <CardBackInner>
+                  {Rating ? (
+                    <Rating />
+                  ) : (
+                    <>
+                      <Icon />
+                      <Name>{name}</Name>
+                    </>
+                  )}
+                </CardBackInner>
+              </CardBack>
+            </CardFront>
           </Card>
         ))}
       </List>

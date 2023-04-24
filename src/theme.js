@@ -18,6 +18,8 @@ const common = {
 
 const color = {
   white: "#FFFFFF",
+  transculentWhite: "#FFFFFF80",
+  transparentWhite: "#FFFFFF10",
   whiteLilac: "#FBFBFE",
   mineShaft: "#252525",
   semiTransparentMineShaft: "#363636B8",
@@ -32,6 +34,7 @@ const color = {
   dodgerBlue: "#2188FF",
   shipCove: "#6D93BE",
   mercury: "#E5E5E5",
+  transparent: "transparent",
 };
 
 const transform = {
@@ -86,6 +89,10 @@ export const dark = {
     textModeOff: opacity.invisible,
     textModeOn: opacity.visible,
   },
+  skills: {
+    front: color.transparentWhite,
+    back: color.transculentWhite,
+  },
 };
 
 export const light = {
@@ -129,5 +136,9 @@ export const light = {
     icon: color.white,
     textModeOff: opacity.visible,
     textModeOn: opacity.invisible,
+  },
+  skills: {
+    front: color.transparent,
+    back: color.transculentWhite,
   },
 };

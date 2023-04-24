@@ -17,7 +17,7 @@ export const Title = styled.h2`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 18px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
   }
 `;
 
