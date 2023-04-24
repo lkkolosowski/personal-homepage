@@ -18,11 +18,9 @@ export const List = styled.ul`
 
 export const Card = styled.li`
   perspective: 800px;
-  transition: ease-out 0.6s;
   cursor: default;
 
   &:hover > div {
-    transition-delay: 0.15s;
     transform: rotateX(180deg);
   }
 
@@ -43,7 +41,9 @@ export const CardInner = styled.div`
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
-  transition: ease-out 0.6s;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-delay: 0.1s;
   border-radius: 4px;
   box-shadow: ${({ theme }) => theme.tile.border} 0 0 0 1px;
   background-color: ${({ theme }) => theme.white};
