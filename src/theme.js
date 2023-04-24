@@ -18,11 +18,12 @@ const common = {
 
 const color = {
   white: "#FFFFFF",
-  transculentWhite: "#FFFFFF80",
+  transculentWhite: "#FFFFFF30",
   transparentWhite: "#FFFFFF10",
   whiteLilac: "#FBFBFE",
   mineShaft: "#252525",
   semiTransparentMineShaft: "#363636B8",
+  transparentMineShaft: "#36363630",
   slateGray: "#6E7E91",
   semiTransparentIron: "#D1D5DA4D",
   semiTransparentLighterIron: "#D1D5DA1A",
@@ -138,7 +139,7 @@ export const light = {
     textModeOn: opacity.invisible,
   },
   skills: {
-    front: color.transparent,
-    back: color.transculentWhite,
+    front: color.transculentWhite,
+    back: color.transparentWhite,
   },
 };

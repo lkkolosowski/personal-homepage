@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as StarsIcon } from "../../../../icons/star-rating.svg";
 
 export const SectionBody = styled.div`
   color: ${({ theme }) => theme.textAlternative};
@@ -120,12 +119,4 @@ export const styledRating = (Rating) => styled(Rating)`
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     height: 18px;
   }
-`;
-
-export const Stars = styled(StarsIcon)`
-  /* & path {
-    fill: ${({ theme }) => theme.switch.icon};
-    transition: ${({ theme }) => theme.themeAnimation};
-  } */
-  height: 20px;
 `;
