@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.a63c22c2.js",
+    "main.js": "/personal-homepage/static/js/main.c9a5c9b4.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/profile-picture.jpg": "/personal-homepage/static/media/profile-picture.a8c1887f8d37de0568d4.jpg",
     "static/media/react-query.svg": "/personal-homepage/static/media/react-query.aabaf077b85dfce1bb552fd3145596a0.svg",
@@ -8,7 +8,6 @@
     "static/media/instagram.svg": "/personal-homepage/static/media/instagram.ac575dc2f80befa7ba993f0a04ba6dda.svg",
     "static/media/brightness.svg": "/personal-homepage/static/media/brightness.265ed56c7ce199415001d346ff2142d5.svg",
     "static/media/star-rating-5.svg": "/personal-homepage/static/media/star-rating-5.f9d1928dea850c6bf138acbdad533884.svg",
-    "static/media/star-rating.svg": "/personal-homepage/static/media/star-rating.f9d1928dea850c6bf138acbdad533884.svg",
     "static/media/star-rating-4.svg": "/personal-homepage/static/media/star-rating-4.f5307570eb321cd338ef3f342a2a8cfe.svg",
     "static/media/star-rating-3.svg": "/personal-homepage/static/media/star-rating-3.afe2d1a1852f7a44596b8d1351517450.svg",
     "static/media/react-router.svg": "/personal-homepage/static/media/react-router.e36e0a540dc4eb8b36f40c09fc806f63.svg",
@@ -24,10 +23,10 @@
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.a56e0e9ffbffefca5f7c9f481e4b8689.svg",
-    "main.a63c22c2.js.map": "/personal-homepage/static/js/main.a63c22c2.js.map",
+    "main.c9a5c9b4.js.map": "/personal-homepage/static/js/main.c9a5c9b4.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a63c22c2.js"
+    "static/js/main.c9a5c9b4.js"
   ]
 }
