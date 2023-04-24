@@ -15,7 +15,7 @@ export const skills = [
     name: "HTML 5",
     Icon: styledIcon(HtmlIcon),
     color: "#008db9",
-    level: "✓ Advanced",
+    level: "✓ Intermediate",
   },
   {
     name: "CSS 3",
