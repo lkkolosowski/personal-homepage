@@ -25,10 +25,10 @@ export const Skills = styled.ul`
 `;
 
 export const Skill = styled.li`
-  width: calc((100% / 4) - (((4-1) / 4) * 16px));
+  width: calc((100% / 4) - (((4 - 1) / 4) * 16px));
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    width: calc((100% / 2) - (((2-1) / 2) * 16px));
+    width: calc((100% / 2) - (((2 - 1) / 2) * 16px));
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
@@ -37,7 +37,7 @@ export const Skill = styled.li`
 `;
 
 export const SkillBody = styled.div`
-  height: calc(13.5em + 50px);
+  height: calc(13.5em + 56px);
   padding: 25px;
   margin-top: 16px;
   border-radius: 4px;
@@ -47,11 +47,12 @@ export const SkillBody = styled.div`
     background-color ${({ theme }) => theme.themeAnimation},
     color ${({ theme }) => theme.themeAnimation};
   border: 3px solid ${({ theme }) => theme.tile.border};
+  box-shadow: ${({ theme }) => theme.shadow.thick};
   font-size: 16px;
   line-height: 1.5;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    height: calc(10.5em + 50px);
+    height: calc(10.5em + 56px);
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
