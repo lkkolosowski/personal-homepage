@@ -19,7 +19,7 @@ export const Skills = styled.ul`
   padding: 0;
   list-style: none;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     gap: 16px;
   }
 `;
@@ -37,8 +37,7 @@ export const Skill = styled.li`
 `;
 
 export const SkillContent = styled.div`
-  margin-top: -25px;
-  padding-top: 25px;
+  margin-top: 16px;
   border-radius: 4px;
   background-color: ${({ theme }) => theme.tile.background};
   color: ${({ theme }) => theme.textAlternative};
@@ -50,8 +49,6 @@ export const SkillContent = styled.div`
   line-height: 1.5;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    margin-top: -24px;
-    padding-top: 24px;
     font-size: 14px;
   }
 `;
@@ -80,6 +77,7 @@ export const Card = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     width: 100%;
+    pointer-events: none;
   }
 `;
 
