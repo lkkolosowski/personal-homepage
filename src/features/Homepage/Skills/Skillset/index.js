@@ -10,8 +10,7 @@ import {
   Skills,
   Text,
   Skill,
-  SkillContent,
-  SkillContentInner,
+  SkillBody,
 } from "./styled";
 
 const Skillset = ({ title, icon, subtitle, skills }) => (
@@ -42,11 +41,7 @@ const Skillset = ({ title, icon, subtitle, skills }) => (
               </CardFront>
             </Card>
 
-            {description && (
-              <SkillContent>
-                <SkillContentInner>{description}</SkillContentInner>
-              </SkillContent>
-            )}
+            {description && <SkillBody>{description}</SkillBody>}
           </Skill>
         ))}
       </Skills>
