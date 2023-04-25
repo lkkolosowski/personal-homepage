@@ -23,7 +23,7 @@ const Skillset = ({ title, icon, subtitle, skills }) => (
             <Card>
               <CardFront style={{ backgroundColor: color }}>
                 <CardFrontInner>
-                  <Icon enlarged={description ? false : true} />
+                  <Icon />
                   <Text>{name}</Text>
                 </CardFrontInner>
                 <CardBack style={{ backgroundColor: color }}>

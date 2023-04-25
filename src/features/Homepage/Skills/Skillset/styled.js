@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const SectionBody = styled.div``;
 
@@ -139,21 +139,9 @@ export const styledIcon = (Icon) => styled(Icon)`
   height: 28px;
   margin: 2px 0;
 
-  ${({ enlarged }) =>
-    enlarged &&
-    css`
-      margin: 22px 0;
-    `};
-
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     width: 26px;
     height: 26px;
-
-    ${({ enlarged }) =>
-      enlarged &&
-      css`
-        margin: 2px 0;
-      `};
   }
 `;
 
