@@ -6,7 +6,7 @@ export const StyledTile = styled.article`
   border-radius: 4px;
   border: 6px solid ${({ theme }) => theme.tile.border};
   padding: 50px;
-  transition: border-color ${({ theme }) => theme.animation},
+  transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
