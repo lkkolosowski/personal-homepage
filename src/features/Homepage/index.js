@@ -9,8 +9,8 @@ const Homepage = () => (
   <Container>
     <ThemeSwitch />
     <Hero />
-    <Skills />
     <Portfolio />
+    <Skills />
     <Contact />
   </Container>
 );
