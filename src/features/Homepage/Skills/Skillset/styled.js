@@ -46,7 +46,7 @@ export const SkillBody = styled.div`
   transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation},
     color ${({ theme }) => theme.themeAnimation};
-  border: 3px solid ${({ theme }) => theme.tile.border};
+  border: 6px solid ${({ theme }) => theme.tile.border};
   box-shadow: ${({ theme }) => theme.shadow.thick};
   font-size: 16px;
   line-height: 1.5;
