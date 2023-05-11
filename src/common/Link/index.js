@@ -34,6 +34,7 @@ export const ButtonLink = styled.a`
   border: 1px solid ${({ theme }) => theme.button.border};
   border-radius: 4px;
   text-decoration: none;
+  box-shadow: ${({ theme }) => theme.shadow.thick};
   cursor: pointer;
   transition: box-shadow ${({ theme }) => theme.animation},
     background-color ${({ theme }) => theme.themeAnimation};
@@ -45,11 +46,12 @@ export const ButtonLink = styled.a`
     `};
 
   &:hover {
-    box-shadow: ${({ theme }) => theme.button.hover} 0px 0px 0px 2px;
+    box-shadow: ${({ theme }) => theme.button.hover} 0 0 0 2px;
   }
 
   &:active {
-    box-shadow: ${({ theme }) => theme.button.active} 0px 2px 0px 0px inset;
+    box-shadow: ${({ theme }) => theme.button.hover} 0 0 0 0,
+      ${({ theme }) => theme.button.active} 0 2px 0 0 inset;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
