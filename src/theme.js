@@ -72,7 +72,7 @@ export const dark = {
   },
   link: {
     text: color.dodgerBlue,
-    underline: color.semiTransparentLighterIron,
+    underline: color.semiTransparentIron,
     hover: color.scienceBlue,
     underlineHover: color.dodgerBlue,
     active: color.parsley,

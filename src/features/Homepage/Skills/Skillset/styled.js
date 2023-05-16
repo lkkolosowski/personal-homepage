@@ -51,6 +51,10 @@ export const SkillBody = styled.div`
   font-size: 16px;
   line-height: 1.5;
 
+  &:hover {
+    border-color: ${({ theme }) => theme.tile.hover};
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     height: calc(10.5em + 56px);
   }
