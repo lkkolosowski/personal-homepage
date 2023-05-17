@@ -38,6 +38,11 @@ const color = {
   transparent: "transparent",
 };
 
+const brightness = {
+  light: "brightness(1)",
+  dark: "brightness(0.85)",
+}
+
 const transform = {
   left: "translateX(0)",
   right: "translateX(100%)",
@@ -58,6 +63,7 @@ export const dark = {
   border: color.semiTransparentMineShaft,
   underline: color.semiTransparentLighterIron,
   indicator: color.semiTransparentDarkerScienceBlue,
+  brightness: brightness.dark,
   tile: {
     background: color.semiTransparentMineShaft,
     border: color.semiTransparentLighterIron,
@@ -106,6 +112,7 @@ export const light = {
   border: color.semiTransparentIron,
   underline: color.semiTransparentIron,
   indicator: color.semiTransparentScienceBlue,
+  brightness: brightness.light,
   tile: {
     background: color.white,
     border: color.semiTransparentIron,

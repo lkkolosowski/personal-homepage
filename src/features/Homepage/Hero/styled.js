@@ -54,7 +54,8 @@ export const ProfilePicture = styled.aside`
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: ${({ theme }) => theme.shadow.thick};
+  filter: ${({ theme }) => theme.brightness};
+  transition: filter ${({ theme }) => theme.themeAnimation};
 `;
 
 export const Icon = styled(MessageIcon)`
