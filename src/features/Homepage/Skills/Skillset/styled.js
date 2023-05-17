@@ -37,7 +37,7 @@ export const Skill = styled.li`
 `;
 
 export const SkillBody = styled.div`
-  height: calc(13.5em + 56px);
+  height: calc(100% - 66px);
   padding: 25px;
   margin-top: 16px;
   border-radius: 4px;
@@ -55,14 +55,10 @@ export const SkillBody = styled.div`
     border-color: ${({ theme }) => theme.tile.hover};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    height: calc(10.5em + 56px);
-  }
-
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    height: auto;
     padding: 24px;
     font-size: 14px;
+    height: calc(100% - 64px);
   }
 `;
 
