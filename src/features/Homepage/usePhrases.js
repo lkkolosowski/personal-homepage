@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 
-export const usePhrases = (props) => {
+export const usePhrases = (phrases) => {
   const [phrase, setPhrase] = useState([]);
 
   useEffect(() => {
-    const phrases = props;
     let i = 0;
     let j = 0;
     let currentPhrase = [];
@@ -49,7 +48,7 @@ export const usePhrases = (props) => {
     };
 
     loop();
-  }, [props]);
+  }, [phrases]);
 
   return phrase;
 };
