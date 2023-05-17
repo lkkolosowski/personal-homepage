@@ -1,5 +1,6 @@
 import Skillset from "./Skillset";
-import { skills, goals } from "./skillsData";
+import { skills } from "./skillsData";
+// import { goals } from "./skillsData";
 import { Icon } from "./styled";
 
 const Skills = () => (
@@ -10,12 +11,12 @@ const Skills = () => (
       subtitle={"My skillset includes"}
       skills={skills}
     />
-    <Skillset
+    {/* <Skillset
       icon={<Icon>🚀</Icon>}
       title={"Future"}
       subtitle={"What I want to learn next"}
       skills={goals}
-    />
+    /> */}
   </>
 );
 
