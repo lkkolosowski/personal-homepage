@@ -8,7 +8,7 @@ import { Title, Paragraph } from "./styled";
 const Contact = () => {
   const phrase = usePhrases(goodbyePhrases);
   return (
-    <footer>
+    <footer id="contact">
       <Subtitle content={phrase} />
       <Title>
         <TextLink text href={`mailto:${email}`}>
