@@ -48,7 +48,7 @@ export const SkillBody = styled.div`
     color ${({ theme }) => theme.themeAnimation};
   border: 6px solid ${({ theme }) => theme.tile.border};
   box-shadow: ${({ theme }) => theme.shadow.thick};
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 
   &:hover {
@@ -57,7 +57,6 @@ export const SkillBody = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     padding: 24px;
-    font-size: 14px;
     height: calc(100% - 64px);
   }
 `;
