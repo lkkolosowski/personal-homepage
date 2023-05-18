@@ -1,4 +1,5 @@
 export const name = "Łukasz Kołosowski";
+export const nick = "lkkolosowski";
 export const description = (
   <>
     Looking for the perfect frontend development? You are in the right
