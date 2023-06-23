@@ -41,7 +41,9 @@ const Skillset = ({ title, icon, subtitle, skills }) => (
               </CardFront>
             </Card>
 
-            {description && <SkillBody>{description}</SkillBody>}
+            {description && (
+              <SkillBody variant={color}>{description}</SkillBody>
+            )}
           </Skill>
         ))}
       </Skills>

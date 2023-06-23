@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const SectionBody = styled.div``;
 
@@ -37,6 +37,7 @@ export const Skill = styled.li`
 `;
 
 export const SkillBody = styled.div`
+  position: relative;
   height: calc(100% - 66px);
   padding: 25px;
   margin-top: 16px;
@@ -53,6 +54,29 @@ export const SkillBody = styled.div`
 
   &:hover {
     border-color: ${({ theme }) => theme.tile.hover};
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translate(-6px, -3px);
+    opacity: 0.5;
+    height: 0;
+    border-radius: 50%;
+    width: 0;
+    margin: 0 auto;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid transparent;
+
+    ${({ variant }) =>
+      variant &&
+      css`
+        border-top: 6px solid ${({ variant }) => variant};
+      `};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
