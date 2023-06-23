@@ -1,5 +1,5 @@
 import { ButtonLink } from "../../../common/Link";
-import { name, description, email, welcomePhrases } from "../nameplate";
+import { name, about, email, welcomePhrases } from "../nameplate";
 import Subtitle from "../Subtitle";
 import { usePhrases } from "../usePhrases";
 import {
@@ -8,6 +8,7 @@ import {
   Title,
   HeaderParagraph,
   Icon,
+  LineBreak,
 } from "./styled";
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
       <section>
         <Subtitle content={phrase} />
         <Title>{name}</Title>
-        <HeaderParagraph>{description}</HeaderParagraph>
+        <HeaderParagraph>{about.heading}<LineBreak />{about.description}</HeaderParagraph>
         <ButtonLink wide title={email} href="#contact">
           <Icon />
           Hire me

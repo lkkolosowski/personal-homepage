@@ -35,12 +35,10 @@ export const HeaderParagraph = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     font-size: 17px;
-    max-width: 530px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin: 16px 0 24px;
-    max-width: 530px;
   }
 `;
 
@@ -56,6 +54,12 @@ export const ProfilePicture = styled.aside`
   background-position: center;
   filter: ${({ theme }) => theme.brightness};
   transition: filter ${({ theme }) => theme.themeAnimation};
+`;
+
+export const LineBreak = styled.br`
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    display: none;
+  }
 `;
 
 export const Icon = styled(MessageIcon)`

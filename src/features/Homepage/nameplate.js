@@ -1,18 +1,14 @@
 export const name = "Łukasz Kołosowski";
 export const nick = "lkkolosowski";
-export const description = (
-  <>
-    Looking for the perfect frontend development? You are in the right
-    place. Get the professional results you're looking for. Your work will
-    be done on time and according to your requirements. Simply contact me
-    and let me know your needs.
-  </>
-);
+export const about = {
+  heading: "I love taking on new challenges. I keep trying new things. ",
+  description:
+    "I want to use my creativity and commitment to work in a team with professionals who inspire me and have a passion for creating innovative and aesthetic projects.",
+};
 export const information = (
   <>
     If you have any questions, do not hesitate to send me a message! I also
-    invite you to visit my social media profiles, links are located below.
-    👇
+    invite you to visit my social media profiles, links are located below. 👇
   </>
 );
 export const welcomePhrases = [
