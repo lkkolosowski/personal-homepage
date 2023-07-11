@@ -58,3 +58,12 @@ export const Item = styled.li`
   display: grid;
   grid-template-columns: 4em 1fr;
 `;
+
+export const Image = styled.img`
+  display: inline-block;
+  line-height: 1;
+  height: 38px;
+  margin-bottom: -10px;
+  margin-right: 10px;
+  text-align: center;
+`;
