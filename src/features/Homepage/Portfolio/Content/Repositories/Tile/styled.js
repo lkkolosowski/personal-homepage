@@ -62,8 +62,14 @@ export const Item = styled.li`
 export const Image = styled.img`
   display: inline-block;
   line-height: 1;
-  height: 38px;
-  margin-bottom: -10px;
-  margin-right: 10px;
+  height: 28px;
+  margin-bottom: -5px;
+  margin-right: 8px;
   text-align: center;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    height: 18px;
+    margin-bottom: -3px;
+    margin-right: 8px;
+  }
 `;
