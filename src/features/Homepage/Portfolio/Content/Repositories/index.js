@@ -7,13 +7,13 @@ const Repositories = ({ repositories }) => {
   return (
     <StyledRepositories>
       {transformedRepositories(repositories).map(
-        ({ id, name, description, homepage, html_url }) => (
+        ({ id, name, description, homepage, html_url }, i) => (
           <motion.div
             initial={{
               opacity: 0,
               y: 50,
             }}
-            whileInView={{
+            animate={{
               opacity: 1,
               y: 0,
             }}
@@ -21,7 +21,7 @@ const Repositories = ({ repositories }) => {
               type: "spring",
               duration: 0.9,
               bounce: 0.45,
-              delay: 0.15,
+              delay: i * 0.15,
             }}
             viewport={{
               once: true,
