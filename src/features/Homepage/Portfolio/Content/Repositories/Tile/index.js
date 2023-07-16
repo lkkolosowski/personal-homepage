@@ -25,9 +25,8 @@ const Tile = ({ name, description, homepage, html_url }) => {
   return (
     <TileWrapper>
       <StyledTile>
-        <Thumbnail target={"_blank"} href={homepage}>
+        <Thumbnail target={"_blank"} href={homepage || html_url}>
           <ThumbnailImage
-            hoverable={homepage}
             src={
               projects.find((x) => x.name === name)
                 ? projects.find((x) => x.name === name).thumbnail

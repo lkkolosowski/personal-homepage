@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const TileWrapper = styled.div`
   height: 100%;
@@ -105,11 +105,7 @@ export const ThumbnailImage = styled.img`
 
   &:hover {
     transform: scale(1.01);
-    ${({ hoverable }) =>
-      hoverable &&
-      css`
-        filter: opacity(0.7);
-      `}
+    filter: opacity(0.7);
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
