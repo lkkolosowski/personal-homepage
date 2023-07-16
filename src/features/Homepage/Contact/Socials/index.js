@@ -20,9 +20,6 @@ const Socials = () => (
           bounce: 0.45,
           delay: i * 0.23333333,
         }}
-        viewport={{
-          once: true,
-        }}
       >
         <IconLink
           key={name}
