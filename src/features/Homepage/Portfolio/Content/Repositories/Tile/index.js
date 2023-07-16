@@ -6,7 +6,7 @@ import {
   Description,
   List,
   Item,
-  Image,
+  IconImage,
   Content,
   Thumbnail,
   ThumbnailImage,
@@ -27,6 +27,7 @@ const Tile = ({ name, description, homepage, html_url }) => {
       <StyledTile>
         <Thumbnail target={"_blank"} href={homepage}>
           <ThumbnailImage
+            hoverable={homepage}
             src={
               projects.find((x) => x.name === name)
                 ? projects.find((x) => x.name === name).thumbnail
@@ -38,7 +39,7 @@ const Tile = ({ name, description, homepage, html_url }) => {
         <Content>
           <Title>
             <TextLink target={"_blank"} href={homepage || html_url}>
-              <Image
+              <IconImage
                 src={`https://lkkolosowski.github.io/${name}/icon128.png`}
                 alt={name}
                 onError={imageOnErrorHandler}

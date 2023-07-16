@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const TileWrapper = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.tile.background};
   box-shadow: ${({ theme }) => theme.shadow.thick};
   border-radius: 4px;
+  transition: background-color ${({ theme }) => theme.themeAnimation};
 `;
 
 export const StyledTile = styled.article`
@@ -12,8 +13,6 @@ export const StyledTile = styled.article`
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 50px;
-  transition: border-color ${({ theme }) => theme.themeAnimation},
-    background-color ${({ theme }) => theme.themeAnimation};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
     gap: 32px;
@@ -71,7 +70,7 @@ export const Item = styled.li`
   grid-template-columns: 4em 1fr;
 `;
 
-export const Image = styled.img`
+export const IconImage = styled.img`
   display: inline-block;
   line-height: 1;
   height: 28px;
@@ -100,12 +99,17 @@ export const ThumbnailImage = styled.img`
   width: 100%;
   border-radius: 4px;
   transform: scale(1.05);
+  filter: opacity(0.9);
   transition: transform ${({ theme }) => theme.animation},
     filter ${({ theme }) => theme.animation};
 
   &:hover {
     transform: scale(1.01);
-    filter: opacity(0.8);
+    ${({ hoverable }) =>
+      hoverable &&
+      css`
+        filter: opacity(0.7);
+      `}
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
