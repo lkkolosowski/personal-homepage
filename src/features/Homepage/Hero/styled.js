@@ -27,8 +27,8 @@ export const Title = styled.h1`
   }
 `;
 
-export const HeaderParagraph = styled.p`
-  margin: 35px 0 32px;
+export const Heading = styled.div`
+  margin: 32px 0;
   font-size: 20px;
   line-height: 1.4;
   transition: color ${({ theme }) => theme.themeAnimation};
@@ -40,6 +40,16 @@ export const HeaderParagraph = styled.p`
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     margin: 16px 0 24px;
   }
+`;
+
+export const HeaderParagraph = styled.p`
+  margin: 10px 0;
+`;
+
+export const Quotation = styled.q`
+  font-style: italic;
+  font-size: 0.8em;
+  margin-bottom: 16px;
 `;
 
 export const ProfilePicture = styled.aside`
@@ -54,12 +64,6 @@ export const ProfilePicture = styled.aside`
   background-position: center;
   filter: ${({ theme }) => theme.brightness};
   transition: filter ${({ theme }) => theme.themeAnimation};
-`;
-
-export const LineBreak = styled.br`
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    display: none;
-  }
 `;
 
 export const Icon = styled(MessageIcon)`

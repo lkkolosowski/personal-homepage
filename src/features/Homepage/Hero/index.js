@@ -8,7 +8,8 @@ import {
   Title,
   HeaderParagraph,
   Icon,
-  LineBreak,
+  Quotation,
+  Heading,
 } from "./styled";
 
 const Hero = () => {
@@ -20,7 +21,12 @@ const Hero = () => {
       <section>
         <Subtitle content={phrase} />
         <Title>{name}</Title>
-        <HeaderParagraph>{about.heading}<LineBreak />{about.description}</HeaderParagraph>
+        <Heading>
+          <HeaderParagraph>
+            <Quotation>{about.heading}</Quotation>
+          </HeaderParagraph>
+          <HeaderParagraph>{about.description}</HeaderParagraph>
+        </Heading>
         <ButtonLink wide title={email} href="#contact">
           <Icon />
           Hire me
