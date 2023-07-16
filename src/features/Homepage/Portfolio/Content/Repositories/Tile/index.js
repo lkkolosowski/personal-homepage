@@ -10,6 +10,7 @@ import {
   Content,
   Thumbnail,
   ThumbnailImage,
+  TileWrapper,
 } from "./styled";
 import { capitalizeWords } from "./utils";
 import { name as fullname, nick, projects } from "../../../../nameplate";
@@ -22,53 +23,55 @@ const Tile = ({ name, description, homepage, html_url }) => {
   };
 
   return (
-    <StyledTile>
-      <Thumbnail target={"_blank"} href={homepage}>
-        <ThumbnailImage
-          src={
-            projects.find((x) => x.name === name)
-              ? projects.find((x) => x.name === name).thumbnail
-              : placeholderImage
-          }
-          alt={name}
-        />
-      </Thumbnail>
-      <Content>
-        <Title>
-          <TextLink target={"_blank"} href={homepage || html_url}>
-            <Image
-              src={`https://lkkolosowski.github.io/${name}/icon128.png`}
-              alt={name}
-              onError={imageOnErrorHandler}
-            />
-            {name !== nick ? capitalizeWords(name) : fullname}
-          </TextLink>
-        </Title>
-        <TileBody>
-          <Description>{description}</Description>
-          <List>
-            {homepage && (
+    <TileWrapper>
+      <StyledTile>
+        <Thumbnail target={"_blank"} href={homepage}>
+          <ThumbnailImage
+            src={
+              projects.find((x) => x.name === name)
+                ? projects.find((x) => x.name === name).thumbnail
+                : placeholderImage
+            }
+            alt={name}
+          />
+        </Thumbnail>
+        <Content>
+          <Title>
+            <TextLink target={"_blank"} href={homepage || html_url}>
+              <Image
+                src={`https://lkkolosowski.github.io/${name}/icon128.png`}
+                alt={name}
+                onError={imageOnErrorHandler}
+              />
+              {name !== nick ? capitalizeWords(name) : fullname}
+            </TextLink>
+          </Title>
+          <TileBody>
+            <Description>{description}</Description>
+            <List>
+              {homepage && (
+                <Item>
+                  <span>Demo:</span>
+                  <span>
+                    <TextLink target={"_blank"} href={homepage}>
+                      https://{name}.demo
+                    </TextLink>
+                  </span>
+                </Item>
+              )}
               <Item>
-                <span>Demo:</span>
+                <span>Code:</span>
                 <span>
-                  <TextLink target={"_blank"} href={homepage}>
-                    https://{name}.demo
+                  <TextLink target={"_blank"} href={html_url}>
+                    https://{name}.code
                   </TextLink>
                 </span>
               </Item>
-            )}
-            <Item>
-              <span>Code:</span>
-              <span>
-                <TextLink target={"_blank"} href={html_url}>
-                  https://{name}.code
-                </TextLink>
-              </span>
-            </Item>
-          </List>
-        </TileBody>
-      </Content>
-    </StyledTile>
+            </List>
+          </TileBody>
+        </Content>
+      </StyledTile>
+    </TileWrapper>
   );
 };
 

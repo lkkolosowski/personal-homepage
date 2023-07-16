@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
+export const TileWrapper = styled.div`
+  height: 100%;
+  background-color: ${({ theme }) => theme.tile.background};
+  box-shadow: ${({ theme }) => theme.shadow.thick};
+  border-radius: 4px;
+`;
+
 export const StyledTile = styled.article`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 50px;
-  background-color: ${({ theme }) => theme.tile.background};
-  box-shadow: ${({ theme }) => theme.shadow.thick};
-  border-radius: 4px;
-  height: 100%;
   transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation};
 
