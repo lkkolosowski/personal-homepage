@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Socials = () => (
   <StyledSocials>
-    {socials.map(({ name, url, Icon }, i) => (
+    {socials.map(({ name, url, Icon, iconBackground }, i) => (
       <motion.div
         initial={{
           opacity: 0,
@@ -31,7 +31,7 @@ const Socials = () => (
           target="_blank"
           rel="noreferrer"
         >
-          <Icon />
+          <Icon iconBackground={iconBackground} />
         </IconLink>
       </motion.div>
     ))}

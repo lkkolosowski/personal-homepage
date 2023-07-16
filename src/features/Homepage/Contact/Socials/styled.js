@@ -11,21 +11,12 @@ export const StyledSocials = styled.div`
 `;
 
 export const IconLink = styled.a`
-  & > svg > path {
-    fill: ${({ theme }) => theme.icon.background};
-    transition: ${({ theme }) => theme.animation};
-  }
-
   & > svg {
     border-radius: 50%;
   }
 
   &:hover > svg {
     animation: shake 0.4s;
-  }
-
-  &:hover > svg > path {
-    fill: ${({ theme }) => theme.icon.hover};
   }
 
   @keyframes shake {
@@ -47,6 +38,18 @@ export const IconLink = styled.a`
 export const styledIcon = (Icon) => styled(Icon)`
   width: 48px;
   height: 48px;
+  & path {
+    fill: ${({ theme }) => theme.icon.background};
+    transition: ${({ theme }) => theme.animation};
+  }
+
+  &:hover {
+    animation: shake 0.4s;
+  }
+
+  &:hover > path {
+    fill: ${({ iconBackground }) => iconBackground}
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     width: 32px;
