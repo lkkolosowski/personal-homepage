@@ -1,16 +1,25 @@
 import styled from "styled-components";
 
 export const StyledTile = styled.article`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 50px;
   background-color: ${({ theme }) => theme.tile.background};
   box-shadow: ${({ theme }) => theme.shadow.thick};
   border-radius: 4px;
-  border: 6px solid ${({ theme }) => theme.tile.border};
-  padding: 50px;
+  height: 100%;
   transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation};
 
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    gap: 32px;
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    padding: 24px;
+    gap: 16px;
   }
 
   &:hover {
@@ -71,5 +80,44 @@ export const Image = styled.img`
     height: 18px;
     margin-bottom: -3px;
     margin-right: 8px;
+  }
+`;
+
+export const Thumbnail = styled.a`
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  background-color: ${({ theme }) => theme.white};
+`;
+
+export const ThumbnailImage = styled.img`
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 4px;
+  transform: scale(1.05);
+  transition: transform ${({ theme }) => theme.animation},
+    filter ${({ theme }) => theme.animation};
+
+  &:hover {
+    transform: scale(1.01);
+    filter: opacity(0.8);
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    aspect-ratio: 3 / 1;
+  }
+`;
+
+export const Content = styled.div`
+  padding: 50px 50px 50px 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    padding: 0 32px 32px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    padding: 0 16px 16px;
   }
 `;
