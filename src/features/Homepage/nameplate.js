@@ -12,7 +12,7 @@ export const nick = "lkkolosowski";
 export const about = {
   heading: "I love taking on new challenges. I keep trying new things.",
   description:
-    "I'm a Software Engineer specialized in React, based in Wrocław. Working towards creating aesthetic projects that makes life easier and more meaningful.",
+    "I'm a Software Developer specialized in React, based in Wrocław. Working towards creating aesthetic projects that makes life easier and more meaningful.",
 };
 export const information = (
   <>
