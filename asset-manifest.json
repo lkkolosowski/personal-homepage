@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.c3bac571.js",
+    "main.js": "/personal-homepage/static/js/main.9683f188.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/currency-converter-react.png": "/personal-homepage/static/media/currency-converter-react.12d39321b55b06323871.png",
     "static/media/movies-browser.png": "/personal-homepage/static/media/movies-browser.88860fb46bf712439e67.png",
@@ -17,22 +17,29 @@
     "static/media/brightness.svg": "/personal-homepage/static/media/brightness.265ed56c7ce199415001d346ff2142d5.svg",
     "static/media/react-router.svg": "/personal-homepage/static/media/react-router.e36e0a540dc4eb8b36f40c09fc806f63.svg",
     "static/media/redux.svg": "/personal-homepage/static/media/redux.227122155330417003da3a3ca41da8c7.svg",
+    "static/media/speechBubble.svg": "/personal-homepage/static/media/speechBubble.79b91ed30a70d9341fe6b993569a2820.svg",
     "static/media/github.svg": "/personal-homepage/static/media/github.a9062bf9626a38e8866f20e84ee3d71b.svg",
     "static/media/placeholderImage.svg": "/personal-homepage/static/media/placeholderImage.452c9760b38bd18b49636836ef428655.svg",
     "index.html": "/personal-homepage/index.html",
+    "static/media/personSurname.svg": "/personal-homepage/static/media/personSurname.4d8d9a5d2e267d5214fa7fda986f048c.svg",
     "static/media/typescript.svg": "/personal-homepage/static/media/typescript.a6305a733dd55243980aec55f96f70c5.svg",
     "static/media/linkedin.svg": "/personal-homepage/static/media/linkedin.2c26b104242a1c77c13c1498fc1cd787.svg",
     "static/media/danger.svg": "/personal-homepage/static/media/danger.368eab1b87e3c2785bab7da11c278b44.svg",
+    "static/media/font.svg": "/personal-homepage/static/media/font.54038b66567d41918526ae274d88c47c.svg",
+    "static/media/phone.svg": "/personal-homepage/static/media/phone.60a6d3a946ac01d2efd6e0b9bf9f1542.svg",
+    "static/media/envelope.svg": "/personal-homepage/static/media/envelope.e0b68ff3f0a828522be1e8a9bab2aae6.svg",
+    "static/media/personName.svg": "/personal-homepage/static/media/personName.f59d926fc5e4d62cf7a9de568a2d5e25.svg",
     "static/media/css.svg": "/personal-homepage/static/media/css.8be595612207191743030813dab7cbff.svg",
     "static/media/message.svg": "/personal-homepage/static/media/message.26211eaaaa6c65af54e458abaff54c3e.svg",
     "static/media/javascript.svg": "/personal-homepage/static/media/javascript.acc4642f682cd93a4c20a8a02c0cfa21.svg",
+    "static/media/user.svg": "/personal-homepage/static/media/user.149e1811ba612c3689c4e28218a3a608.svg",
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.a56e0e9ffbffefca5f7c9f481e4b8689.svg",
-    "main.c3bac571.js.map": "/personal-homepage/static/js/main.c3bac571.js.map",
+    "main.9683f188.js.map": "/personal-homepage/static/js/main.9683f188.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.c3bac571.js"
+    "static/js/main.9683f188.js"
   ]
 }
