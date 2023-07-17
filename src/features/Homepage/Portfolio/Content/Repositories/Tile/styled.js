@@ -89,7 +89,12 @@ export const Thumbnail = styled.a`
   border-radius: 4px;
   overflow: hidden;
   display: block;
+  aspect-ratio: 16 / 9;
   background-color: ${({ theme }) => theme.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    aspect-ratio: 3 / 1;
+  }
 `;
 
 export const ThumbnailImage = styled.img`
