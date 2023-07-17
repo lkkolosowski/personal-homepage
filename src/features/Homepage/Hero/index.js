@@ -7,9 +7,9 @@ import {
   ProfilePicture,
   Title,
   HeaderParagraph,
-  Icon,
   Quotation,
   Heading,
+  MessageIcon,
 } from "./styled";
 
 const Hero = () => {
@@ -28,7 +28,7 @@ const Hero = () => {
           <HeaderParagraph>{about.description}</HeaderParagraph>
         </Heading>
         <ButtonLink wide title={email} href="#contact">
-          <Icon />
+          <MessageIcon />
           Hire me
         </ButtonLink>
       </section>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import picture from "../../../images/profile-picture.png";
-import { ReactComponent as MessageIcon } from "../../../icons/message.svg";
+import { ReactComponent as Message } from "../../../icons/message.svg";
 
 export const StyledHeader = styled.header`
   display: grid;
@@ -66,7 +66,7 @@ export const ProfilePicture = styled.aside`
   transition: filter ${({ theme }) => theme.themeAnimation};
 `;
 
-export const Icon = styled(MessageIcon)`
+export const MessageIcon = styled(Message)`
   position: relative;
   top: 1px;
 `;
