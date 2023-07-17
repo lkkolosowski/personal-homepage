@@ -48,7 +48,7 @@ export const styledIcon = (Icon) => styled(Icon)`
   }
 
   &:hover > path {
-    fill: ${({ iconBackground }) => iconBackground}
+    fill: ${({ iconbackground }) => iconbackground}
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {

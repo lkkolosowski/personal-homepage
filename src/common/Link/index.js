@@ -43,6 +43,7 @@ export const ButtonLink = styled.a`
     wide &&
     css`
       display: flex;
+      width: 100%;
     `};
 
   &:hover {

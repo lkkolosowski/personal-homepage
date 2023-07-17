@@ -9,6 +9,7 @@ const Repositories = ({ repositories }) => {
       {transformedRepositories(repositories).map(
         ({ id, name, description, homepage, html_url }, i) => (
           <motion.div
+            key={id}
             initial={{
               opacity: 0,
               y: 50,
@@ -28,7 +29,6 @@ const Repositories = ({ repositories }) => {
             }}
           >
             <Tile
-              key={id}
               name={name}
               description={description}
               homepage={homepage}
