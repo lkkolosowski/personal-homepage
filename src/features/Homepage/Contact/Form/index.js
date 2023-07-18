@@ -58,7 +58,7 @@ const Form = () => {
                 <PersonNameIcon />
               </LabelContent>
             </Label>
-            <Input type="text" placeholder="Name" name="user_name" />
+            <Input type="text" placeholder="Name" name="user_name" required/>
           </FormItem>
           <FormItem>
             <Label>
@@ -66,7 +66,7 @@ const Form = () => {
                 <PersonSurnameIcon />
               </LabelContent>
             </Label>
-            <Input type="text" placeholder="Surname" name="user_surname" />
+            <Input type="text" placeholder="Surname" name="user_surname" required/>
           </FormItem>
         </Pair>
         <Pair>
@@ -76,7 +76,7 @@ const Form = () => {
                 <EnvelopeIcon />
               </LabelContent>
             </Label>
-            <Input type="email" placeholder="Email" name="user_email" />
+            <Input type="email" placeholder="Email" name="user_email" required/>
           </FormItem>
           <FormItem>
             <Label>
@@ -88,6 +88,7 @@ const Form = () => {
               type="tel"
               placeholder="Phone number"
               name="user_phone_number"
+              required
             />
           </FormItem>
         </Pair>
@@ -99,7 +100,7 @@ const Form = () => {
               <TopicIcon />
             </LabelContent>
           </Label>
-          <Input type="text" placeholder="Topic" name="message_topic" />
+          <Input type="text" placeholder="Topic (optional)" name="message_topic" />
         </FormItem>
         <FormItem>
           <Label>
@@ -107,7 +108,7 @@ const Form = () => {
               <SpeechBubbleIcon />
             </LabelContent>
           </Label>
-          <TextArea rows="5" placeholder="Message" name="message" />
+          <TextArea rows="5" placeholder="Message" name="message" required/>
         </FormItem>
         {captchaIsDone && (
           <motion.div
