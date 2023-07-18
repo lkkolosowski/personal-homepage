@@ -41,13 +41,13 @@ const Form = () => {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
         (result) => {
           console.log(result.text);
-          e.target.reset();
-          setEmailIsSent(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
+      e.target.reset();
+      setEmailIsSent(true);
     }
   };
 
@@ -152,7 +152,10 @@ const Form = () => {
             </ButtonLink>
           </motion.div>
         )}
-        <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={onChange} />
+        <ReCAPTCHA
+          sitekey={CAPTCHA_KEY}
+          onChange={onChange}
+        />
       </FormSet>
     </StyledForm>
   );
