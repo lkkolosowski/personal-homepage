@@ -5,7 +5,13 @@ export const TileWrapper = styled.div`
   background-color: ${({ theme }) => theme.tile.background};
   box-shadow: ${({ theme }) => theme.shadow.thick};
   border-radius: 4px;
-  transition: background-color ${({ theme }) => theme.themeAnimation};
+  transition: border-color ${({ theme }) => theme.themeAnimation},
+    background-color ${({ theme }) => theme.themeAnimation};
+  border: 6px solid ${({ theme }) => theme.tile.border};
+
+  &:hover {
+    border-color: ${({ theme }) => theme.tile.hover};
+  }
 `;
 
 export const StyledTile = styled.article`
@@ -86,7 +92,6 @@ export const IconImage = styled.img`
 `;
 
 export const Thumbnail = styled.a`
-  border-radius: 4px;
   overflow: hidden;
   display: block;
   aspect-ratio: 16 / 9;
@@ -110,7 +115,7 @@ export const ThumbnailImage = styled.img`
 
   &:hover {
     transform: scale(1.01);
-    filter: opacity(0.7);
+    filter: opacity(0.8);
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
