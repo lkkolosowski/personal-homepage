@@ -164,10 +164,7 @@ const Form = () => {
             </ButtonLink>
           </motion.div>
         )}
-        <ReCAPTCHA
-          sitekey={CAPTCHA_KEY}
-          onChange={onChange}
-        />
+        <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={onChange} />
       </FormSet>
     </StyledForm>
   );

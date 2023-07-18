@@ -52,6 +52,24 @@ export const ButtonLink = styled.a`
       background-color: #6ab190;
       pointer-events: none;
       border: 1px solid #6ab190;
+      animation: shake 0.4s;
+      transition: box-shadow ${({ theme }) => theme.animation},
+        background-color ${({ theme }) => theme.animation};
+
+      @keyframes shake {
+        20% {
+          transform: rotate(7deg);
+        }
+        40% {
+          transform: rotate(-6deg);
+        }
+        60% {
+          transform: rotate(3deg);
+        }
+        80% {
+          transform: rotate(-2deg);
+        }
+      }
     `};
 
   &:hover {
