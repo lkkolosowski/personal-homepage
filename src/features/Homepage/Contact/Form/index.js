@@ -20,11 +20,15 @@ import {
   PersonSurnameIcon,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
 
 const Form = () => {
   const form = useRef();
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [emailIsSent, setEmailIsSent] = useState(false);
+  const [confettiRain, setConfettiRain] = useState(0);
+  const { width, height } = useWindowSize();
 
   const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
   const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -48,11 +52,19 @@ const Form = () => {
       );
       e.target.reset();
       setEmailIsSent(true);
+      setConfettiRain(300);
+      setTimeout(() => setConfettiRain(0), 3000);
     }
   };
 
   return (
     <StyledForm ref={form} onSubmit={sendEmail}>
+      <Confetti
+        numberOfPieces={confettiRain}
+        style={{ position: "fixed" }}
+        width={width}
+        height={height}
+      />
       <FormSet>
         <Pair>
           <FormItem>
