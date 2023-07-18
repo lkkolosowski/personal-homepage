@@ -24,6 +24,7 @@ import { ButtonLink } from "../../../../common/Link";
 const Form = () => {
   const form = useRef();
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
+  const [emailIsSent, setEmailIsSent] = useState(false);
 
   const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
   const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -36,10 +37,12 @@ const Form = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (captchaIsDone) {
+    if (captchaIsDone && !emailIsSent) {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
         (result) => {
           console.log(result.text);
+          e.target.reset();
+          setEmailIsSent(true);
         },
         (error) => {
           console.log(error.text);
@@ -58,7 +61,7 @@ const Form = () => {
                 <PersonNameIcon />
               </LabelContent>
             </Label>
-            <Input type="text" placeholder="Name" name="user_name" required/>
+            <Input type="text" placeholder="Name" name="user_name" required />
           </FormItem>
           <FormItem>
             <Label>
@@ -66,7 +69,12 @@ const Form = () => {
                 <PersonSurnameIcon />
               </LabelContent>
             </Label>
-            <Input type="text" placeholder="Surname" name="user_surname" required/>
+            <Input
+              type="text"
+              placeholder="Surname"
+              name="user_surname"
+              required
+            />
           </FormItem>
         </Pair>
         <Pair>
@@ -76,7 +84,12 @@ const Form = () => {
                 <EnvelopeIcon />
               </LabelContent>
             </Label>
-            <Input type="email" placeholder="Email" name="user_email" required/>
+            <Input
+              type="email"
+              placeholder="Email"
+              name="user_email"
+              required
+            />
           </FormItem>
           <FormItem>
             <Label>
@@ -100,7 +113,11 @@ const Form = () => {
               <TopicIcon />
             </LabelContent>
           </Label>
-          <Input type="text" placeholder="Topic (optional)" name="message_topic" />
+          <Input
+            type="text"
+            placeholder="Topic (optional)"
+            name="message_topic"
+          />
         </FormItem>
         <FormItem>
           <Label>
@@ -108,7 +125,7 @@ const Form = () => {
               <SpeechBubbleIcon />
             </LabelContent>
           </Label>
-          <TextArea rows="5" placeholder="Message" name="message" required/>
+          <TextArea rows="5" placeholder="Message" name="message" required />
         </FormItem>
         {captchaIsDone && (
           <motion.div
@@ -129,9 +146,9 @@ const Form = () => {
               once: true,
             }}
           >
-            <ButtonLink wide as="button" type="submit">
+            <ButtonLink success={emailIsSent} wide as="button" type="submit">
               <MessageIcon />
-              Send
+              {!emailIsSent ? "Send" : "Sent!"}
             </ButtonLink>
           </motion.div>
         )}

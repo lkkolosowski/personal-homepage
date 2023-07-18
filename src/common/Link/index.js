@@ -46,6 +46,14 @@ export const ButtonLink = styled.a`
       width: 100%;
     `};
 
+  ${({ success }) =>
+    success &&
+    css`
+      background-color: #6ab190;
+      pointer-events: none;
+      border: 1px solid #6ab190;
+    `};
+
   &:hover {
     box-shadow: ${({ theme }) => theme.button.hover} 0 0 0 2px;
   }
