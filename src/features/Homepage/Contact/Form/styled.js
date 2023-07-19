@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as Message } from "../../../../icons/message.svg";
 import { ReactComponent as User } from "../../../../icons/user.svg";
 import { ReactComponent as Phone } from "../../../../icons/phone.svg";
@@ -66,7 +66,8 @@ export const LabelContent = styled.div`
   background-color: ${({ theme }) => theme.tile.border};
   width: 100%;
   height: 100%;
-  transition: background-color ${({ theme }) => theme.themeAnimation}, color ${({ theme }) => theme.themeAnimation};
+  transition: background-color ${({ theme }) => theme.themeAnimation},
+    color ${({ theme }) => theme.themeAnimation};
   padding-left: 3px;
 `;
 
@@ -132,4 +133,20 @@ export const PersonSurnameIcon = styled(PersonSurname)`
 export const SpeechBubbleIcon = styled(SpeechBubble)`
   width: 24px;
   height: auto;
+`;
+
+export const InfoParagraph = styled.div`
+  padding: 0.75rem 1.25rem;
+  margin: 0 auto;
+
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  ${({ success }) =>
+    success &&
+    css`
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    `}
 `;

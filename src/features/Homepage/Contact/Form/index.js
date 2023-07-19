@@ -18,6 +18,7 @@ import {
   EnvelopeIcon,
   PersonNameIcon,
   PersonSurnameIcon,
+  InfoParagraph,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
 import useWindowSize from "react-use/lib/useWindowSize";
@@ -26,8 +27,8 @@ import Confetti from "react-confetti";
 const Form = () => {
   const form = useRef();
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
-  const [emailIsSent, setEmailIsSent] = useState(false);
   const [confettiRain, setConfettiRain] = useState(0);
+  const [success, setSuccess] = useState(null);
   const { width, height } = useWindowSize();
 
   const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
@@ -41,19 +42,23 @@ const Form = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    if (captchaIsDone && !emailIsSent) {
+    if (captchaIsDone && !success) {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
         (result) => {
           console.log(result.text);
+          setSuccess(true);
         },
         (error) => {
           console.log(error.text);
+          setSuccess(false);
         }
       );
-      e.target.reset();
-      setEmailIsSent(true);
-      setConfettiRain(300);
-      setTimeout(() => setConfettiRain(0), 3000);
+
+      if (success) {
+        e.target.reset();
+        setConfettiRain(300);
+        setTimeout(() => setConfettiRain(0), 3000);
+      }
     }
   };
 
@@ -158,13 +163,39 @@ const Form = () => {
               once: true,
             }}
           >
-            <ButtonLink success={emailIsSent} wide as="button" type="submit">
+            <ButtonLink success={success} wide as="button" type="submit">
               <MessageIcon />
-              {!emailIsSent ? "Send" : "Sent!"}
+              {!success ? "Send" : "Sent!"}
             </ButtonLink>
           </motion.div>
         )}
         <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={onChange} />
+        {success !== null && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              type: "spring",
+              duration: 0.9,
+              bounce: 0.45,
+            }}
+            viewport={{
+              once: true,
+            }}
+          >
+            <InfoParagraph success={success}>
+              {success
+                ? "Your message has been sent! I will get back to you soon :)"
+                : "Something went wrong with your message :("}
+            </InfoParagraph>
+          </motion.div>
+        )}
       </FormSet>
     </StyledForm>
   );
