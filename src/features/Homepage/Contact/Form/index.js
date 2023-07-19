@@ -178,7 +178,7 @@ const Form = () => {
               opacity: 0,
               y: 40,
             }}
-            whileInView={{
+            animate={{
               opacity: 1,
               y: 0,
             }}
@@ -186,9 +186,6 @@ const Form = () => {
               type: "spring",
               duration: 0.9,
               bounce: 0.45,
-            }}
-            viewport={{
-              once: true,
             }}
           >
             <InfoParagraph success={success}>
