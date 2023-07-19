@@ -11,6 +11,8 @@ export const StyledSocials = styled.div`
 `;
 
 export const IconLink = styled.a`
+  display: block;
+
   & > svg {
     border-radius: 50%;
   }
@@ -48,7 +50,7 @@ export const styledIcon = (Icon) => styled(Icon)`
   }
 
   &:hover > path {
-    fill: ${({ iconbackground }) => iconbackground}
+    fill: ${({ iconbackground }) => iconbackground};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
