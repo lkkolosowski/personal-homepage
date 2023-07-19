@@ -17,7 +17,7 @@ const Content = ({ status, repositories }) => {
       return <Repositories repositories={repositories} />;
 
     default:
-      throw new Error(`Incorrect status :${status}`);
+      throw new Error(`Incorrect status: ${status}`);
   }
 };
 

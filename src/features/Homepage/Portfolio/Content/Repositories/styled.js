@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledRepositories = styled.div`
   display: grid;
@@ -14,4 +14,10 @@ export const StyledRepositories = styled.div`
     grid-template-columns: 1fr;
     gap: 32px;
   }
+
+  ${({ hidden }) =>
+    hidden &&
+    css`
+      visibility: hidden;
+    `}
 `;
