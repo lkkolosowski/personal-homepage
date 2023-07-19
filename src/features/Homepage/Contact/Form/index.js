@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 import { motion } from "framer-motion";
@@ -53,14 +53,16 @@ const Form = () => {
           setSuccess(false);
         }
       );
-
-      if (success) {
-        e.target.reset();
-        setConfettiRain(300);
-        setTimeout(() => setConfettiRain(0), 3000);
-      }
     }
   };
+
+  useEffect(() => {
+    if (success) {
+      form.current.reset();
+      setConfettiRain(300);
+      setTimeout(() => setConfettiRain(0), 3000);
+    }
+  }, [success]);
 
   return (
     <StyledForm ref={form} onSubmit={sendEmail}>
