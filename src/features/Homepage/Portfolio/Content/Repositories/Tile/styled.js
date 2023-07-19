@@ -16,19 +16,8 @@ export const TileWrapper = styled.div`
 
 export const StyledTile = styled.article`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 50px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    gap: 32px;
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    gap: 16px;
-  }
+  grid-template-columns: 1fr;
+  align-items: start;
 
   &:hover {
     border-color: ${({ theme }) => theme.tile.hover};
@@ -38,14 +27,11 @@ export const StyledTile = styled.article`
 export const TileBody = styled.div`
   color: ${({ theme }) => theme.textAlternative};
   transition: color ${({ theme }) => theme.themeAnimation};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    font-size: 14px;
-  }
+  font-size: 14px;
 `;
 
 export const Title = styled.h2`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
@@ -79,7 +65,7 @@ export const Item = styled.li`
 export const IconImage = styled.img`
   display: inline-block;
   line-height: 1;
-  height: 28px;
+  height: 24px;
   margin-bottom: -5px;
   margin-right: 8px;
   text-align: center;
@@ -94,18 +80,14 @@ export const IconImage = styled.img`
 export const Thumbnail = styled.a`
   overflow: hidden;
   display: block;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 1;
   background-color: ${({ theme }) => theme.white};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    aspect-ratio: 3 / 1;
-  }
 `;
 
 export const ThumbnailImage = styled.img`
   display: block;
   object-fit: cover;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 3 / 1;
   width: 100%;
   border-radius: 4px;
   transform: scale(1.05);
@@ -117,20 +99,8 @@ export const ThumbnailImage = styled.img`
     transform: scale(1.01);
     filter: opacity(0.8);
   }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    aspect-ratio: 3 / 1;
-  }
 `;
 
 export const Content = styled.div`
-  padding: 50px 50px 50px 0;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    padding: 0 32px 32px;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    padding: 0 16px 16px;
-  }
+  padding: 25px;
 `;
