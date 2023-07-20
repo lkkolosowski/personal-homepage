@@ -22,7 +22,7 @@ const Repositories = ({ repositories }) => {
                 opacity: 0,
                 y: 50,
               }}
-              animate={{
+              whileInView={{
                 opacity: 1,
                 y: 0,
               }}
@@ -30,7 +30,7 @@ const Repositories = ({ repositories }) => {
                 type: "spring",
                 duration: 0.9,
                 bounce: 0.45,
-                delay: i * 0.15,
+                delay: i * 0.1,
               }}
               viewport={{
                 once: true,
