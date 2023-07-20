@@ -6,13 +6,13 @@ import { Icon } from "./styled";
 const Skills = () => (
   <>
     <Skillset
-      icon={<Icon>🛠️</Icon>}
+      icon={<Icon>🚀</Icon>}
       title={"Skills"}
       subtitle={"My skillset includes"}
       skills={skills}
     />
     {/* <Skillset
-      icon={<Icon>🚀</Icon>}
+      icon={<Icon>🛠️</Icon>}
       title={"Future"}
       subtitle={"What I want to learn next"}
       skills={goals}
