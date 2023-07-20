@@ -37,13 +37,22 @@ export const ButtonLink = styled.a`
   box-shadow: ${({ theme }) => theme.shadow.thick};
   cursor: pointer;
   transition: box-shadow ${({ theme }) => theme.animation},
-    background-color ${({ theme }) => theme.themeAnimation};
+    background-color ${({ theme }) => theme.animation},
+    border-color ${({ theme }) => theme.animation};
 
   ${({ wide }) =>
     wide &&
     css`
       display: flex;
       width: 100%;
+    `};
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      pointer-events: none;
+      background-color: #80bdff;
+      border-color: #80bdff;
     `};
 
   ${({ success }) =>

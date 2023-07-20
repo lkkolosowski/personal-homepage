@@ -29,6 +29,7 @@ const Form = () => {
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [confettiRain, setConfettiRain] = useState(0);
   const [success, setSuccess] = useState(null);
+  const [isSubmit, setIsSubmit] = useState(false);
   const { width, height } = useWindowSize();
 
   const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
@@ -41,6 +42,7 @@ const Form = () => {
   }
 
   const sendEmail = (e) => {
+    setIsSubmit(true);
     e.preventDefault();
     if (captchaIsDone && !success) {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
@@ -152,7 +154,7 @@ const Form = () => {
               opacity: 0,
               y: 40,
             }}
-            whileInView={{
+            animate={{
               opacity: 1,
               y: 0,
             }}
@@ -165,7 +167,7 @@ const Form = () => {
               once: true,
             }}
           >
-            <ButtonLink success={success} wide as="button" type="submit">
+            <ButtonLink success={success} disabled={isSubmit} wide as="button" type="submit">
               <MessageIcon />
               {!success ? "Send" : "Sent!"}
             </ButtonLink>
@@ -190,7 +192,7 @@ const Form = () => {
           >
             <InfoParagraph success={success}>
               {success
-                ? "Your message has been sent! I will get back to you soon :)"
+                ? "Your message has been sent! :)"
                 : "Something went wrong with your message :("}
             </InfoParagraph>
           </motion.div>
