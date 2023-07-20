@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const TileWrapper = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.tile.background};
-  box-shadow: ${({ theme }) => theme.shadow.thick};
   border-radius: 4px;
   transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation};

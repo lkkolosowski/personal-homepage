@@ -40,6 +40,7 @@ export const TextArea = styled.textarea`
   outline: 0;
   background-color: ${({ theme }) => theme.tile.background};
   resize: vertical;
+  min-height: calc(1.15em + 18px);
   transition: border-color ${({ theme }) => theme.animation},
     background-color ${({ theme }) => theme.themeAnimation},
     color ${({ theme }) => theme.themeAnimation};
@@ -92,7 +93,6 @@ export const FormItem = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  box-shadow: ${({ theme }) => theme.shadow.thick};
 `;
 
 export const MessageIcon = styled(Message)`

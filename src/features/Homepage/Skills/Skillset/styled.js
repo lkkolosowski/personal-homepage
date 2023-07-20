@@ -48,7 +48,6 @@ export const SkillBody = styled.div`
     background-color ${({ theme }) => theme.themeAnimation},
     color ${({ theme }) => theme.themeAnimation};
   border: 6px solid ${({ theme }) => theme.tile.border};
-  box-shadow: ${({ theme }) => theme.shadow.thick};
   font-size: 14px;
   line-height: 1.5;
 
