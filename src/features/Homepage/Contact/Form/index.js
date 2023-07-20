@@ -18,7 +18,6 @@ import {
   EnvelopeIcon,
   PersonNameIcon,
   PersonSurnameIcon,
-  InfoParagraph,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
 import useWindowSize from "react-use/lib/useWindowSize";
@@ -174,7 +173,7 @@ const Form = () => {
           </motion.div>
         )}
         <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={onChange} />
-        {success !== null && (
+        {/* {success !== null && (
           <motion.div
             initial={{
               opacity: 0,
@@ -196,7 +195,7 @@ const Form = () => {
                 : "Something went wrong with your message :("}
             </InfoParagraph>
           </motion.div>
-        )}
+        )} */}
       </FormSet>
     </StyledForm>
   );
