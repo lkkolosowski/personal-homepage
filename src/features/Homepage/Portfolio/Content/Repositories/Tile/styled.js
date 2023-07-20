@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TileWrapper = styled.div`
   height: 100%;
   background-color: ${({ theme }) => theme.tile.background};
-  border-radius: 4px;
+  border-radius: 8px;
   transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation};
   border: 6px solid ${({ theme }) => theme.tile.border};
@@ -80,7 +80,6 @@ export const Thumbnail = styled.a`
   overflow: hidden;
   display: block;
   aspect-ratio: 3 / 1;
-  background-color: ${({ theme }) => theme.white};
 `;
 
 export const ThumbnailImage = styled.img`
@@ -88,7 +87,7 @@ export const ThumbnailImage = styled.img`
   object-fit: cover;
   aspect-ratio: 3 / 1;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 8px;
   transform: scale(1.05);
   filter: opacity(0.9);
   transition: transform ${({ theme }) => theme.animation},

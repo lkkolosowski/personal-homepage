@@ -34,7 +34,7 @@ export const FormSet = styled.div`
 
 export const TextArea = styled.textarea`
   color: ${({ theme }) => theme.textPrimary};
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 8px 8px 0;
   padding: 6px 12px;
   border: 3px solid ${({ theme }) => theme.tile.border};
   outline: 0;
@@ -51,7 +51,7 @@ export const TextArea = styled.textarea`
 `;
 
 export const Label = styled.label`
-  border-radius: 4px 0 0 4px;
+  border-radius: 8px 0 0 8px;
   background-color: ${({ theme }) => theme.tile.background};
   width: calc(1.15em + 14px);
   height: 100%;
@@ -60,7 +60,7 @@ export const Label = styled.label`
 
 export const LabelContent = styled.div`
   color: ${({ theme }) => theme.textPrimary};
-  border-radius: 4px 0 0 4px;
+  border-radius: 8px 0 0 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +74,7 @@ export const LabelContent = styled.div`
 
 export const Input = styled.input`
   color: ${({ theme }) => theme.textPrimary};
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 8px 8px 0;
   padding: 6px 12px;
   border: 3px solid ${({ theme }) => theme.tile.border};
   outline: 0;

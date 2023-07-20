@@ -41,7 +41,7 @@ export const SkillBody = styled.div`
   height: calc(100% - 66px);
   padding: 25px;
   margin-top: 16px;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: ${({ theme }) => theme.tile.background};
   color: ${({ theme }) => theme.textAlternative};
   transition: border-color ${({ theme }) => theme.themeAnimation},
@@ -107,7 +107,7 @@ export const CardFront = styled.div`
   transform-style: preserve-3d;
   transition-property: transform;
   transition-duration: 0.5s;
-  border-radius: 4px;
+  border-radius: 8px;
   color: ${({ theme }) => theme.white};
 `;
 
@@ -117,7 +117,7 @@ export const CardFrontInner = styled.div`
   background-color: ${({ theme }) => theme.skills.front};
   box-shadow: ${({ theme }) => theme.tile.border} 0 0 0 1px;
   display: flex;
-  border-radius: 4px;
+  border-radius: 8px;
   gap: 16px;
   justify-content: center;
   align-items: center;
@@ -134,7 +134,7 @@ export const CardBack = styled.div`
   justify-content: center;
   align-items: center;
   backface-visibility: hidden;
-  border-radius: 4px;
+  border-radius: 8px;
   color: ${({ theme }) => theme.white};
   transform: rotateX(180deg);
 `;
@@ -145,7 +145,7 @@ export const CardBackInner = styled.div`
   background-color: ${({ theme }) => theme.skills.back};
   border: 1px solid ${({ theme }) => theme.tile.border};
   display: flex;
-  border-radius: 4px;
+  border-radius: 8px;
   gap: 16px;
   justify-content: center;
   align-items: center;

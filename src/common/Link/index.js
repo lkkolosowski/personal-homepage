@@ -32,7 +32,7 @@ export const ButtonLink = styled.a`
   background-color: ${({ theme }) => theme.button.background};
   color: ${({ theme }) => theme.button.text};
   border: 1px solid ${({ theme }) => theme.button.border};
-  border-radius: 4px;
+  border-radius: 8px;
   text-decoration: none;
   box-shadow: ${({ theme }) => theme.shadow.thick};
   cursor: pointer;
