@@ -135,8 +135,9 @@ const Form = () => {
           </Label>
           <Input
             type="text"
-            placeholder="Topic (optional)"
+            placeholder="Topic"
             name="message_topic"
+            required
           />
         </FormItem>
         <FormItem>
@@ -166,7 +167,13 @@ const Form = () => {
               once: true,
             }}
           >
-            <ButtonLink success={success} disabled={isSubmit} wide as="button" type="submit">
+            <ButtonLink
+              success={success}
+              disabled={isSubmit}
+              wide
+              as="button"
+              type="submit"
+            >
               <MessageIcon />
               {!success ? "Send" : "Sent!"}
             </ButtonLink>
