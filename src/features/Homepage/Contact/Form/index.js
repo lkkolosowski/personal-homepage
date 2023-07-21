@@ -64,7 +64,7 @@ const Form = () => {
   return (
     <Formik
       initialValues={{
-        recaptcha: "",
+        "g-recaptcha-response": "",
         user_name: "",
         user_surname: "",
         user_email: "",
@@ -185,11 +185,12 @@ const Form = () => {
             </motion.div>
           )}
           <ReCAPTCHA
-            name="recaptcha"
+            name="g-recaptcha-response"
             sitekey={CAPTCHA_KEY}
             // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            // this is key for developers only
             onChange={(response) => {
-              setFieldValue("recaptcha", response);
+              setFieldValue("g-recaptcha-response", response);
               setCaptchaIsDone(true);
             }}
           />
