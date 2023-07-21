@@ -11,7 +11,7 @@ import { ReactComponent as SpeechBubble } from "../../../../icons/speechBubble.s
 export const StyledForm = styled.form`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 16px;
 `;
 
 export const Pair = styled.div`
@@ -59,6 +59,7 @@ export const Label = styled.label`
 `;
 
 export const LabelContent = styled.div`
+  position: relative;
   color: ${({ theme }) => theme.textPrimary};
   border-radius: 8px 0 0 8px;
   display: flex;
@@ -70,6 +71,27 @@ export const LabelContent = styled.div`
   transition: background-color ${({ theme }) => theme.themeAnimation},
     color ${({ theme }) => theme.themeAnimation};
   padding-left: 3px;
+  overflow: hidden;
+
+  ${({ required }) =>
+    required &&
+    css`
+      &:after {
+        color: ${({ theme }) => theme.white};
+        content: "*";
+        padding: 11px 3px 7px 1px;
+        position: absolute;
+        top: -14px;
+        right: -4px;
+        background-color: ${({ theme }) => theme.button.background};
+        transform: rotate(-45deg);
+        opacity: 0.8;
+
+        @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+          right: -3px;
+        }
+      }
+    `}
 `;
 
 export const Input = styled.input`

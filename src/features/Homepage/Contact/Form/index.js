@@ -13,7 +13,6 @@ import {
   SpeechBubbleIcon,
   StyledForm,
   TextArea,
-  FormSet,
   TopicIcon,
   EnvelopeIcon,
   PersonNameIcon,
@@ -73,114 +72,126 @@ const Form = () => {
         width={width}
         height={height}
       />
-      <FormSet>
-        <Pair>
-          <FormItem>
-            <Label>
-              <LabelContent>
-                <PersonNameIcon />
-              </LabelContent>
-            </Label>
-            <Input type="text" placeholder="Name" name="user_name" required />
-          </FormItem>
-          <FormItem>
-            <Label>
-              <LabelContent>
-                <PersonSurnameIcon />
-              </LabelContent>
-            </Label>
-            <Input
-              type="text"
-              placeholder="Surname"
-              name="user_surname"
-              required
-            />
-          </FormItem>
-        </Pair>
-        <Pair>
-          <FormItem>
-            <Label>
-              <LabelContent>
-                <EnvelopeIcon />
-              </LabelContent>
-            </Label>
-            <Input
-              type="email"
-              placeholder="Email"
-              name="user_email"
-              required
-            />
-          </FormItem>
-          <FormItem>
-            <Label>
-              <LabelContent>
-                <PhoneIcon />
-              </LabelContent>
-            </Label>
-            <Input
-              type="tel"
-              placeholder="Phone number"
-              name="user_phone_number"
-              required
-            />
-          </FormItem>
-        </Pair>
-      </FormSet>
-      <FormSet>
+      <Pair>
         <FormItem>
-          <Label>
-            <LabelContent>
-              <TopicIcon />
+          <Label htmlFor="user_name">
+            <LabelContent required>
+              <PersonNameIcon />
             </LabelContent>
           </Label>
           <Input
             type="text"
-            placeholder="Topic"
-            name="message_topic"
+            placeholder="Name"
+            id="user_name"
+            name="user_name"
             required
           />
         </FormItem>
         <FormItem>
-          <Label>
-            <LabelContent>
-              <SpeechBubbleIcon />
+          <Label htmlFor="user_surname">
+            <LabelContent required>
+              <PersonSurnameIcon />
             </LabelContent>
           </Label>
-          <TextArea rows="5" placeholder="Message" name="message" required />
+          <Input
+            type="text"
+            placeholder="Surname"
+            id="user_surname"
+            name="user_surname"
+            required
+          />
         </FormItem>
-        {captchaIsDone && (
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 40,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              type: "spring",
-              duration: 0.9,
-              bounce: 0.45,
-            }}
-            viewport={{
-              once: true,
-            }}
+      </Pair>
+      <Pair>
+        <FormItem>
+          <Label htmlFor="user_email">
+            <LabelContent required>
+              <EnvelopeIcon />
+            </LabelContent>
+          </Label>
+          <Input
+            type="email"
+            placeholder="Email"
+            id="user_email"
+            name="user_email"
+            required
+          />
+        </FormItem>
+        <FormItem>
+          <Label htmlFor="user_phone_number">
+            <LabelContent>
+              <PhoneIcon />
+            </LabelContent>
+          </Label>
+          <Input
+            type="tel"
+            placeholder="Phone number (optional)"
+            id="user_phone_number"
+            name="user_phone_number"
+          />
+        </FormItem>
+      </Pair>
+
+      <FormItem>
+        <Label htmlFor="message_topic">
+          <LabelContent>
+            <TopicIcon />
+          </LabelContent>
+        </Label>
+        <Input
+          type="text"
+          placeholder="Topic (optional)"
+          id="message_topic"
+          name="message_topic"
+        />
+      </FormItem>
+      <FormItem>
+        <Label htmlFor="message">
+          <LabelContent required>
+            <SpeechBubbleIcon />
+          </LabelContent>
+        </Label>
+        <TextArea
+          rows="5"
+          placeholder="Message"
+          id="message"
+          name="message"
+          required
+        />
+      </FormItem>
+      {!captchaIsDone && (
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: "spring",
+            duration: 0.9,
+            bounce: 0.45,
+          }}
+          viewport={{
+            once: true,
+          }}
+        >
+          <ButtonLink
+            success={success}
+            disabled={isSubmit}
+            wide
+            as="button"
+            type="submit"
           >
-            <ButtonLink
-              success={success}
-              disabled={isSubmit}
-              wide
-              as="button"
-              type="submit"
-            >
-              <MessageIcon />
-              {!success ? "Send" : "Sent!"}
-            </ButtonLink>
-          </motion.div>
-        )}
-        <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={onChange} />
-        {/* {success !== null && (
+            <MessageIcon />
+            {!success ? "Send" : "Sent!"}
+          </ButtonLink>
+        </motion.div>
+      )}
+      <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={onChange} />
+      {/* {success !== null && (
           <motion.div
             initial={{
               opacity: 0,
@@ -203,7 +214,6 @@ const Form = () => {
             </InfoParagraph>
           </motion.div>
         )} */}
-      </FormSet>
     </StyledForm>
   );
 };
