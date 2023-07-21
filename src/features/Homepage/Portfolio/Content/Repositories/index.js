@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import Tile from "./Tile";
-import { StyledRepositories } from "./styled";
-import { transformedRepositories } from "./utils";
+import { Repository, StyledRepositories } from "./styled";
 import { motion } from "framer-motion";
 import { useOnLoadImages } from "./useOnLoadImages";
 import Loader from "../Loader";
@@ -10,13 +9,15 @@ const Repositories = ({ repositories }) => {
   const wrapperRef = useRef(null);
   const imagesLoaded = useOnLoadImages(wrapperRef);
 
+  const MotionRepository = motion(Repository);
+
   return (
     <>
       {!imagesLoaded && <Loader />}
       <StyledRepositories ref={wrapperRef} hidden={!imagesLoaded}>
-        {transformedRepositories(repositories).map(
+        {repositories.map(
           ({ id, name, description, homepage, html_url }, i) => (
-            <motion.div
+            <MotionRepository
               key={id}
               initial={{
                 opacity: 0,
@@ -42,7 +43,7 @@ const Repositories = ({ repositories }) => {
                 homepage={homepage}
                 html_url={html_url}
               />
-            </motion.div>
+            </MotionRepository>
           )
         )}
       </StyledRepositories>

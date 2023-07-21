@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const TileWrapper = styled.div`
+  height: calc(100% - 176px);
   margin-top: 16px;
   background-color: ${({ theme }) => theme.tile.background};
   border-radius: 8px;
@@ -10,6 +11,10 @@ export const TileWrapper = styled.div`
 
   &:hover {
     border-color: ${({ theme }) => theme.tile.hover};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    height: auto;
   }
 `;
 
@@ -76,17 +81,10 @@ export const IconImage = styled.img`
   }
 `;
 
-export const Thumbnail = styled.a`
-  overflow: hidden;
-  display: block;
-  aspect-ratio: 3 / 1;
-  border-radius: 8px;
-`;
-
 export const ThumbnailImage = styled.img`
   display: block;
   object-fit: cover;
-  aspect-ratio: 3 / 1;
+  height: 160px;
   width: 100%;
   border-radius: 8px;
   transition: transform ${({ theme }) => theme.animation},
@@ -97,10 +95,32 @@ export const ThumbnailImage = styled.img`
     css`
       opacity: 0.5;
     `}
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 16px;
+    height: auto;
+    aspect-ratio: 3 / 1;
+  }
+`;
+
+export const ThumbnailImageOverlay = styled.div`
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #444cf7 0,
+    #444cf7 1px,
+    #e5e5f7 0,
+    #e5e5f7 50%
+  );
 `;
 
 export const Content = styled.div`
-  min-height: 211.88px;
+  height: 100%;
   padding: 25px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {

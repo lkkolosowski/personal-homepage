@@ -2,15 +2,15 @@ import styled, { css } from "styled-components";
 
 export const StyledCard = styled.div`
   perspective: 800px;
-  cursor: default;
 
   &:hover > div {
     transform: rotateX(180deg);
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    width: 100%;
-    pointer-events: none;
+    &:hover > div {
+      transform: none;
+    }
   }
 `;
 

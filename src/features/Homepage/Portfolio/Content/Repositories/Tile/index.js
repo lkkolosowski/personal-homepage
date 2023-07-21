@@ -8,9 +8,9 @@ import {
   Item,
   IconImage,
   Content,
-  Thumbnail,
   ThumbnailImage,
   TileWrapper,
+  ThumbnailImageOverlay,
 } from "./styled";
 import { capitalizeWords } from "./utils";
 import { name as fullname, nick, projects } from "../../../../nameplate";
@@ -25,9 +25,9 @@ const Tile = ({ name, description, homepage, html_url }) => {
 
   return (
     <>
-      <Card
-        cardFrontContent={
-          <Thumbnail target={"_blank"} href={homepage || html_url}>
+      <a target={"_blank"} href={homepage || html_url} rel="noreferrer">
+        <Card
+          cardFrontContent={
             <ThumbnailImage
               src={
                 projects.find((x) => x.name === name)
@@ -36,24 +36,24 @@ const Tile = ({ name, description, homepage, html_url }) => {
               }
               alt={name}
             />
-          </Thumbnail>
-        }
-        cardBackContent={
-          <Thumbnail target={"_blank"} href={homepage || html_url}>
-            <ThumbnailImage
-              src={
-                projects.find((x) => x.name === name)
-                  ? projects.find((x) => x.name === name).thumbnail
-                  : placeholderImage
-              }
-              alt={name}
-              details
-            />
-          </Thumbnail>
-        }
-        cardFrontBackground={(theme) => theme.white}
-        cardBackBackground={(theme) => theme.white}
-      />
+          }
+          cardBackContent={
+            <ThumbnailImageOverlay>
+              <ThumbnailImage
+                src={
+                  projects.find((x) => x.name === name)
+                    ? projects.find((x) => x.name === name).thumbnail
+                    : placeholderImage
+                }
+                alt={name}
+                details
+              />
+            </ThumbnailImageOverlay>
+          }
+          cardFrontBackground={(theme) => theme.white}
+          cardBackBackground={(theme) => theme.white}
+        />
+      </a>
       <TileWrapper>
         <StyledTile>
           <Content>
