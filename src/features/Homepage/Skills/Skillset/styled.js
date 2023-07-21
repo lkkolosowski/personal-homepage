@@ -1,6 +1,4 @@
-import styled, { css } from "styled-components";
-
-export const SectionBody = styled.div``;
+import styled from "styled-components";
 
 export const Text = styled.span`
   text-transform: uppercase;
@@ -55,105 +53,9 @@ export const SkillBody = styled.div`
     border-color: ${({ theme }) => theme.tile.hover};
   }
 
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -14px;
-    left: 50%;
-    transform: translate(-6px, -3px);
-    opacity: 0.5;
-    height: 0;
-    border-radius: 50%;
-    width: 0;
-    margin: 0 auto;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid transparent;
-
-    ${({ variant }) =>
-      variant &&
-      css`
-        border-top: 6px solid ${({ variant }) => variant};
-      `};
-  }
-
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     padding: 24px;
     height: calc(100% - 64px);
-  }
-`;
-
-export const Card = styled.div`
-  perspective: 800px;
-  cursor: default;
-
-  &:hover > div {
-    transform: rotateX(180deg);
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    width: 100%;
-    pointer-events: none;
-  }
-`;
-
-export const CardFront = styled.div`
-  position: relative;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-  transform-style: preserve-3d;
-  transition-property: transform;
-  transition-duration: 0.5s;
-  border-radius: 8px;
-  color: ${({ theme }) => theme.white};
-`;
-
-export const CardFrontInner = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: ${({ theme }) => theme.skills.front};
-  box-shadow: ${({ theme }) => theme.tile.border} 0 0 0 1px;
-  display: flex;
-  border-radius: 8px;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  transition: background-color ${({ theme }) => theme.themeAnimation},
-    box-shadow ${({ theme }) => theme.themeAnimation};
-  padding: 9px 12px;
-`;
-
-export const CardBack = styled.div`
-  position: absolute;
-  inset: 0;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  backface-visibility: hidden;
-  border-radius: 8px;
-  color: ${({ theme }) => theme.white};
-  transform: rotateX(180deg);
-`;
-
-export const CardBackInner = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: ${({ theme }) => theme.skills.back};
-  border: 1px solid ${({ theme }) => theme.tile.border};
-  display: flex;
-  border-radius: 8px;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  transition: background-color ${({ theme }) => theme.themeAnimation};
-  padding: 0 12px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    padding: 0 8px;
   }
 `;
 
