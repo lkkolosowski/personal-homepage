@@ -12,6 +12,7 @@ export const Main = styled.main`
   max-width: 1232px;
   margin: 0 auto;
   padding: 120px 16px;
+  overflow-x: hidden;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     font-size: 14px;
