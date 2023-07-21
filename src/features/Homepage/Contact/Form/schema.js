@@ -15,4 +15,5 @@ export const schema = yup.object().shape({
     .matches(phoneRegExp, "Please enter a valid phone number"),
   message_topic: yup.string(),
   message: yup.string().required("Required"),
+  recaptcha: yup.string().required("Req"),
 });

@@ -50,9 +50,9 @@ const Form = () => {
     }
   }
 
-  function onChange() {
-    setCaptchaIsDone(true);
-  }
+  // function onChange() {
+  //   setCaptchaIsDone(true);
+  // }
 
   useEffect(() => {
     if (success) {
@@ -64,6 +64,7 @@ const Form = () => {
   return (
     <Formik
       initialValues={{
+        recaptcha: "",
         user_name: "",
         user_surname: "",
         user_email: "",
@@ -78,7 +79,7 @@ const Form = () => {
         }, 1000);
       }}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, setFieldValue }) => (
         <StyledForm ref={form}>
           <Confetti
             numberOfPieces={confettiRain}
@@ -183,7 +184,15 @@ const Form = () => {
               </ButtonLink>
             </motion.div>
           )}
-          <ReCAPTCHA sitekey={CAPTCHA_KEY} onChange={onChange} />
+          <ReCAPTCHA
+            name="recaptcha"
+            sitekey={CAPTCHA_KEY}
+            // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            onChange={(response) => {
+              setFieldValue("recaptcha", response);
+              setCaptchaIsDone(true);
+            }}
+          />
           {/* {success !== null && (
         <motion.div
           initial={{
