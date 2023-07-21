@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const TileWrapper = styled.div`
-  height: 100%;
+  margin-top: 16px;
   background-color: ${({ theme }) => theme.tile.background};
   border-radius: 8px;
   transition: border-color ${({ theme }) => theme.themeAnimation},
@@ -80,6 +80,7 @@ export const Thumbnail = styled.a`
   overflow: hidden;
   display: block;
   aspect-ratio: 3 / 1;
+  border-radius: 8px;
 `;
 
 export const ThumbnailImage = styled.img`
@@ -88,17 +89,21 @@ export const ThumbnailImage = styled.img`
   aspect-ratio: 3 / 1;
   width: 100%;
   border-radius: 8px;
-  transform: scale(1.05);
-  filter: opacity(0.9);
   transition: transform ${({ theme }) => theme.animation},
     filter ${({ theme }) => theme.animation};
 
-  &:hover {
-    transform: scale(1.01);
-    filter: opacity(0.8);
-  }
+  ${({ details }) =>
+    details &&
+    css`
+      opacity: 0.6;
+    `}
 `;
 
 export const Content = styled.div`
+  min-height: 211.88px;
   padding: 25px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    min-height: auto;
+  }
 `;
