@@ -10,6 +10,7 @@ const common = {
     0px 16px 58px rgba(9, 10, 51, 0.03)`,
   },
   white: "#FFFFFF",
+  black: "#000000",
   mineShaft: "#252525",
   animation: "0.3s",
   themeAnimation: "0.5s 0.25s",
@@ -18,6 +19,7 @@ const common = {
 
 const color = {
   white: "#FFFFFF",
+  black: "#000000",
   transculentWhite: "#FFFFFF30",
   transparentWhite: "#FFFFFF10",
   whiteLilac: "#FBFBFE",
@@ -41,7 +43,7 @@ const color = {
 const brightness = {
   light: "brightness(1)",
   dark: "brightness(0.85)",
-}
+};
 
 const transform = {
   left: "translateX(0)",
@@ -55,6 +57,7 @@ const opacity = {
 
 export const dark = {
   ...common,
+  contrast: color.white,
   primary: color.dodgerBlue,
   alternative: color.scienceBlue,
   textPrimary: color.white,
@@ -96,7 +99,7 @@ export const dark = {
     textModeOff: opacity.invisible,
     textModeOn: opacity.visible,
   },
-  skills: {
+  card: {
     front: color.transparentWhite,
     back: color.transculentWhite,
   },
@@ -104,6 +107,7 @@ export const dark = {
 
 export const light = {
   ...common,
+  contrast: color.black,
   primary: color.scienceBlue,
   alternative: color.dodgerBlue,
   textPrimary: color.mineShaft,
@@ -145,7 +149,7 @@ export const light = {
     textModeOff: opacity.visible,
     textModeOn: opacity.invisible,
   },
-  skills: {
+  card: {
     front: color.transculentWhite,
     back: color.transparentWhite,
   },
