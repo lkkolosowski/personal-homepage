@@ -26,7 +26,7 @@ export const CardFront = styled.div`
   border-radius: 8px;
   color: ${({ theme }) => theme.white};
   background-color: ${({ background, theme }) =>
-    typeof background === "string" ? background : theme.white};
+    typeof background === "string" ? background : theme.background};
 `;
 
 export const CardFrontInner = styled.div`
@@ -66,7 +66,7 @@ export const CardBack = styled.div`
   color: ${({ theme }) => theme.white};
   transform: rotateX(180deg);
   background-color: ${({ background, theme }) =>
-    typeof background === "string" ? background : theme.white};
+    typeof background === "string" ? background : theme.background};
 `;
 
 export const CardBackInner = styled.div`

@@ -95,7 +95,7 @@ export const ThumbnailImage = styled.img`
   ${({ details }) =>
     details &&
     css`
-      opacity: 0.6;
+      opacity: 0.5;
     `}
 `;
 
