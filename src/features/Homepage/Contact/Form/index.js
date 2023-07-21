@@ -44,6 +44,7 @@ const Form = () => {
         (error) => {
           console.log(error.text);
           setSuccess(false);
+          alert("Something went wrong with your message :(");
         }
       );
     }
