@@ -20,7 +20,7 @@ const common = {
 const color = {
   white: "#FFFFFF",
   black: "#000000",
-  transculentWhite: "#FFFFFF30",
+  transculentWhite: "#FFFFFF40",
   transparentWhite: "#FFFFFF10",
   whiteLilac: "#FBFBFE",
   mineShaft: "#252525",
