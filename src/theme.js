@@ -32,6 +32,7 @@ const color = {
   scienceBlue: "#0366D6",
   semiTransparentScienceBlue: "#0366D633",
   semiTransparentDarkerScienceBlue: "#0366D680",
+  vividTangerine: "#ff7f7fab",
   anakiwa: "#8CC2FF",
   parsley: "#14462033",
   dodgerBlue: "#2188FF",
@@ -71,6 +72,7 @@ export const dark = {
     background: color.semiTransparentMineShaft,
     border: color.semiTransparentLighterIron,
     hover: color.semiTransparentDarkerScienceBlue,
+    error: color.vividTangerine,
   },
   button: {
     text: color.white,
@@ -121,6 +123,7 @@ export const light = {
     background: color.white,
     border: color.semiTransparentIron,
     hover: color.semiTransparentScienceBlue,
+    error: color.vividTangerine,
   },
   button: {
     text: color.white,
