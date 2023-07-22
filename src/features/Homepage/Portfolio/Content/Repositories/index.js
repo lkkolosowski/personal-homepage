@@ -12,8 +12,8 @@ const Repositories = ({ repositories }) => {
 
   return (
     <>
-      {!imagesLoaded && <Loader />}
-      <StyledRepositories ref={wrapperRef} hidden={!imagesLoaded}>
+      {imagesLoaded === false && <Loader />}
+      <StyledRepositories ref={wrapperRef} hidden={imagesLoaded === false}>
         {transformedRepositories(repositories).map(
           ({ id, name, description, homepage, html_url }, i) => (
             <Repository key={id}>
