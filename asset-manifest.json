@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.26c7d418.js",
+    "main.js": "/personal-homepage/static/js/main.a6ce8386.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/currency-converter-react.png": "/personal-homepage/static/media/currency-converter-react.12d39321b55b06323871.png",
     "static/media/movies-browser.png": "/personal-homepage/static/media/movies-browser.88860fb46bf712439e67.png",
     "static/media/homepage.png": "/personal-homepage/static/media/homepage.2ec24a4c0af15c57a3c8.png",
-    "static/media/profile-picture.png": "/personal-homepage/static/media/profile-picture.d27a3a501c8bec4b3e90.png",
+    "static/media/profile-picture.png": "/personal-homepage/static/media/profile-picture.e1f74424699ac2f90f82.png",
     "static/media/food-market.png": "/personal-homepage/static/media/food-market.a8341f72ee992dddfd64.png",
     "static/media/arrays-and-objects.png": "/personal-homepage/static/media/arrays-and-objects.a665cbb2f0b483b5a613.png",
     "static/media/portfolio-nextjs.png": "/personal-homepage/static/media/portfolio-nextjs.d1c9895b706f4bae6187.png",
@@ -36,10 +36,10 @@
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.a56e0e9ffbffefca5f7c9f481e4b8689.svg",
-    "main.26c7d418.js.map": "/personal-homepage/static/js/main.26c7d418.js.map",
+    "main.a6ce8386.js.map": "/personal-homepage/static/js/main.a6ce8386.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.26c7d418.js"
+    "static/js/main.a6ce8386.js"
   ]
 }
