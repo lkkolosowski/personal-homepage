@@ -1,5 +1,12 @@
 import { ButtonLink, TextLink } from "../../../common/Link";
-import { name, about, email, welcomePhrases, linkedin, nick } from "../nameplate";
+import {
+  name,
+  about,
+  email,
+  welcomePhrases,
+  linkedin,
+  nick,
+} from "../nameplate";
 import Subtitle from "../Subtitle";
 import { usePhrases } from "../usePhrases";
 import {
@@ -26,7 +33,10 @@ const Hero = () => {
             <Quotation>{about.heading}</Quotation>
           </HeaderParagraph>
           <HeaderParagraph>
-            {about.description} <TextLink soft href={linkedin} target="_blank" rel="no-referrer">@{nick}</TextLink>
+            {about.description}{" "}
+            <TextLink soft href={linkedin} target="_blank" rel="no-referrer">
+              @{nick}
+            </TextLink>
           </HeaderParagraph>
         </Heading>
         <ButtonLink wide hero title={email} href="#contact">
