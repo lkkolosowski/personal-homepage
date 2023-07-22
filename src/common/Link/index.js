@@ -17,6 +17,12 @@ export const TextLink = styled.a`
     css`
       color: ${({ theme }) => theme.textPrimary};
     `};
+
+  ${({ soft }) =>
+    soft &&
+    css`
+      color: ${({ theme }) => theme.link.soft};
+    `};
 `;
 
 export const ButtonLink = styled.a`
@@ -47,12 +53,20 @@ export const ButtonLink = styled.a`
       width: 100%;
     `};
 
+    ${({ hero }) =>
+    hero &&
+    css`
+      transition: box-shadow ${({ theme }) => theme.animation},
+    background-color ${({ theme }) => theme.themeAnimation},
+    border-color ${({ theme }) => theme.themeAnimation};
+    `};
+
   ${({ disabled }) =>
     disabled &&
     css`
       pointer-events: none;
-      background-color: #80bdff;
-      border-color: #80bdff;
+      background-color: ${({ theme }) => theme.button.inactive};
+      border-color: ${({ theme }) => theme.button.inactive};
     `};
 
   ${({ success }) =>
