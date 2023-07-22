@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Formik } from "formik";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import { motion } from "framer-motion";
 import {
   MessageIcon,
   PhoneIcon,
@@ -115,7 +114,7 @@ const Form = () => {
               required={true}
               icon={<EnvelopeIcon />}
               name="user_email"
-              type="email"
+              type="text"
               placeholder="Email"
               id="user_email"
               as="input"
@@ -152,38 +151,17 @@ const Form = () => {
             id="message"
             as="textarea"
           />
-          {captchaIsDone && (
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 40,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                type: "spring",
-                duration: 0.9,
-                bounce: 0.45,
-              }}
-              viewport={{
-                once: true,
-              }}
-            >
-              <ButtonLink
-                success={success}
-                disabled={isSubmitting}
-                wide
-                as="button"
-                type="submit"
-                style={{ marginBottom: "16px" }}
-              >
-                <MessageIcon />
-                {!success ? "Send" : "Sent!"}
-              </ButtonLink>
-            </motion.div>
-          )}
+          <ButtonLink
+            success={success}
+            disabled={!captchaIsDone || isSubmitting}
+            wide
+            as="button"
+            type="submit"
+            style={{ marginBottom: "16px" }}
+          >
+            <MessageIcon />
+            {!success ? "Send" : "Sent!"}
+          </ButtonLink>
           <ReCAPTCHA
             name="g-recaptcha-response"
             sitekey={CAPTCHA_KEY}
@@ -191,7 +169,7 @@ const Form = () => {
             // this is key for developers only
             onChange={(response) => {
               setFieldValue("g-recaptcha-response", response);
-              setCaptchaIsDone(true);
+              setCaptchaIsDone(!captchaIsDone);
             }}
           />
           {/* {success !== null && (
