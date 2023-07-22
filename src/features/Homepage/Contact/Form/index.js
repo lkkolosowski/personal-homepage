@@ -159,6 +159,7 @@ const Form = () => {
             {!success ? "Send" : "Sent!"}
           </ButtonLink>
           <ReCAPTCHA
+            size="compact"
             name="g-recaptcha-response"
             sitekey={CAPTCHA_KEY}
             // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
