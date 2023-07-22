@@ -32,7 +32,7 @@ const color = {
   scienceBlue: "#0366D6",
   semiTransparentScienceBlue: "#0366D633",
   semiTransparentDarkerScienceBlue: "#0366D680",
-  vividTangerine: "#ff7f7fab",
+  vividTangerine: "#ff5050",
   anakiwa: "#8CC2FF",
   parsley: "#14462033",
   dodgerBlue: "#2188FF",

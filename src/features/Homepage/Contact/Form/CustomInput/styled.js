@@ -82,7 +82,7 @@ export const Input = styled.input`
   ${({ isError }) =>
     isError &&
     css`
-      border-color: ${({ theme }) => theme.tile.error};
+      border-color: ${({ theme }) => theme.tile.error}cc;
     `}
 
     ${({as}) => as === "textarea" && css`
