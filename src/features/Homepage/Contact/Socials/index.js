@@ -11,15 +11,23 @@ const Socials = () => (
           opacity: 0,
           y: 30,
         }}
+        exit={{
+          transition: {
+            duration: 0,
+            delay: 0,
+            y: 0,
+            opacity: 0,
+          },
+        }}
         whileInView={{
           opacity: 1,
           y: 0,
-        }}
-        transition={{
-          type: "spring",
-          duration: 0.9,
-          bounce: 0.45,
-          delay: i * 0.23333333,
+          transition: {
+            type: "spring",
+            duration: 0.9,
+            bounce: 0.45,
+            delay: i * 0.23333333,
+          },
         }}
       >
         <IconLink href={url} title={name} target="_blank" rel="noreferrer">
