@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { Wrapper, Paragraph, StyledLoader } from "./styled";
 
 const Loader = () => {
-  const MotionLoader = motion(StyledLoader);
   return (
     <Wrapper>
       <Paragraph>Please wait, projects are being loaded...</Paragraph>
-      <MotionLoader
+      <motion.div
         initial={{
           opacity: 0,
+          width: "100%",
         }}
         animate={{
           opacity: 1,
@@ -20,7 +20,9 @@ const Loader = () => {
           duration: 1,
           delay: 0.5,
         }}
-      />
+      >
+        <StyledLoader />
+      </motion.div>
     </Wrapper>
   );
 };
