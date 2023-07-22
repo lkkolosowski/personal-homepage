@@ -49,10 +49,6 @@ const Form = () => {
     }
   }
 
-  // function onChange() {
-  //   setCaptchaIsDone(true);
-  // }
-
   useEffect(() => {
     if (success) {
       setConfettiRain(300);
