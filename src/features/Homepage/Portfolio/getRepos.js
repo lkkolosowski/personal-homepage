@@ -1,11 +1,17 @@
 import axios from "axios";
 
-const username = "lkkolosowski";
-const apiURL = "https://api.github.com";
+const getRepos = () => {
+  const username = "lkkolosowski";
+  const apiURL = "https://api.github.com";
+  const params = {
+    sort: "pushed",
+  };
 
-const getRepos = () =>
-  axios
-    .get(`${apiURL}/users/${username}/repos`)
+  const response = axios
+    .get(`${apiURL}/users/${username}/repos`, { params })
     .then((response) => response.data);
+
+  return response;
+};
 
 export default getRepos;
