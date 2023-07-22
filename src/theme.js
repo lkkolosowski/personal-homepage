@@ -33,6 +33,7 @@ const color = {
   semiTransparentScienceBlue: "#0366D633",
   semiTransparentDarkerScienceBlue: "#0366D680",
   vividTangerine: "#ff5050",
+  malibu: "#80bdff",
   anakiwa: "#8CC2FF",
   parsley: "#14462033",
   dodgerBlue: "#2188FF",
@@ -42,8 +43,8 @@ const color = {
 };
 
 const brightness = {
-  light: "brightness(1)",
-  dark: "brightness(0.85)",
+  light: "brightness(1.08) contrast(1.12);",
+  dark: "brightness(1) contrast(1.05);",
 };
 
 const transform = {
@@ -80,6 +81,7 @@ export const dark = {
     border: color.semiTransparentIron,
     hover: color.shipCove,
     active: color.parsley,
+    inactive: color.malibu,
   },
   link: {
     text: color.dodgerBlue,
@@ -87,6 +89,7 @@ export const dark = {
     hover: color.scienceBlue,
     underlineHover: color.dodgerBlue,
     active: color.parsley,
+    soft: color.malibu,
   },
   icon: {
     background: color.white,
@@ -131,6 +134,7 @@ export const light = {
     border: color.semiTransparentIron,
     hover: color.anakiwa,
     active: color.parsley,
+    inactive: color.malibu,
   },
   link: {
     text: color.scienceBlue,
@@ -138,6 +142,7 @@ export const light = {
     hover: color.dodgerBlue,
     underlineHover: color.semiTransparentDarkerScienceBlue,
     active: color.parsley,
+    soft: color.malibu,
   },
   icon: {
     background: color.mineShaft,
