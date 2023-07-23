@@ -44,7 +44,8 @@ export const ButtonLink = styled.a`
   cursor: pointer;
   transition: box-shadow ${({ theme }) => theme.animation},
     background-color ${({ theme }) => theme.animation},
-    border-color ${({ theme }) => theme.animation};
+    border-color ${({ theme }) => theme.animation},
+    color ${({ theme }) => theme.animation};
 
   ${({ icon }) =>
     icon &&
