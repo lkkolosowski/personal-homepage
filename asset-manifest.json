@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.89c235f7.js",
+    "main.js": "/personal-homepage/static/js/main.7859b2e7.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/currency-converter-react.png": "/personal-homepage/static/media/currency-converter-react.12d39321b55b06323871.png",
     "static/media/movies-browser.png": "/personal-homepage/static/media/movies-browser.88860fb46bf712439e67.png",
@@ -38,11 +38,11 @@
     "static/media/play.svg": "/personal-homepage/static/media/play.c268f68c6446d7177ec18e96e2c69a3a.svg",
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
-    "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.a56e0e9ffbffefca5f7c9f481e4b8689.svg",
-    "main.89c235f7.js.map": "/personal-homepage/static/js/main.89c235f7.js.map",
+    "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.783068fa314aeb1a4f97d6f125fda843.svg",
+    "main.7859b2e7.js.map": "/personal-homepage/static/js/main.7859b2e7.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.89c235f7.js"
+    "static/js/main.7859b2e7.js"
   ]
 }
