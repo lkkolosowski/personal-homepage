@@ -53,15 +53,17 @@ export const ButtonLink = styled.a`
       width: 60px;
     `};
 
-  ${({ invert }) =>
-    invert &&
+  ${({ text }) =>
+    text &&
     css`
+      padding: 0;
       gap: 8px;
-      padding: 6px 12px;
       background-color: ${({ theme }) => theme.transparent};
       color: ${({ theme }) => theme.link.text};
+      box-shadow: none;
       border: none;
-      box-shadow: ${({ theme }) => theme.shadow.hidden};
+      border-bottom: 1px solid ${({ theme }) => theme.link.underline};
+      border-radius: 0;
     `};
 
   ${({ wide }) =>
@@ -115,6 +117,16 @@ export const ButtonLink = styled.a`
 
   &:hover {
     box-shadow: ${({ theme }) => theme.button.hover} 0 0 0 2px;
+
+    ${({ text }) =>
+      text &&
+      css`
+        &:hover {
+          color: ${({ theme }) => theme.link.hover};
+          border-bottom: 1px solid ${({ theme }) => theme.link.underlineHover};
+          box-shadow: none;
+        }
+      `};
   }
 
   &:active {

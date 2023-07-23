@@ -76,24 +76,24 @@ const Tile = ({ name, description, homepage, html_url, tileIndex }) => {
       <Content>
         <div>
           <Title>
-            <TextLink target={"_blank"} href={homepage || html_url}>
+            <ButtonLink text target={"_blank"} href={homepage || html_url}>
               <IconImage
                 src={`https://lkkolosowski.github.io/${name}/icon128.png`}
                 alt={name}
                 onError={imageOnErrorHandler}
               />
               {name !== nick ? capitalizeWords(name) : fullname}
-            </TextLink>
+            </ButtonLink>
           </Title>
           <Description>{description}</Description>
         </div>
         <Buttons>
           {homepage && (
-            <ButtonLink invert target={"_blank"} href={homepage}>
+            <ButtonLink text target={"_blank"} href={homepage}>
               <PlayIcon />Demo
             </ButtonLink>
           )}
-          <ButtonLink invert target={"_blank"} href={html_url}>
+          <ButtonLink text target={"_blank"} href={html_url}>
             <CodeIcon />Code
           </ButtonLink>
         </Buttons>

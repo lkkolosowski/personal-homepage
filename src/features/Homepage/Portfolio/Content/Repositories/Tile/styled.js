@@ -52,21 +52,14 @@ export const Buttons = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  gap: 16px;
 `;
 
 export const IconImage = styled.img`
-  display: inline-block;
+  display: block;
   line-height: 1;
   height: 24px;
-  margin-bottom: -5px;
-  margin-right: 8px;
   text-align: center;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    height: 18px;
-    margin-bottom: -3px;
-    margin-right: 8px;
-  }
 `;
 
 export const ThumbnailImage = styled.img`
