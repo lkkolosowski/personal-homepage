@@ -47,7 +47,7 @@ export const ButtonLink = styled.a`
   box-shadow: ${({ theme }) => theme.shadow.thick};
   cursor: pointer;
   transition: box-shadow ${({ theme }) => theme.animation},
-    background-color ${({ theme }) => theme.themeAnimation},
+    background-color ${({ theme }) => theme.animation},
     border-color ${({ theme }) => theme.animation},
     color ${({ theme }) => theme.animation};
 
@@ -70,6 +70,15 @@ export const ButtonLink = styled.a`
       border-bottom: 1px solid ${({ theme }) => theme.link.underline};
       border-radius: 0;
     `};
+
+  ${({ hero }) =>
+    hero &&
+    css`
+      transition: box-shadow ${({ theme }) => theme.animation},
+        background-color ${({ theme }) => theme.themeAnimation},
+        border-color ${({ theme }) => theme.animation},
+        color ${({ theme }) => theme.animation};
+    `}
 
   ${({ wide }) =>
     wide &&
