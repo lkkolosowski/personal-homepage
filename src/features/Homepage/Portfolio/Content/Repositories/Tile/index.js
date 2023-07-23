@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import { TextLink } from "../../../../../../common/Link";
+import { ButtonLink, TextLink } from "../../../../../../common/Link";
 import {
-  StyledTile,
   Title,
-  TileBody,
   Description,
   List,
   Item,
   IconImage,
   Content,
   ThumbnailImage,
-  TileWrapper,
   ThumbnailImageOverlay,
+  PlayIcon,
+  CodeIcon,
+  Buttons,
 } from "./styled";
 import { capitalizeWords } from "./utils";
 import { name as fullname, nick, projects } from "../../../../nameplate";
@@ -75,45 +75,31 @@ const Tile = ({ name, description, homepage, html_url, tileIndex }) => {
           backgroundBack={(theme) => theme.white}
         />
       </a>
-      <TileWrapper>
-        <StyledTile>
-          <Content>
-            <Title>
-              <TextLink target={"_blank"} href={homepage || html_url}>
-                <IconImage
-                  src={`https://lkkolosowski.github.io/${name}/icon128.png`}
-                  alt={name}
-                  onError={imageOnErrorHandler}
-                />
-                {name !== nick ? capitalizeWords(name) : fullname}
-              </TextLink>
-            </Title>
-            <TileBody>
-              <Description>{description}</Description>
-              <List>
-                {homepage && (
-                  <Item>
-                    <span>Demo:</span>
-                    <span>
-                      <TextLink target={"_blank"} href={homepage}>
-                        https://{name}.demo
-                      </TextLink>
-                    </span>
-                  </Item>
-                )}
-                <Item>
-                  <span>Code:</span>
-                  <span>
-                    <TextLink target={"_blank"} href={html_url}>
-                      https://{name}.code
-                    </TextLink>
-                  </span>
-                </Item>
-              </List>
-            </TileBody>
-          </Content>
-        </StyledTile>
-      </TileWrapper>
+      <Content>
+        <div>
+          <Title>
+            <TextLink target={"_blank"} href={homepage || html_url}>
+              <IconImage
+                src={`https://lkkolosowski.github.io/${name}/icon128.png`}
+                alt={name}
+                onError={imageOnErrorHandler}
+              />
+              {name !== nick ? capitalizeWords(name) : fullname}
+            </TextLink>
+          </Title>
+          <Description>{description}</Description>
+        </div>
+        <Buttons>
+          {homepage && (
+            <ButtonLink invert target={"_blank"} href={homepage}>
+              <PlayIcon />Demo
+            </ButtonLink>
+          )}
+          <ButtonLink invert target={"_blank"} href={html_url}>
+            <CodeIcon />Code
+          </ButtonLink>
+        </Buttons>
+      </Content>
     </motion.div>
   );
 };

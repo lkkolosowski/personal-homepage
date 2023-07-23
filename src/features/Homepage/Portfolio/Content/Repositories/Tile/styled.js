@@ -1,12 +1,22 @@
 import styled, { css } from "styled-components";
+import { ReactComponent as Play } from "../../../../../../icons/play.svg";
+import { ReactComponent as Code } from "../../../../../../icons/code.svg";
 
-export const TileWrapper = styled.div`
+export const Content = styled.article`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 25px;
   height: calc(100% - 176px);
   margin-top: 16px;
   background-color: ${({ theme }) => theme.tile.background};
   border-radius: 8px;
+  color: ${({ theme }) => theme.textAlternative};
+  font-size: 14px;
   transition: border-color ${({ theme }) => theme.themeAnimation},
-    background-color ${({ theme }) => theme.themeAnimation};
+    background-color ${({ theme }) => theme.themeAnimation},
+    color ${({ theme }) => theme.themeAnimation};
   border: 6px solid ${({ theme }) => theme.tile.border};
 
   &:hover {
@@ -14,24 +24,9 @@ export const TileWrapper = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    min-height: auto;
     height: auto;
   }
-`;
-
-export const StyledTile = styled.article`
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: start;
-
-  &:hover {
-    border-color: ${({ theme }) => theme.tile.hover};
-  }
-`;
-
-export const TileBody = styled.div`
-  color: ${({ theme }) => theme.textAlternative};
-  transition: color ${({ theme }) => theme.themeAnimation};
-  font-size: 14px;
 `;
 
 export const Title = styled.h2`
@@ -53,17 +48,10 @@ export const Description = styled.p`
   }
 `;
 
-export const List = styled.ul`
-  display: grid;
-  gap: 8px;
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-`;
-
-export const Item = styled.li`
-  display: grid;
-  grid-template-columns: 4em 1fr;
+export const Buttons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 `;
 
 export const IconImage = styled.img`
@@ -119,11 +107,15 @@ export const ThumbnailImageOverlay = styled.div`
   );
 `;
 
-export const Content = styled.div`
-  height: 100%;
-  padding: 25px;
+export const PlayIcon = styled(Play)`
+  width: 24px;
+  height: auto;
+`;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    min-height: auto;
-  }
+export const CodeIcon = styled(Code)`
+  margin-top: -6px;
+  width: 30px;
+  height: auto;
+  position: relative;
+  top: 3px;
 `;
