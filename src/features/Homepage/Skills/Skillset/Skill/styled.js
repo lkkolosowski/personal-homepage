@@ -19,13 +19,24 @@ export const StyledSkill = styled.li`
   }
 `;
 
-export const SkillBody = styled.div`
+export const Backdrop = styled.div`
+  position: fixed;
+  inset: 0;
+  background-color: ${({ theme }) => theme.backdrop.background};
+  opacity: 0.67;
+`;
+
+export const SkillWrapper = styled.div`
+  z-index: 111;
   position: relative;
-  height: calc(100% - 66px);
+`;
+
+export const SkillBody = styled.div`
+  position: absolute;
   padding: 25px;
   margin-top: 16px;
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.tile.background};
+  background-color: ${({ theme }) => theme.tile.backgroundAlternative};
   color: ${({ theme }) => theme.textAlternative};
   transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation},
@@ -39,10 +50,5 @@ export const SkillBody = styled.div`
     transition: border-color ${({ theme }) => theme.animation},
       background-color ${({ theme }) => theme.themeAnimation},
       color ${({ theme }) => theme.themeAnimation};
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    padding: 24px;
-    height: calc(100% - 64px);
   }
 `;

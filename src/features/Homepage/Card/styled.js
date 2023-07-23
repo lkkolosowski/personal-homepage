@@ -7,6 +7,19 @@ export const StyledCard = styled.div`
     transform: rotateX(180deg);
   }
 
+  ${({ onClick }) =>
+    onClick &&
+    css`
+      cursor: pointer;
+      position: relative;
+    `};
+
+  ${({ highlighted }) =>
+    highlighted &&
+    css`
+      z-index: 120;
+    `};
+
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     &:hover > div {
       transform: none;

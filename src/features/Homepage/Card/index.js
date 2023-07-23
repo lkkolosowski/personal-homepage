@@ -13,9 +13,11 @@ const Card = ({
   backgroundFront,
   backgroundBack,
   brightening,
+  handleOnClick,
+  highlighted
 }) => {
   return (
-    <StyledCard>
+    <StyledCard highlighted={highlighted} onClick={handleOnClick}>
       <CardFront background={backgroundFront}>
         <CardFrontInner brightening={brightening} withPadding={withPadding}>
           {contentFront}

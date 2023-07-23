@@ -18,6 +18,7 @@ const common = {
   animation: "0.3s",
   themeAnimation: "0.5s 0.25s",
   switchAnimation: "0.6s cubic-bezier(0.66, -0.60, 0.66, 0.90) 0s",
+  backdrop: "#00000080",
 };
 
 const color = {
@@ -27,6 +28,7 @@ const color = {
   transparentWhite: "#FFFFFF10",
   whiteLilac: "#FBFBFE",
   mineShaft: "#252525",
+  hardMineShaft: "#313131",
   semiTransparentMineShaft: "#363636B8",
   transparentMineShaft: "#36363630",
   slateGray: "#6E7E91",
@@ -72,8 +74,13 @@ export const dark = {
   underline: color.semiTransparentLighterIron,
   indicator: color.semiTransparentDarkerScienceBlue,
   brightness: brightness.dark,
+  backdrop: {
+    background: color.black,
+    stripe: color.hardDarkerScienceBlue,
+  },
   tile: {
     background: color.semiTransparentMineShaft,
+    backgroundAlternative: color.hardMineShaft,
     border: color.semiTransparentLighterIron,
     hover: color.semiTransparentDarkerScienceBlue,
     error: color.vividTangerine,
@@ -125,8 +132,13 @@ export const light = {
   underline: color.semiTransparentIron,
   indicator: color.semiTransparentScienceBlue,
   brightness: brightness.light,
+  backdrop: {
+    background: color.white,
+    stripe: color.semiTransparentScienceBlue,
+  },
   tile: {
     background: color.white,
+    backgroundAlternative: color.white,
     border: color.semiTransparentIron,
     hover: color.semiTransparentScienceBlue,
     error: color.vividTangerine,

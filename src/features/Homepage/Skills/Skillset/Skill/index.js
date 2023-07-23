@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import Card from "../../../Card";
-import { Text, StyledSkill, SkillBody } from "./styled";
+import { Text, StyledSkill, SkillBody, SkillWrapper, Backdrop } from "./styled";
+import { useState } from "react";
 
 const Skill = ({ name, Icon, color, level, description, skillIndex }) => {
+  const [isBodyHidden, setIsBodyHidden] = useState(true);
+
   return (
     <StyledSkill>
       <motion.div
@@ -27,6 +30,8 @@ const Skill = ({ name, Icon, color, level, description, skillIndex }) => {
         key={name}
       >
         <Card
+          highlighted={!isBodyHidden}
+          handleOnClick={() => setIsBodyHidden(!isBodyHidden)}
           contentFront={
             <>
               <Icon />
@@ -45,7 +50,28 @@ const Skill = ({ name, Icon, color, level, description, skillIndex }) => {
           brightening={true}
         />
 
-        {description && <SkillBody variant={color}>{description}</SkillBody>}
+        {description && !isBodyHidden && (
+          <SkillWrapper>
+            <Backdrop onClick={() => setIsBodyHidden(!isBodyHidden)} />
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 75,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                type: "spring",
+                duration: 0.9,
+                bounce: 0.45,
+              }}
+            >
+              <SkillBody variant={color}>{description}</SkillBody>
+            </motion.div>
+          </SkillWrapper>
+        )}
       </motion.div>
     </StyledSkill>
   );
