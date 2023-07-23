@@ -4,15 +4,11 @@ export const Skills = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px 16px;
+  gap: 16px;
   margin-top: 0;
   margin-bottom: 0;
   padding: 0;
   list-style: none;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    gap: 16px;
-  }
 `;
 
 export const Break = styled.div`
