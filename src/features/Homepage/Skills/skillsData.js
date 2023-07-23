@@ -7,8 +7,8 @@ import { ReactComponent as ReactRouterIcon } from "../../../icons/react-router.s
 import { ReactComponent as ReduxIcon } from "../../../icons/redux.svg";
 import { ReactComponent as TypescriptIcon } from "../../../icons/typescript.svg";
 import { ReactComponent as TailwindIcon } from "../../../icons/tailwind.svg";
-import { ReactComponent as TanstackQueryIcon } from "../../../icons/react-query.svg";
 import { ReactComponent as NextjsIcon } from "../../../icons/nextjs.svg";
+import { ReactComponent as TanstackQueryIcon } from "../../../icons/react-query.svg";
 import { styledIcon } from "./Skillset/styled";
 
 export const skills = [
@@ -77,12 +77,20 @@ export const skills = [
       "By using TypeScript, I add strong typing and improved code reliability to my projects, catching errors more effectively during development and making the code easier to maintain and understand.",
   },
   {
-    name: "TailwindCSS",
+    name: "Tailwind CSS",
     Icon: styledIcon(TailwindIcon),
     color: "#38b2ac",
     level: "⭐⭐",
     description:
       "I use Tailwind CSS to quickly create attractive and responsive user interfaces, making it easier for me to design and speeding up the development process.",
+  },
+  {
+    name: "Nextjs",
+    Icon: styledIcon(NextjsIcon),
+    color: "#000000",
+    level: "⭐⭐",
+    description:
+      "Nextjs enables me to build super-fast and extremely user-friendly static websites as well as web applications using React.",
   },
 ];
 
