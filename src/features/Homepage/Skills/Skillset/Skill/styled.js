@@ -36,6 +36,9 @@ export const SkillBody = styled.div`
 
   &:hover {
     border-color: ${({ theme }) => theme.tile.hover};
+    transition: border-color ${({ theme }) => theme.animation},
+      background-color ${({ theme }) => theme.themeAnimation},
+      color ${({ theme }) => theme.themeAnimation};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {

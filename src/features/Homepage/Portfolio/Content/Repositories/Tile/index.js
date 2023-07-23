@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ButtonLink, TextLink } from "../../../../../../common/Link";
+import { ButtonLink } from "../../../../../../common/Link";
 import {
   Title,
   Description,
@@ -90,11 +90,13 @@ const Tile = ({ name, description, homepage, html_url, tileIndex }) => {
         <Buttons>
           {homepage && (
             <ButtonLink text target={"_blank"} href={homepage}>
-              <PlayIcon />Demo
+              <PlayIcon />
+              Demo
             </ButtonLink>
           )}
           <ButtonLink text target={"_blank"} href={html_url}>
-            <CodeIcon />Code
+            <CodeIcon />
+            Code
           </ButtonLink>
         </Buttons>
       </Content>

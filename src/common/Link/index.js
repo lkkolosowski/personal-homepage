@@ -5,17 +5,21 @@ export const TextLink = styled.a`
   text-decoration: none;
   border-bottom: 1px solid ${({ theme }) => theme.link.underline};
   transition: border-bottom ${({ theme }) => theme.animation},
-    color ${({ theme }) => theme.animation};
+    color ${({ theme }) => theme.themeAnimation};
 
   &:hover {
     color: ${({ theme }) => theme.link.hover};
     border-bottom: 1px solid ${({ theme }) => theme.link.underlineHover};
+    transition: border-bottom ${({ theme }) => theme.animation},
+      color ${({ theme }) => theme.animation};
   }
 
   ${({ text }) =>
     text &&
     css`
       color: ${({ theme }) => theme.textPrimary};
+      transition: border-bottom ${({ theme }) => theme.animation},
+        color ${({ theme }) => theme.animation};
     `};
 
   ${({ soft }) =>
@@ -43,7 +47,7 @@ export const ButtonLink = styled.a`
   box-shadow: ${({ theme }) => theme.shadow.thick};
   cursor: pointer;
   transition: box-shadow ${({ theme }) => theme.animation},
-    background-color ${({ theme }) => theme.animation},
+    background-color ${({ theme }) => theme.themeAnimation},
     border-color ${({ theme }) => theme.animation},
     color ${({ theme }) => theme.animation};
 
@@ -72,14 +76,6 @@ export const ButtonLink = styled.a`
     css`
       display: flex;
       width: 100%;
-    `};
-
-  ${({ hero }) =>
-    hero &&
-    css`
-      transition: box-shadow ${({ theme }) => theme.animation},
-        background-color ${({ theme }) => theme.themeAnimation},
-        border-color ${({ theme }) => theme.themeAnimation};
     `};
 
   ${({ disabled }) =>
@@ -118,6 +114,10 @@ export const ButtonLink = styled.a`
 
   &:hover {
     box-shadow: ${({ theme }) => theme.button.hover} 0 0 0 2px;
+    transition: box-shadow ${({ theme }) => theme.animation},
+      background-color ${({ theme }) => theme.themeAnimation},
+      border-color ${({ theme }) => theme.animation},
+      color ${({ theme }) => theme.animation};
 
     ${({ text }) =>
       text &&

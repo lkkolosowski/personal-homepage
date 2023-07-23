@@ -55,6 +55,7 @@ export const LabelContent = styled.div`
         background-color: ${({ theme }) => theme.button.background};
         transform: rotate(-45deg);
         opacity: 0.8;
+        transition: background-color ${({ theme }) => theme.themeAnimation};
 
         @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
           right: -3px;
@@ -67,13 +68,19 @@ export const Input = styled.input`
   color: ${({ theme }) => theme.textPrimary};
   border-radius: 0 8px 8px 0;
   padding: 6px 12px;
-  border: 3px solid ${({ theme }) => theme.tile.border};
+  border: 2px solid ${({ theme }) => theme.tile.border};
   outline: 0;
   background-color: ${({ theme }) => theme.tile.background};
-  transition: border-color ${({ theme }) => theme.animation},
+  transition: border-color ${({ theme }) => theme.themeAnimation},
     background-color ${({ theme }) => theme.themeAnimation},
     color ${({ theme }) => theme.themeAnimation};
   grid-area: input;
+
+  &:hover {
+    transition: border-color ${({ theme }) => theme.animation},
+      background-color ${({ theme }) => theme.themeAnimation},
+      color ${({ theme }) => theme.animation};
+  }
 
   &:focus {
     border-color: ${({ theme }) => theme.tile.hover};
@@ -85,9 +92,11 @@ export const Input = styled.input`
       border-color: ${({ theme }) => theme.tile.error}cc;
     `}
 
-    ${({as}) => as === "textarea" && css`
-    resize: none;
-    min-height: calc(5.75em + 18px);
+  ${({ as }) =>
+    as === "textarea" &&
+    css`
+      resize: none;
+      min-height: calc(5.75em + 18px);
     `}
 `;
 
