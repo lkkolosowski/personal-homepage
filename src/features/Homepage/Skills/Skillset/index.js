@@ -4,6 +4,7 @@ import Skill from "./Skill";
 import { Break, Skills } from "./styled";
 
 const Skillset = ({ title, icon, subtitle, skills }) => {
+
   return (
     <Section>
       <Header icon={icon} title={title} subtitle={subtitle} />
@@ -33,8 +34,8 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
             />
           ))
           .slice(3, 7)}
-          <Break />
-          {skills
+        <Break />
+        {skills
           .map(({ name, Icon, color, level, description }, i) => (
             <Skill
               skillIndex={i}
@@ -46,7 +47,6 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
             />
           ))
           .slice(7)}
-          <Break />
       </Skills>
     </Section>
   );
