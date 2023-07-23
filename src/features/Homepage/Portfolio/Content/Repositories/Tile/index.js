@@ -3,8 +3,6 @@ import { ButtonLink, TextLink } from "../../../../../../common/Link";
 import {
   Title,
   Description,
-  List,
-  Item,
   IconImage,
   Content,
   ThumbnailImage,
