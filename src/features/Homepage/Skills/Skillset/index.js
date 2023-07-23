@@ -1,18 +1,38 @@
+import { motion } from "framer-motion";
 import Header from "../../../../common/Header";
 import Section from "../../../../common/Section";
 import Skill from "./Skill";
 import { Break, Skills } from "./styled";
 
 const Skillset = ({ title, icon, subtitle, skills }) => {
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
   return (
     <Section>
       <Header icon={icon} title={title} subtitle={subtitle} />
-      <Skills>
+      <Skills
+        as={motion.ul}
+        variants={container}
+        whileInView="show"
+        initial="hidden"
+        viewport={{
+          once: true,
+        }}
+      >
         {skills
-          .map(({ name, Icon, color, level, description }, i) => (
+          .map(({ name, Icon, color, level, description }) => (
             <Skill
-              skillIndex={i}
+              key={name}
               name={name}
               Icon={Icon}
               color={color}
@@ -23,9 +43,9 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
           .slice(0, 3)}
         <Break />
         {skills
-          .map(({ name, Icon, color, level, description }, i) => (
+          .map(({ name, Icon, color, level, description }) => (
             <Skill
-              skillIndex={i}
+              key={name}
               name={name}
               Icon={Icon}
               color={color}
@@ -36,9 +56,9 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
           .slice(3, 7)}
         <Break />
         {skills
-          .map(({ name, Icon, color, level, description }, i) => (
+          .map(({ name, Icon, color, level, description }) => (
             <Skill
-              skillIndex={i}
+              key={name}
               name={name}
               Icon={Icon}
               color={color}
@@ -47,8 +67,8 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
             />
           ))
           .slice(7)}
-          <Break />
-          <Break />
+        <Break />
+        <Break />
       </Skills>
     </Section>
   );

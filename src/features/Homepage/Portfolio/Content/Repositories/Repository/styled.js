@@ -2,6 +2,18 @@ import styled, { css } from "styled-components";
 import { ReactComponent as Play } from "../../../../../../icons/play.svg";
 import { ReactComponent as Code } from "../../../../../../icons/code.svg";
 
+export const StyledRepository = styled.div`
+  width: calc((100% / 3) - (((3 - 1) / 3) * 16px));
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
+    width: calc((100% / 2) - (((2 - 1) / 2) * 16px));
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    width: 100%;
+  }
+`;
+
 export const Content = styled.article`
   display: flex;
   flex-direction: column;

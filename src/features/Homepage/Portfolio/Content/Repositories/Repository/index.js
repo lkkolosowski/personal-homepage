@@ -10,6 +10,7 @@ import {
   PlayIcon,
   CodeIcon,
   Buttons,
+  StyledRepository,
 } from "./styled";
 import { capitalizeWords } from "./utils";
 import { name as fullname, nick, projects } from "../../../../nameplate";
@@ -17,29 +18,25 @@ import websiteIcon from "../../../../../../images/website.png";
 import placeholderImage from "../../../../../../images/placeholderImage.svg";
 import Card from "../../../../Card";
 
-const Tile = ({ name, description, homepage, html_url, tileIndex }) => {
+const Repository = ({ name, description, homepage, html_url}) => {
   const imageOnErrorHandler = (event) => {
     event.currentTarget.src = websiteIcon;
   };
 
+  const item = {
+    hidden: { opacity: 0, y: 120 },
+    show: { opacity: 1, y: 0 },
+    transition: {
+      type: "spring",
+      duration: 0.9,
+      bounce: 0.45,
+    },
+  };
+
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 50,
-        height: "100%",
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        height: "100%",
-      }}
-      transition={{
-        type: "spring",
-        duration: 0.9,
-        bounce: 0.45,
-        delay: tileIndex * 0.1,
-      }}
+    <StyledRepository
+      as={motion.div}
+      variants={item}
       viewport={{
         once: true,
       }}
@@ -100,8 +97,8 @@ const Tile = ({ name, description, homepage, html_url, tileIndex }) => {
           </ButtonLink>
         </Buttons>
       </Content>
-    </motion.div>
+    </StyledRepository>
   );
 };
 
-export default Tile;
+export default Repository;

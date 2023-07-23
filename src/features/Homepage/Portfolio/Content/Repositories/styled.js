@@ -16,15 +16,3 @@ export const StyledRepositories = styled.div`
       visibility: hidden;
     `}
 `;
-
-export const Repository = styled.div`
-  width: calc((100% / 3) - (((3 - 1) / 3) * 16px));
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
-    width: calc((100% / 2) - (((2 - 1) / 2) * 16px));
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-    width: 100%;
-  }
-`;
