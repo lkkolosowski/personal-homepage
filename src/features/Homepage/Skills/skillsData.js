@@ -6,6 +6,7 @@ import { ReactComponent as StyledComponentsIcon } from "../../../icons/styled-co
 import { ReactComponent as ReactRouterIcon } from "../../../icons/react-router.svg";
 import { ReactComponent as ReduxIcon } from "../../../icons/redux.svg";
 import { ReactComponent as TypescriptIcon } from "../../../icons/typescript.svg";
+import { ReactComponent as TailwindIcon } from "../../../icons/tailwind.svg";
 import { ReactComponent as TanstackQueryIcon } from "../../../icons/react-query.svg";
 import { ReactComponent as NextjsIcon } from "../../../icons/nextjs.svg";
 import { styledIcon } from "./Skillset/styled";
@@ -38,7 +39,7 @@ export const skills = [
   {
     name: "JS ES6+",
     Icon: styledIcon(JavascriptIcon),
-    color: "#323330",
+    color: "#585a53",
     level: "⭐⭐⭐⭐",
     description:
       "I code in JS ES6+  including features like arrow functions, template literals, and destructuring, that is both easy to read and maintain.",
@@ -66,6 +67,22 @@ export const skills = [
     level: "⭐⭐⭐⭐",
     description:
       "I implement React Router to create seamless and dynamic navigation between different pages of your website, allowing users to easily navigate and interact.",
+  },
+  {
+    name: "TypeScript",
+    Icon: styledIcon(TypescriptIcon),
+    color: "#5e540c",
+    level: "⭐⭐",
+    description:
+      "By using TypeScript, I add strong typing and improved code reliability to my projects, catching errors more effectively during development and making the code easier to maintain and understand.",
+  },
+  {
+    name: "TailwindCSS",
+    Icon: styledIcon(TailwindIcon),
+    color: "#253391",
+    level: "⭐⭐",
+    description:
+      "I use Tailwind CSS to quickly create attractive and responsive user interfaces, making it easier for me to design and speeding up the development process.",
   },
 ];
 
