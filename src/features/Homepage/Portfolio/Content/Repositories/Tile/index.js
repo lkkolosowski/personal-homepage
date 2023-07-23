@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { TextLink } from "../../../../../../common/Link";
 import {
   StyledTile,
@@ -18,16 +19,36 @@ import websiteIcon from "../../../../../../images/website.png";
 import placeholderImage from "../../../../../../images/placeholderImage.svg";
 import Card from "../../../../Card";
 
-const Tile = ({ name, description, homepage, html_url }) => {
+const Tile = ({ name, description, homepage, html_url, tileIndex }) => {
   const imageOnErrorHandler = (event) => {
     event.currentTarget.src = websiteIcon;
   };
 
   return (
-    <>
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 50,
+        height: "100%",
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        height: "100%",
+      }}
+      transition={{
+        type: "spring",
+        duration: 0.9,
+        bounce: 0.45,
+        delay: tileIndex * 0.1,
+      }}
+      viewport={{
+        once: true,
+      }}
+    >
       <a target={"_blank"} href={homepage || html_url} rel="noreferrer">
         <Card
-          cardFrontContent={
+          contentFront={
             <ThumbnailImage
               src={
                 projects.find((x) => x.name === name)
@@ -37,7 +58,7 @@ const Tile = ({ name, description, homepage, html_url }) => {
               alt={name}
             />
           }
-          cardBackContent={
+          contentBack={
             <ThumbnailImageOverlay>
               <ThumbnailImage
                 src={
@@ -50,8 +71,8 @@ const Tile = ({ name, description, homepage, html_url }) => {
               />
             </ThumbnailImageOverlay>
           }
-          cardFrontBackground={(theme) => theme.white}
-          cardBackBackground={(theme) => theme.white}
+          backgroundFront={(theme) => theme.white}
+          backgroundBack={(theme) => theme.white}
         />
       </a>
       <TileWrapper>
@@ -93,7 +114,7 @@ const Tile = ({ name, description, homepage, html_url }) => {
           </Content>
         </StyledTile>
       </TileWrapper>
-    </>
+    </motion.div>
   );
 };
 
