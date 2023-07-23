@@ -8,21 +8,21 @@ import {
 
 const Card = ({
   withPadding,
-  cardFrontContent,
-  cardBackContent,
-  cardFrontBackground,
-  cardBackBackground,
+  contentFront,
+  contentBack,
+  backgroundFront,
+  backgroundBack,
   brightening,
 }) => {
   return (
     <StyledCard>
-      <CardFront background={cardFrontBackground}>
+      <CardFront background={backgroundFront}>
         <CardFrontInner brightening={brightening} withPadding={withPadding}>
-          {cardFrontContent}
+          {contentFront}
         </CardFrontInner>
-        <CardBack background={cardBackBackground}>
+        <CardBack background={backgroundBack}>
           <CardBackInner brightening={brightening} withPadding={withPadding}>
-            {cardBackContent}
+            {contentBack}
           </CardBackInner>
         </CardBack>
       </CardFront>
