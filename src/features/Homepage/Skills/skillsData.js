@@ -71,7 +71,7 @@ export const skills = [
   {
     name: "TypeScript",
     Icon: styledIcon(TypescriptIcon),
-    color: "#5e540c",
+    color: "#3178c6",
     level: "⭐⭐",
     description:
       "By using TypeScript, I add strong typing and improved code reliability to my projects, catching errors more effectively during development and making the code easier to maintain and understand.",
@@ -79,7 +79,7 @@ export const skills = [
   {
     name: "TailwindCSS",
     Icon: styledIcon(TailwindIcon),
-    color: "#253391",
+    color: "#38b2ac",
     level: "⭐⭐",
     description:
       "I use Tailwind CSS to quickly create attractive and responsive user interfaces, making it easier for me to design and speeding up the development process.",
