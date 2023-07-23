@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.e5f44a5e.js",
+    "main.js": "/personal-homepage/static/js/main.723c3d08.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/currency-converter-react.png": "/personal-homepage/static/media/currency-converter-react.12d39321b55b06323871.png",
     "static/media/movies-browser.png": "/personal-homepage/static/media/movies-browser.88860fb46bf712439e67.png",
@@ -29,17 +29,20 @@
     "static/media/phone.svg": "/personal-homepage/static/media/phone.60a6d3a946ac01d2efd6e0b9bf9f1542.svg",
     "static/media/envelope.svg": "/personal-homepage/static/media/envelope.e0b68ff3f0a828522be1e8a9bab2aae6.svg",
     "static/media/personName.svg": "/personal-homepage/static/media/personName.f59d926fc5e4d62cf7a9de568a2d5e25.svg",
+    "static/media/code.svg": "/personal-homepage/static/media/code.044e02242e2aaaa62a48d16710075fca.svg",
     "static/media/css.svg": "/personal-homepage/static/media/css.8be595612207191743030813dab7cbff.svg",
     "static/media/message.svg": "/personal-homepage/static/media/message.26211eaaaa6c65af54e458abaff54c3e.svg",
     "static/media/javascript.svg": "/personal-homepage/static/media/javascript.acc4642f682cd93a4c20a8a02c0cfa21.svg",
     "static/media/user.svg": "/personal-homepage/static/media/user.149e1811ba612c3689c4e28218a3a608.svg",
+    "static/media/play.svg": "/personal-homepage/static/media/play.c268f68c6446d7177ec18e96e2c69a3a.svg",
+    "static/media/tailwind.svg": "/personal-homepage/static/media/tailwind.973c73e85d4daa24b257ba20298716c4.svg",
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.a56e0e9ffbffefca5f7c9f481e4b8689.svg",
-    "main.e5f44a5e.js.map": "/personal-homepage/static/js/main.e5f44a5e.js.map",
+    "main.723c3d08.js.map": "/personal-homepage/static/js/main.723c3d08.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e5f44a5e.js"
+    "static/js/main.723c3d08.js"
   ]
 }
