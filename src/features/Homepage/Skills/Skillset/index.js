@@ -47,6 +47,8 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
             />
           ))
           .slice(7)}
+          <Break />
+          <Break />
       </Skills>
     </Section>
   );
