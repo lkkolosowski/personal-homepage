@@ -14,7 +14,7 @@ const Card = ({
   backgroundBack,
   brightening,
   handleOnClick,
-  highlighted
+  highlighted,
 }) => {
   return (
     <StyledCard highlighted={highlighted} onClick={handleOnClick}>

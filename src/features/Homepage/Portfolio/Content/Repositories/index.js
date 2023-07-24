@@ -17,18 +17,17 @@ const Repositories = ({ repositories }) => {
     show: {
       opacity: 1,
       transition: {
-        delay: 0.7,
         when: "beforeChildren",
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
       },
     },
   };
 
   return (
     <>
-      {imagesLoaded === false && <Loader />}
+      {!imagesLoaded && <Loader />}
       <StyledRepositories
-        as={motion.div}
+        as={imagesLoaded ? motion.div : "div"}
         variants={container}
         whileInView="show"
         initial="hidden"

@@ -71,7 +71,7 @@ export const Input = styled.input`
   border: 2px solid ${({ theme }) => theme.tile.border};
   outline: 0;
   background-color: ${({ theme }) => theme.tile.background};
-  transition: border-color ${({ theme }) => theme.themeAnimation},
+  transition: border-color ${({ theme }) => theme.animation},
     background-color ${({ theme }) => theme.themeAnimation},
     color ${({ theme }) => theme.themeAnimation};
   grid-area: input;
