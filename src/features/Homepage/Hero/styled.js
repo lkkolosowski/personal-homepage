@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import picture from "../../../images/profile-picture.png";
+import picture from "../../../images/profile-picture.webp";
 import { ReactComponent as Message } from "../../../icons/message.svg";
 
 export const StyledHeader = styled.header`

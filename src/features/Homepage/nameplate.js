@@ -1,11 +1,11 @@
-import image1 from "../../images/arrays-and-objects.png";
-import image2 from "../../images/currency-converter-react.png";
-import image3 from "../../images/food-market.png";
-import image4 from "../../images/homepage.png";
-import image5 from "../../images/movies-browser.png";
-import image6 from "../../images/personal-homepage.jpg";
-import image7 from "../../images/portfolio-nextjs.png";
-import image8 from "../../images/to-do-list-react.jpg";
+import image1 from "../../images/arrays-and-objects.webp";
+import image2 from "../../images/currency-converter-react.webp";
+import image3 from "../../images/food-market.webp";
+import image4 from "../../images/homepage.webp";
+import image5 from "../../images/movies-browser.webp";
+import image6 from "../../images/personal-homepage.webp";
+import image7 from "../../images/portfolio-nextjs.webp";
+import image8 from "../../images/to-do-list-react.webp";
 
 export const name = "Łukasz Kołosowski";
 export const nick = "lkkolosowski";
