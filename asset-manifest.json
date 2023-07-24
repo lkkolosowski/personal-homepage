@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.9ae8d757.js",
+    "main.js": "/personal-homepage/static/js/main.852f85ce.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
+    "static/media/profile-picture.png": "/personal-homepage/static/media/profile-picture.78e3c4678b0d93f7933a.png",
     "static/media/food-market.webp": "/personal-homepage/static/media/food-market.70c3fc04ec2f87c169be.webp",
     "static/media/currency-converter-react.webp": "/personal-homepage/static/media/currency-converter-react.4557c54c6ffcdd97bbcd.webp",
     "static/media/movies-browser.webp": "/personal-homepage/static/media/movies-browser.c8dc5eaaf122eab932ec.webp",
-    "static/media/profile-picture.webp": "/personal-homepage/static/media/profile-picture.903866eb5b84680baf44.webp",
     "static/media/personal-homepage.webp": "/personal-homepage/static/media/personal-homepage.5c39f2b83128dfa5a6ac.webp",
     "static/media/portfolio-nextjs.webp": "/personal-homepage/static/media/portfolio-nextjs.db02be9c52da36b67b8e.webp",
     "static/media/arrays-and-objects.webp": "/personal-homepage/static/media/arrays-and-objects.f58d2d42a27709fccea4.webp",
@@ -39,10 +39,10 @@
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.783068fa314aeb1a4f97d6f125fda843.svg",
-    "main.9ae8d757.js.map": "/personal-homepage/static/js/main.9ae8d757.js.map",
+    "main.852f85ce.js.map": "/personal-homepage/static/js/main.852f85ce.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9ae8d757.js"
+    "static/js/main.852f85ce.js"
   ]
 }
