@@ -95,6 +95,12 @@ export const ButtonLink = styled.a`
       border-color: ${({ theme }) => theme.button.inactive};
     `};
 
+  ${({ formButton }) =>
+    formButton &&
+    css`
+      margin-bottom: 16px;
+    `};
+
   ${({ success }) =>
     success &&
     css`
