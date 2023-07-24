@@ -17,6 +17,8 @@ const Repositories = ({ repositories }) => {
     show: {
       opacity: 1,
       transition: {
+        delay: 0.7,
+        when: "beforeChildren",
         staggerChildren: 0.1,
       },
     },
@@ -37,9 +39,9 @@ const Repositories = ({ repositories }) => {
         hidden={imagesLoaded === false}
       >
         {transformedRepositories(repositories).map(
-          ({ id, name, description, homepage, html_url }) => (
+          ({ name, description, homepage, html_url }) => (
             <Repository
-              key={id}
+              key={name}
               name={name}
               description={description}
               homepage={homepage}

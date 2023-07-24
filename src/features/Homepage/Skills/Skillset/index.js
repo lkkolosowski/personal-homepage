@@ -12,6 +12,8 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
     show: {
       opacity: 1,
       transition: {
+        delay: 0.7,
+        when: "beforeChildren",
         staggerChildren: 0.1,
       },
     },

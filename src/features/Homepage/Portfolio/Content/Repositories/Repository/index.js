@@ -18,7 +18,7 @@ import websiteIcon from "../../../../../../images/website.png";
 import placeholderImage from "../../../../../../images/placeholderImage.svg";
 import Card from "../../../../Card";
 
-const Repository = ({ name, description, homepage, html_url}) => {
+const Repository = ({ name, description, homepage, html_url }) => {
   const imageOnErrorHandler = (event) => {
     event.currentTarget.src = websiteIcon;
   };
