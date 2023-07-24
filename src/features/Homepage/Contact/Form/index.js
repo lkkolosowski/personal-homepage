@@ -20,39 +20,37 @@ import { schema } from "./schema";
 import CustomInput from "./CustomInput";
 
 const Form = () => {
-  const form = useRef();
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
-  const [confettiRain, setConfettiRain] = useState(0);
+  const [amountOfConfetti, setAmountOfConfetti] = useState(0);
   const [success, setSuccess] = useState(null);
   const { width, height } = useWindowSize();
+  const form = useRef();
 
   const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
   const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
   const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
   const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
-  function SendEmail(values, actions) {
-    if (captchaIsDone) {
-      emailjs.send(SERVICE_ID, TEMPLATE_ID, values, PUBLIC_KEY).then(
-        (result) => {
-          console.log(result.text);
-          actions.resetForm();
-          setSuccess(true);
-          actions.setSubmitting(false);
-        },
-        (error) => {
-          console.log(error.text);
-          setSuccess(false);
-          alert("Something went wrong with your message :(");
-        }
-      );
-    }
-  }
+  const SendEmail = (values, actions) => {
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, values, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        actions.resetForm();
+        setSuccess(true);
+        actions.setSubmitting(false);
+      },
+      (error) => {
+        console.log(error.text);
+        setSuccess(false);
+        alert("Something went wrong with your message :(");
+      }
+    );
+  };
 
   useEffect(() => {
     if (success) {
-      setConfettiRain(300);
-      setTimeout(() => setConfettiRain(0), 3000);
+      setAmountOfConfetti(300);
+      setTimeout(() => setAmountOfConfetti(0), 3000);
     }
   }, [success]);
 
@@ -77,7 +75,7 @@ const Form = () => {
       {({ isSubmitting, setFieldValue }) => (
         <StyledForm ref={form}>
           <Confetti
-            numberOfPieces={confettiRain}
+            numberOfPieces={amountOfConfetti}
             style={{ position: "fixed" }}
             width={width}
             height={height}
@@ -85,75 +83,67 @@ const Form = () => {
           <Pair>
             <CustomInput
               label="user_name"
-              required={true}
               icon={<PersonNameIcon />}
               name="user_name"
+              id="user_name"
               type="text"
               placeholder="Name"
-              id="user_name"
-              as="input"
+              required
             />
             <CustomInput
               label="user_surname"
-              required={false}
               icon={<PersonSurnameIcon />}
               name="user_surname"
+              id="user_surname"
               type="text"
               placeholder="Surname"
-              id="user_surname"
-              as="input"
             />
           </Pair>
           <Pair>
             <CustomInput
               label="user_email"
-              required={true}
               icon={<EnvelopeIcon />}
               name="user_email"
+              id="user_email"
               type="text"
               placeholder="Email"
-              id="user_email"
-              as="input"
+              required
             />
             <CustomInput
               label="user_phone_number"
-              required={false}
               icon={<PhoneIcon />}
               name="user_phone_number"
+              id="user_phone_number"
               type="tel"
               placeholder="Phone number"
-              id="user_phone_number"
-              as="input"
             />
           </Pair>
           <CustomInput
             label="message_topic"
-            required={false}
             icon={<TopicIcon />}
             name="message_topic"
+            id="message_topic"
             type="text"
             placeholder="Topic"
-            id="message_topic"
-            as="input"
           />
           <CustomInput
+            as="textarea"
             withTextArea={true}
             label="message"
-            required={true}
             icon={<SpeechBubbleIcon />}
             name="message"
+            id="message"
             type="text"
             placeholder="Message"
-            id="message"
-            as="textarea"
+            required
           />
           <ButtonLink
+            as="button"
             success={success}
             disabled={!captchaIsDone || isSubmitting}
-            wide
-            as="button"
             type="submit"
-            style={{ marginBottom: "16px" }}
+            formButton
+            wide
           >
             <MessageIcon />
             {!success ? "Send" : "Sent!"}
@@ -169,29 +159,6 @@ const Form = () => {
               setCaptchaIsDone(!captchaIsDone);
             }}
           />
-          {/* {success !== null && (
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            type: "spring",
-            duration: 0.9,
-            bounce: 0.45,
-          }}
-        >
-          <InfoParagraph success={success}>
-            {success
-              ? "Your message has been sent! :)"
-              : "Something went wrong with your message :("}
-          </InfoParagraph>
-        </motion.div>
-      )} */}
         </StyledForm>
       )}
     </Formik>
