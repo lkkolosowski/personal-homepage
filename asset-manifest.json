@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.b6466fe9.js",
+    "main.js": "/personal-homepage/static/js/main.9ae8d757.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
-    "static/media/currency-converter-react.png": "/personal-homepage/static/media/currency-converter-react.12d39321b55b06323871.png",
-    "static/media/movies-browser.png": "/personal-homepage/static/media/movies-browser.88860fb46bf712439e67.png",
-    "static/media/homepage.png": "/personal-homepage/static/media/homepage.2ec24a4c0af15c57a3c8.png",
-    "static/media/profile-picture.png": "/personal-homepage/static/media/profile-picture.e1f74424699ac2f90f82.png",
-    "static/media/food-market.png": "/personal-homepage/static/media/food-market.a8341f72ee992dddfd64.png",
-    "static/media/arrays-and-objects.png": "/personal-homepage/static/media/arrays-and-objects.a665cbb2f0b483b5a613.png",
-    "static/media/portfolio-nextjs.png": "/personal-homepage/static/media/portfolio-nextjs.d1c9895b706f4bae6187.png",
-    "static/media/to-do-list-react.jpg": "/personal-homepage/static/media/to-do-list-react.b2ca8dbe98937244ec15.jpg",
-    "static/media/personal-homepage.jpg": "/personal-homepage/static/media/personal-homepage.167224499033e53a860e.jpg",
+    "static/media/food-market.webp": "/personal-homepage/static/media/food-market.70c3fc04ec2f87c169be.webp",
+    "static/media/currency-converter-react.webp": "/personal-homepage/static/media/currency-converter-react.4557c54c6ffcdd97bbcd.webp",
+    "static/media/movies-browser.webp": "/personal-homepage/static/media/movies-browser.c8dc5eaaf122eab932ec.webp",
+    "static/media/profile-picture.webp": "/personal-homepage/static/media/profile-picture.903866eb5b84680baf44.webp",
+    "static/media/personal-homepage.webp": "/personal-homepage/static/media/personal-homepage.5c39f2b83128dfa5a6ac.webp",
+    "static/media/portfolio-nextjs.webp": "/personal-homepage/static/media/portfolio-nextjs.db02be9c52da36b67b8e.webp",
+    "static/media/arrays-and-objects.webp": "/personal-homepage/static/media/arrays-and-objects.f58d2d42a27709fccea4.webp",
+    "static/media/to-do-list-react.webp": "/personal-homepage/static/media/to-do-list-react.a63aa90492c36a3d1cf7.webp",
+    "static/media/homepage.webp": "/personal-homepage/static/media/homepage.7ffb43aa31fed032e3da.webp",
     "static/media/react-query.svg": "/personal-homepage/static/media/react-query.aabaf077b85dfce1bb552fd3145596a0.svg",
     "static/media/styled-components.svg": "/personal-homepage/static/media/styled-components.6fed13e1d7a108ef997ab010e6f081bf.svg",
     "static/media/instagram.svg": "/personal-homepage/static/media/instagram.ac575dc2f80befa7ba993f0a04ba6dda.svg",
@@ -39,10 +39,10 @@
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.783068fa314aeb1a4f97d6f125fda843.svg",
-    "main.b6466fe9.js.map": "/personal-homepage/static/js/main.b6466fe9.js.map",
+    "main.9ae8d757.js.map": "/personal-homepage/static/js/main.9ae8d757.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.b6466fe9.js"
+    "static/js/main.9ae8d757.js"
   ]
 }
