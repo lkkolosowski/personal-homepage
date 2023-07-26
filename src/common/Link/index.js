@@ -5,7 +5,7 @@ export const TextLink = styled.a`
   text-decoration: none;
   border-bottom: 1px solid ${({ theme }) => theme.link.underline};
   transition: border-bottom ${({ theme }) => theme.animation},
-    color ${({ theme }) => theme.themeAnimation};
+    color ${({ theme }) => theme.animation};
 
   &:hover {
     color: ${({ theme }) => theme.link.hover};
