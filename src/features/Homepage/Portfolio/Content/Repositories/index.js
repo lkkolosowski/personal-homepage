@@ -18,7 +18,7 @@ const Repositories = ({ repositories }) => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.15,
+        staggerChildren: 0.25,
       },
     },
   };
