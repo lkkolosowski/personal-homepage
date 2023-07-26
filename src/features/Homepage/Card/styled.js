@@ -5,6 +5,7 @@ export const StyledCard = styled.div`
 
   &:hover > div {
     transform: rotateX(180deg);
+    transition: transform ${({ theme }) => theme.animation};
   }
 
   ${({ onClick }) =>
@@ -34,8 +35,7 @@ export const CardFront = styled.div`
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
-  transition-property: transform;
-  transition-duration: 0.5s;
+  transition: transform ${({ theme }) => theme.switchAnimation};
   border-radius: 8px;
   color: ${({ theme }) => theme.white};
   background-color: ${({ background, theme }) =>
