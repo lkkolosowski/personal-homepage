@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.bf41be2d.js",
+    "main.js": "/personal-homepage/static/js/main.01e53123.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/profile-picture.png": "/personal-homepage/static/media/profile-picture.78e3c4678b0d93f7933a.png",
     "static/media/food-market.webp": "/personal-homepage/static/media/food-market.70c3fc04ec2f87c169be.webp",
@@ -39,10 +39,10 @@
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.783068fa314aeb1a4f97d6f125fda843.svg",
-    "main.bf41be2d.js.map": "/personal-homepage/static/js/main.bf41be2d.js.map",
+    "main.01e53123.js.map": "/personal-homepage/static/js/main.01e53123.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.bf41be2d.js"
+    "static/js/main.01e53123.js"
   ]
 }
