@@ -17,14 +17,17 @@ import { name as fullname, nick, projects } from "../../../../nameplate";
 import websiteIcon from "../../../../../../images/website.png";
 import placeholderImage from "../../../../../../images/placeholderImage.svg";
 import Card from "../../../../Card";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 const Repository = ({ name, description, homepage, html_url }) => {
+  const { width } = useWindowSize();
+
   const imageOnErrorHandler = (event) => {
     event.currentTarget.src = websiteIcon;
   };
 
   const item = {
-    hidden: { opacity: 0, y: 120 },
+    hidden: { opacity: 0, y: 100 },
     show: { opacity: 1, y: 0 },
     transition: {
       type: "spring",
@@ -37,6 +40,8 @@ const Repository = ({ name, description, homepage, html_url }) => {
     <StyledRepository
       as={motion.div}
       variants={item}
+      whileInView={width > 1200 ? undefined : "show"}
+      initial={width > 1200 ? undefined : "hidden"}
       viewport={{
         once: true,
       }}
