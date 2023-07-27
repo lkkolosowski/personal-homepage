@@ -35,7 +35,7 @@ export const CardFront = styled.div`
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
-  transition: transform ${({ theme }) => theme.switchAnimation};
+  transition: transform ${({ theme }) => theme.animation};
   border-radius: 8px;
   color: ${({ theme }) => theme.white};
   background-color: ${({ background, theme }) =>
