@@ -18,7 +18,7 @@ const ThemeSwitch = () => {
       <Text overlayed>Dark mode on</Text>
       <Wrapper>
         <Text>Dark mode off</Text>
-        <StyledThemeSwitch onClick={() => dispatch(toggleTheme())}>
+        <StyledThemeSwitch aria-label="switch theme" onClick={() => dispatch(toggleTheme())}>
           <ThemeSwitchWrapper>
             <Switcher>
               <Icon />
