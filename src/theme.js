@@ -121,7 +121,7 @@ export const dark = {
     textModeOn: opacity.visible,
   },
   card: {
-    front: color.transparentWhite,
+    front: color.transparent,
     back: color.transculentWhite,
   },
 };
@@ -163,7 +163,7 @@ export const light = {
     hover: color.dodgerBlue,
     underlineHover: color.semiTransparentDarkerScienceBlue,
     active: color.parsley,
-    soft: color.malibu,
+    soft: color.dodgerBlue,
   },
   icon: {
     background: color.mineShaft,
@@ -179,7 +179,7 @@ export const light = {
     textModeOn: opacity.invisible,
   },
   card: {
-    front: color.transculentWhite,
-    back: color.transparentWhite,
+    front: color.transparent,
+    back: color.transculentWhite,
   },
 };
