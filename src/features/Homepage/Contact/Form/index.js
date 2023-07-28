@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Formik } from "formik";
 import emailjs from "@emailjs/browser";
+import { useWindowScroll, useWindowSize } from "react-use";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
   MessageIcon,
@@ -14,16 +15,18 @@ import {
   PersonSurnameIcon,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
-import useWindowSize from "react-use/lib/useWindowSize";
 import Confetti from "react-confetti";
 import { schema } from "./schema";
 import CustomInput from "./CustomInput";
 
 const Form = () => {
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
+  const [isChaptchaVisible, setIsCaptchaVisible] = useState(false);
   const [amountOfConfetti, setAmountOfConfetti] = useState(0);
   const [success, setSuccess] = useState(null);
   const { width, height } = useWindowSize();
+  const { y } = useWindowScroll();
+
   const form = useRef();
 
   const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
@@ -53,6 +56,12 @@ const Form = () => {
       setTimeout(() => setAmountOfConfetti(0), 3000);
     }
   }, [success]);
+
+  useEffect(() => {
+    if (y >= height && isChaptchaVisible !== true) {
+      setIsCaptchaVisible(true);
+    }
+  }, [y, height, isChaptchaVisible]);
 
   return (
     <Formik
@@ -148,17 +157,19 @@ const Form = () => {
             <MessageIcon />
             {!success ? "Send" : "Sent!"}
           </ButtonLink>
-          <ReCAPTCHA
-            size={width < 768 ? "compact" : "normal"}
-            name="g-recaptcha-response"
-            sitekey={CAPTCHA_KEY}
-            // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-            // this is key for developers only
-            onChange={(response) => {
-              setFieldValue("g-recaptcha-response", response);
-              setCaptchaIsDone(!captchaIsDone);
-            }}
-          />
+          {isChaptchaVisible && (
+            <ReCAPTCHA
+              size={width < 768 ? "compact" : "normal"}
+              name="g-recaptcha-response"
+              sitekey={CAPTCHA_KEY}
+              // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              // this is key for developers only
+              onChange={(response) => {
+                setFieldValue("g-recaptcha-response", response);
+                setCaptchaIsDone(!captchaIsDone);
+              }}
+            />
+          )}
         </StyledForm>
       )}
     </Formik>
