@@ -37,7 +37,7 @@ const color = {
   hardMineShaft: "#313131",
   semiTransparentMineShaft: "#363636B8",
   transparentMineShaft: "#36363630",
-  slateGray: "#6E7E91",
+  slateGray: "#5f6872",
   semiTransparentIron: "#D1D5DA4D",
   semiTransparentLighterIron: "#D1D5DA1A",
   scienceBlue: "#0366D6",
