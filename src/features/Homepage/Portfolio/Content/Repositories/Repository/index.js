@@ -52,8 +52,8 @@ const Repository = ({ name, description, homepage, html_url }) => {
           contentFront={
             <ThumbnailImage
               src={
-                projects.find((x) => x.name === name)
-                  ? projects.find((x) => x.name === name).thumbnail
+                projects.find((project) => project.name === name)
+                  ? projects.find((project) => project.name === name).thumbnail
                   : placeholderImage
               }
               alt={name}
@@ -63,8 +63,8 @@ const Repository = ({ name, description, homepage, html_url }) => {
             <ThumbnailImageOverlay>
               <ThumbnailImage
                 src={
-                  projects.find((x) => x.name === name)
-                    ? projects.find((x) => x.name === name).thumbnail
+                  projects.find((project) => project.name === name)
+                    ? projects.find((project) => project.name === name).thumbnail
                     : placeholderImage
                 }
                 alt={name}
@@ -81,7 +81,11 @@ const Repository = ({ name, description, homepage, html_url }) => {
           <Title>
             <ButtonLink text target={"_blank"} href={homepage || html_url}>
               <IconImage
-                src={`https://lkkolosowski.github.io/${name}/icon128.png`}
+                src={
+                  projects.find((project) => project.name === name && project.icon === true)
+                    ? `https://lkkolosowski.github.io/${name}/icon128.png`
+                    : websiteIcon
+                }
                 alt={name}
                 onError={imageOnErrorHandler}
               />

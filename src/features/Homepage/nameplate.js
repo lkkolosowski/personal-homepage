@@ -38,12 +38,12 @@ export const instagram = "https://www.instagram.com/luki.kol/";
 export const skillsTitle = <>My skillset includes&nbsp;🛠️</>;
 
 export const projects = [
-  { name: "arrays-and-objects", thumbnail: image1 },
-  { name: "currency-converter-react", thumbnail: image2 },
-  { name: "food-market", thumbnail: image3 },
-  { name: "homepage", thumbnail: image4 },
-  { name: "movies-browser", thumbnail: image5 },
-  { name: "personal-homepage", thumbnail: image6 },
-  { name: "portfolio-nextjs", thumbnail: image7 },
-  { name: "to-do-list-react", thumbnail: image8 },
+  { name: "arrays-and-objects", thumbnail: image1, icon: true },
+  { name: "currency-converter-react", thumbnail: image2, icon: true },
+  { name: "food-market", thumbnail: image3, icon: true },
+  { name: "homepage", thumbnail: image4, icon: true },
+  { name: "movies-browser", thumbnail: image5, icon: true },
+  { name: "personal-homepage", thumbnail: image6, icon: true },
+  { name: "portfolio-nextjs", thumbnail: image7, icon: false },
+  { name: "to-do-list-react", thumbnail: image8, icon: true },
 ];
