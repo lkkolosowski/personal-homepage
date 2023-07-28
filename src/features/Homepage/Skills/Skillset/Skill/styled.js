@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Text = styled.span`
   text-transform: uppercase;
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.font.semiBold};
   font-size: 14px;
   line-height: 1;
 `;

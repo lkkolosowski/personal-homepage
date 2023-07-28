@@ -11,6 +11,12 @@ const common = {
     hidden: `0px -2px 50px rgba(9, 10, 51, 0),
     0px 16px 58px rgba(9, 10, 51, 0)`,
   },
+  font: {
+    regular: "Regular",
+    semiBold: "SemiBold",
+    bold: "Bold",
+    black: "Black",
+  },
   white: "#FFFFFF",
   black: "#000000",
   transparent: "transparent",

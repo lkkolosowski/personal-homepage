@@ -46,7 +46,7 @@ export const Content = styled.article`
 
 export const Title = styled.h2`
   font-size: 20px;
-  font-weight: 700;
+  font-family: ${({ theme }) => theme.font.bold};
   line-height: 1.2;
   margin: 0;
 

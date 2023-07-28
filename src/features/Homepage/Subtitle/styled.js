@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledSubtitle = styled.div`
   margin-top: 12px;
   margin-bottom: 12px;
-  font-weight: 700;
+  font-family: ${({ theme }) => theme.font.bold};
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;

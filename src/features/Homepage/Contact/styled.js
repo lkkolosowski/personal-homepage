@@ -12,7 +12,7 @@ export const StyledContact = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-weight: 900;
+  font-family: ${({ theme }) => theme.font.black};
   font-size: 32px;
   line-height: 1.2;
   margin: 0;

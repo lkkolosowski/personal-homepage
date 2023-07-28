@@ -23,6 +23,7 @@ const Repository = ({ name, description, homepage, html_url }) => {
   const { width } = useWindowSize();
 
   const imageOnErrorHandler = (event) => {
+    event.preventDefault();
     event.currentTarget.src = websiteIcon;
   };
 

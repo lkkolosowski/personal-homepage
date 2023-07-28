@@ -32,7 +32,7 @@ export const TextLink = styled.a`
 export const ButtonLink = styled.a`
   display: inline-flex;
   gap: 16px;
-  font-weight: 600;
+  font-family: ${({ theme }) => theme.font.semiBold};
   font-size: 20px;
   line-height: 1.2;
   flex-direction: row;

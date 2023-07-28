@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -12,8 +13,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  .body {
-    font-family: "Inter", sans-serif;
+  body {
+    font-family: "Regular", sans-serif;
     color: ${({ theme }) => theme.textPrimary};
     font-size: 18px;
     letter-spacing: 0.05em;

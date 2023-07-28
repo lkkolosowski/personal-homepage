@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
 
 export const Title = styled.h2`
   font-size: 30px;
-  font-weight: 900;
+  font-family: ${({ theme }) => theme.font.black};
   line-height: 1.2;
   text-align: center;
   margin-top: 0;
@@ -23,7 +23,7 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.div`
   font-size: 20px;
-  font-weight: 400;
+  font-family: ${({ theme }) => theme.font.regular};
   line-height: 1.4;
   text-align: center;
   margin-bottom: 24px;
