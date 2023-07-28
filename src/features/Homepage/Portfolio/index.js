@@ -25,7 +25,7 @@ const Portfolio = () => {
     <Section>
       <Header
         icon={
-          <IconLink target="_blank" href={github} rel="noreferrer">
+          <IconLink aria-label="link to my recent projects" target="_blank" href={github} rel="noreferrer">
             <GithubIcon />
           </IconLink>
         }

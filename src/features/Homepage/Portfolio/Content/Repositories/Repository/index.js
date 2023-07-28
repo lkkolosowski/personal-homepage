@@ -87,6 +87,8 @@ const Repository = ({ name, description, homepage, html_url }) => {
                     : websiteIcon
                 }
                 alt={name}
+                width={24}
+                height={24}
                 onError={imageOnErrorHandler}
               />
               {name !== nick ? capitalizeWords(name) : fullname}
