@@ -58,7 +58,7 @@ const Form = () => {
   }, [success]);
 
   useEffect(() => {
-    if (y >= height && isChaptchaVisible !== true) {
+    if (y >= height && !isChaptchaVisible) {
       setIsCaptchaVisible(true);
     }
   }, [y, height, isChaptchaVisible]);
@@ -162,8 +162,6 @@ const Form = () => {
               size={width < 768 ? "compact" : "normal"}
               name="g-recaptcha-response"
               sitekey={CAPTCHA_KEY}
-              // sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-              // this is key for developers only
               onChange={(response) => {
                 setFieldValue("g-recaptcha-response", response);
                 setCaptchaIsDone(!captchaIsDone);
