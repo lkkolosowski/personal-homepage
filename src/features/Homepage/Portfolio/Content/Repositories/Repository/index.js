@@ -3,7 +3,6 @@ import { ButtonLink } from "../../../../../../common/Link";
 import {
   Title,
   Description,
-  IconImage,
   Content,
   ThumbnailImage,
   ThumbnailImageOverlay,
@@ -11,21 +10,17 @@ import {
   CodeIcon,
   Buttons,
   StyledRepository,
+  EarthIcon,
 } from "./styled";
 import { capitalizeWords } from "./utils";
-import { name as fullname, nick, projects } from "../../../../nameplate";
-import websiteIcon from "../../../../../../images/website.png";
+import { name as fullname, nick } from "../../../../nameplate";
+import { projects } from "./projects";
 import placeholderImage from "../../../../../../images/placeholderImage.svg";
 import Card from "../../../../Card";
 import useWindowSize from "react-use/lib/useWindowSize";
 
 const Repository = ({ name, description, homepage, html_url }) => {
   const { width } = useWindowSize();
-
-  const imageOnErrorHandler = (event) => {
-    event.preventDefault();
-    event.currentTarget.src = websiteIcon;
-  };
 
   const item = {
     hidden: { opacity: 0, y: 100 },
@@ -64,7 +59,8 @@ const Repository = ({ name, description, homepage, html_url }) => {
               <ThumbnailImage
                 src={
                   projects.find((project) => project.name === name)
-                    ? projects.find((project) => project.name === name).thumbnail
+                    ? projects.find((project) => project.name === name)
+                        .thumbnail
                     : placeholderImage
                 }
                 alt={name}
@@ -80,17 +76,13 @@ const Repository = ({ name, description, homepage, html_url }) => {
         <div>
           <Title>
             <ButtonLink text target={"_blank"} href={homepage || html_url}>
-              <IconImage
-                src={
-                  projects.find((project) => project.name === name && project.icon === true)
-                    ? `https://lkkolosowski.github.io/${name}/icon128.png`
-                    : websiteIcon
-                }
-                alt={name}
-                width={24}
-                height={24}
-                onError={imageOnErrorHandler}
-              />
+              {projects.find((project) => project.name === name) ? (
+                projects.map(
+                  (project) => project.name === name && <project.Icon key={project.name}/>
+                )
+              ) : (
+                <EarthIcon />
+              )}
               {name !== nick ? capitalizeWords(name) : fullname}
             </ButtonLink>
           </Title>

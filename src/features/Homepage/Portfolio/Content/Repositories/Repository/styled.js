@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as Play } from "../../../../../../icons/play.svg";
 import { ReactComponent as Code } from "../../../../../../icons/code.svg";
+import { ReactComponent as Earth } from "../../../../../../icons/earth.svg";
 
 export const StyledRepository = styled.div`
   width: calc((100% / 3) - (((3 - 1) / 3) * 16px));
@@ -70,13 +71,6 @@ export const Buttons = styled.div`
   gap: 16px;
 `;
 
-export const IconImage = styled.img`
-  display: block;
-  line-height: 1;
-  height: 24px;
-  text-align: center;
-`;
-
 export const ThumbnailImage = styled.img`
   display: block;
   object-fit: cover;
@@ -120,10 +114,20 @@ export const PlayIcon = styled(Play)`
   height: auto;
 `;
 
+export const EarthIcon = styled(Earth)`
+  width: 24px;
+  height: auto;
+`;
+
 export const CodeIcon = styled(Code)`
   margin-top: -6px;
   width: 30px;
   height: auto;
   position: relative;
   top: 3px;
+`;
+
+export const styledIcon = (Icon) => styled(Icon)`
+  width: 24px;
+  height: auto;
 `;
