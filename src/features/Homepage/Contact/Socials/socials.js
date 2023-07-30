@@ -1,5 +1,5 @@
 import { styledIcon } from "./styled";
-import { github, linkedin, instagram } from "../../nameplate";
+import { links } from "../../nameplate";
 import { ReactComponent as GithubIcon } from "../../../../icons/github.svg";
 import { ReactComponent as LinkedinIcon } from "../../../../icons/linkedin.svg";
 import { ReactComponent as InstagramIcon } from "../../../../icons/instagram.svg";
@@ -7,19 +7,19 @@ import { ReactComponent as InstagramIcon } from "../../../../icons/instagram.svg
 export const socials = [
   {
     name: "Github",
-    url: github,
+    url: links.github,
     Icon: styledIcon(GithubIcon),
     iconbackground: "#6e5494",
   },
   {
     name: "LinkedIn",
-    url: linkedin,
+    url: links.linkedin,
     Icon: styledIcon(LinkedinIcon),
     iconbackground: "#0072b1",
   },
   {
     name: "Instagram",
-    url: instagram,
+    url: links.instagram,
     Icon: styledIcon(InstagramIcon),
     iconbackground: "#c13584",
   },

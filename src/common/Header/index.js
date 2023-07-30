@@ -1,8 +1,8 @@
-import { StyledHeader, Subtitle, Title } from "./styled";
+import { Icon, StyledHeader, Subtitle, Title } from "./styled";
 
 const Header = ({ icon, title, subtitle }) => (
   <StyledHeader>
-    {icon}
+    {icon && <Icon>{icon}</Icon>}
     <Title>{title}</Title>
     <Subtitle>{subtitle}</Subtitle>
   </StyledHeader>

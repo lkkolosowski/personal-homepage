@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { ReactComponent as Github } from "../../../icons/github.svg";
 
 export const IconLink = styled.a`
-  line-height: 1;
+  display: block;
+  margin-top: -5px;
 
   & > svg > path {
     fill: ${({ theme }) => theme.link.text};
@@ -11,14 +13,16 @@ export const IconLink = styled.a`
   &:hover > svg > path {
     fill: ${({ theme }) => theme.link.hover};
   }
+`;
 
-  & > svg {
-    width: 40px;
-    height: 40px;
+export const GithubIcon = styled(Github)`
+  position: relative;
+  top: 5px;
+  width: 40px;
+  height: 40px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
-      width: 32px;
-      height: 32px;
-    }
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    width: 32px;
+    height: 32px;
   }
 `;

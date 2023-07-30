@@ -33,3 +33,13 @@ export const Subtitle = styled.div`
     font-size: 17px;
   }
 `;
+
+export const Icon = styled.div`
+  line-height: 1;
+  font-size: 34px;
+  margin-bottom: 3px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    font-size: 28px;
+  }
+`;

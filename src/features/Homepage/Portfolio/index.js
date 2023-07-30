@@ -1,13 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ReactComponent as GithubIcon } from "../../../icons/github.svg";
-import { github } from "../nameplate";
-import { IconLink } from "./styled";
-import {
-  fetchReposStart,
-  selectRepos,
-  selectReposStatus,
-} from "./reposSlice";
+import { links } from "../nameplate";
+import { GithubIcon, IconLink } from "./styled";
+import { fetchReposStart, selectRepos, selectReposStatus } from "./reposSlice";
 import Content from "./Content";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
@@ -25,7 +20,12 @@ const Portfolio = () => {
     <Section>
       <Header
         icon={
-          <IconLink aria-label="link to my recent projects" target="_blank" href={github} rel="noreferrer">
+          <IconLink
+            aria-label="link to my recent projects"
+            target="_blank"
+            href={links.github}
+            rel="noreferrer"
+          >
             <GithubIcon />
           </IconLink>
         }

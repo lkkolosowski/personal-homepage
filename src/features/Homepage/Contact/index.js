@@ -1,4 +1,4 @@
-import { information, email, goodbyePhrases } from "../nameplate";
+import { paragraphs, links, goodbyePhrases } from "../nameplate";
 import { TextLink } from "../../../common/Link";
 import Socials from "./Socials";
 import Subtitle from "../Subtitle";
@@ -14,11 +14,11 @@ const Contact = () => {
         <aside>
           <Subtitle content={phrase} />
           <Title>
-            <TextLink text href={`mailto:${email}`}>
-              {email}
+            <TextLink text href={`mailto:${links.email}`}>
+              {links.email}
             </TextLink>
           </Title>
-          <Paragraph>{information}</Paragraph>
+          <Paragraph>{paragraphs.footer}</Paragraph>
           <Socials />
         </aside>
         <Form />
