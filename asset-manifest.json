@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.43282948.js",
+    "main.js": "/personal-homepage/static/js/main.f145297f.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/Inter-Black.ttf": "/personal-homepage/static/media/Inter-Black.143c28420846d45c5834.ttf",
     "static/media/Inter-Bold.ttf": "/personal-homepage/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
@@ -16,12 +16,21 @@
     "static/media/to-do-list-react.webp": "/personal-homepage/static/media/to-do-list-react.a63aa90492c36a3d1cf7.webp",
     "static/media/homepage.webp": "/personal-homepage/static/media/homepage.7ffb43aa31fed032e3da.webp",
     "static/media/react-query.svg": "/personal-homepage/static/media/react-query.aabaf077b85dfce1bb552fd3145596a0.svg",
+    "static/media/movies-browser.svg": "/personal-homepage/static/media/movies-browser.c7f5ebfb41ab003a3cf0e1ac1ba24045.svg",
     "static/media/styled-components.svg": "/personal-homepage/static/media/styled-components.6fed13e1d7a108ef997ab010e6f081bf.svg",
+    "static/media/personal-homepage.svg": "/personal-homepage/static/media/personal-homepage.0a502e74db640cd9388da36b3b11d055.svg",
+    "static/media/to-do-list-react.svg": "/personal-homepage/static/media/to-do-list-react.e94434284f1855a39e2e96f26485e910.svg",
+    "static/media/arrays-and-objects.svg": "/personal-homepage/static/media/arrays-and-objects.e71464f9f5acba24b58ec00e5eb19fd8.svg",
     "static/media/instagram.svg": "/personal-homepage/static/media/instagram.ac575dc2f80befa7ba993f0a04ba6dda.svg",
+    "static/media/currency-converter-react.svg": "/personal-homepage/static/media/currency-converter-react.c5ec15b64069d2429e90dc8df255d5f5.svg",
     "static/media/brightness.svg": "/personal-homepage/static/media/brightness.265ed56c7ce199415001d346ff2142d5.svg",
+    "static/media/food-market.svg": "/personal-homepage/static/media/food-market.f0c754ac924a4421330e09f3c1871751.svg",
+    "static/media/portfolio-nextjs.svg": "/personal-homepage/static/media/portfolio-nextjs.c15cc90ef3084ba7e4827e0cbc396ad6.svg",
+    "static/media/homepage.svg": "/personal-homepage/static/media/homepage.c71c8a1c109929c8d5a1855f8bd9255c.svg",
     "static/media/react-router.svg": "/personal-homepage/static/media/react-router.e36e0a540dc4eb8b36f40c09fc806f63.svg",
     "static/media/redux.svg": "/personal-homepage/static/media/redux.227122155330417003da3a3ca41da8c7.svg",
     "static/media/typescript.svg": "/personal-homepage/static/media/typescript.607d17ac7c17de425d8cfafc958d2c7f.svg",
+    "static/media/earth.svg": "/personal-homepage/static/media/earth.c9a2da6110ea10ea30787cc0a6c975dd.svg",
     "index.html": "/personal-homepage/index.html",
     "static/media/speechBubble.svg": "/personal-homepage/static/media/speechBubble.79b91ed30a70d9341fe6b993569a2820.svg",
     "static/media/github.svg": "/personal-homepage/static/media/github.a9062bf9626a38e8866f20e84ee3d71b.svg",
@@ -43,10 +52,10 @@
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.783068fa314aeb1a4f97d6f125fda843.svg",
-    "main.43282948.js.map": "/personal-homepage/static/js/main.43282948.js.map",
+    "main.f145297f.js.map": "/personal-homepage/static/js/main.f145297f.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.43282948.js"
+    "static/js/main.f145297f.js"
   ]
 }
