@@ -65,6 +65,7 @@ export const LabelContent = styled.div`
 `;
 
 export const Input = styled.input`
+  height: 100%;
   color: ${({ theme }) => theme.textPrimary};
   border-radius: 0 8px 8px 0;
   padding: 6px 12px;
