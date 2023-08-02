@@ -42,14 +42,11 @@ export const styledIcon = (Icon) => styled(Icon)`
   height: 48px;
   & path {
     fill: ${({ theme }) => theme.icon.background};
-    transition: ${({ theme }) => theme.themeAnimation};
+    transition: ${({ theme }) => theme.animation};
   }
 
   &:hover {
     animation: shake 0.4s;
-    & path {
-      transition: ${({ theme }) => theme.animation};
-    }
   }
 
   &:hover > path {
