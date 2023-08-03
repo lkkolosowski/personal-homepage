@@ -30,6 +30,7 @@ export const ThemeSwitchWrapper = styled.div`
 
 export const Text = styled.span`
   font-family: ${({ theme }) => theme.font.bold};
+  user-select: none;
   font-size: 12px;
   line-height: 26px;
   text-transform: uppercase;
