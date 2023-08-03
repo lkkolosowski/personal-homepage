@@ -22,7 +22,7 @@ import CustomInput from "./CustomInput";
 const Form = () => {
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [isChaptchaVisible, setIsCaptchaVisible] = useState(false);
-  const [amountOfConfetti, setAmountOfConfetti] = useState(0);
+  const [numberOfPieces, setNumberOfPieces] = useState(0);
   const [success, setSuccess] = useState(null);
   const { width, height } = useWindowSize();
   const { y } = useWindowScroll();
@@ -52,8 +52,8 @@ const Form = () => {
 
   useEffect(() => {
     if (success) {
-      setAmountOfConfetti(300);
-      setTimeout(() => setAmountOfConfetti(0), 3000);
+      setNumberOfPieces(300);
+      setTimeout(() => setNumberOfPieces(0), 3000);
     }
   }, [success]);
 
@@ -84,7 +84,7 @@ const Form = () => {
       {({ isSubmitting, setFieldValue }) => (
         <StyledForm ref={form}>
           <Confetti
-            numberOfPieces={amountOfConfetti}
+            numberOfPieces={numberOfPieces}
             style={{ position: "fixed" }}
             width={width}
             height={height}
@@ -137,13 +137,13 @@ const Form = () => {
           />
           <CustomInput
             as="textarea"
-            withTextArea={true}
             label="message"
             icon={<SpeechBubbleIcon />}
             name="message"
             id="message"
             type="text"
             placeholder="Message"
+            withTextArea
             required
           />
           <ButtonLink
@@ -155,7 +155,7 @@ const Form = () => {
             wide
           >
             <MessageIcon />
-            {!success ? "Send" : "Sent!"}
+            {success ? "Sent!" : "Send"}
           </ButtonLink>
           {isChaptchaVisible && (
             <ReCAPTCHA
