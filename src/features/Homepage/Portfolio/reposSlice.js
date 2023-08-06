@@ -5,7 +5,6 @@ export const reposSlice = createSlice({
   initialState: {
     status: "initial",
     repos: [],
-    repositories: null,
   },
   reducers: {
     fetchReposStart: () => ({
