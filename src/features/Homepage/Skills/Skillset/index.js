@@ -47,7 +47,7 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
           variants={container}
           whileInView="show"
           initial="hidden"
-          animate={{ y: selected ? -8 : 0 }}
+          animate={{ y: selected ? 8 : 0 }}
           transition={transition}
           viewport={{
             once: true,

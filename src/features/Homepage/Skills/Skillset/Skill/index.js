@@ -36,7 +36,7 @@ const Skill = ({
       <SkillWrapper
         as={motion.div}
         initial={{ y: 0 }}
-        animate={{ y: selected ? 8 : 0 }}
+        animate={{ y: selected ? -8 : 0 }}
         transition={{
           type: "spring",
           duration: 0.75,
@@ -83,7 +83,7 @@ const Skill = ({
             opacity: 0,
           }}
           animate={{
-            y: 8,
+            y: -8,
             opacity: 1,
           }}
         >
