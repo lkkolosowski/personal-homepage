@@ -1,7 +1,7 @@
 import { useRef } from "react";
+import { useOnLoadImages } from "./useOnLoadImages";
 import Repository from "./Repository";
 import { StyledRepositories } from "./styled";
-import { useOnLoadImages } from "./useOnLoadImages";
 import Loader from "../Loader";
 import { transformedRepositories } from "./utils";
 import { motion } from "framer-motion";
@@ -35,7 +35,7 @@ const Repositories = ({ repositories }) => {
           once: true,
         }}
         ref={wrapperRef}
-        hidden={imagesLoaded === false}
+        hidden={!imagesLoaded}
       >
         {transformedRepositories(repositories).map(
           ({ name, description, homepage, html_url }) => (
@@ -52,5 +52,4 @@ const Repositories = ({ repositories }) => {
     </>
   );
 };
-
 export default Repositories;
