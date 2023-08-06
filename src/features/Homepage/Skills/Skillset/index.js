@@ -1,10 +1,17 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Header from "../../../../common/Header";
 import Section from "../../../../common/Section";
-import Skill from "./Skill";
-import { Break, Skills } from "./styled";
+import { Backdrop, Break, Fieldset, Skills } from "./styled";
+import { mapSkills } from "./utils";
 
 const Skillset = ({ title, icon, subtitle, skills }) => {
+  const [selected, setIsSelected] = useState(false);
+
+  const handleChange = (event) => {
+    setIsSelected(event.target.value);
+  };
+
   const container = {
     hidden: {
       opacity: 0,
@@ -18,59 +25,39 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
     },
   };
 
+  const transition = {
+    type: "spring",
+    duration: 0.75,
+    bounce: 1,
+    stiffness: 300,
+    damping: 8,
+  };
+
   return (
     <Section>
       <Header icon={icon} title={title} subtitle={subtitle} />
-      <Skills
-        as={motion.ul}
-        variants={container}
-        whileInView="show"
-        initial="hidden"
-        viewport={{
-          once: true,
-        }}
-      >
-        {skills
-          .map(({ name, Icon, color, level, description }) => (
-            <Skill
-              key={name}
-              name={name}
-              Icon={Icon}
-              color={color}
-              level={level}
-              description={description}
-            />
-          ))
-          .slice(0, 3)}
-        <Break />
-        {skills
-          .map(({ name, Icon, color, level, description }) => (
-            <Skill
-              key={name}
-              name={name}
-              Icon={Icon}
-              color={color}
-              level={level}
-              description={description}
-            />
-          ))
-          .slice(3, 7)}
-        <Break />
-        {skills
-          .map(({ name, Icon, color, level, description }) => (
-            <Skill
-              key={name}
-              name={name}
-              Icon={Icon}
-              color={color}
-              level={level}
-              description={description}
-            />
-          ))
-          .slice(7)}
-        <Break />
-        <Break />
-      </Skills>
+      <Backdrop visible={selected} onClick={() => setIsSelected(false)} />
+      <Fieldset>
+        <Skills
+          as={motion.ul}
+          variants={container}
+          whileInView="show"
+          initial="hidden"
+          animate={{ y: selected ? -8 : 0 }}
+          transition={transition}
+          viewport={{
+            once: true,
+          }}
+        >
+          {mapSkills(skills, selected, handleChange).slice(0, 3)}
+          <Break />
+          {mapSkills(skills, selected, handleChange).slice(3, 7)}
+          <Break />
+          {mapSkills(skills, selected, handleChange).slice(7)}
+          <Break />
+          <Break />
+        </Skills>
+      </Fieldset>
     </Section>
   );
 };

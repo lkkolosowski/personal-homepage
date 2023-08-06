@@ -2,24 +2,12 @@ import styled, { css } from "styled-components";
 
 export const StyledCard = styled.div`
   perspective: 800px;
+  cursor: pointer;
 
   &:hover > div {
     transform: rotateX(180deg);
     transition: transform ${({ theme }) => theme.animation};
   }
-
-  ${({ onClick }) =>
-    onClick &&
-    css`
-      cursor: pointer;
-      position: relative;
-    `};
-
-  ${({ highlighted }) =>
-    highlighted &&
-    css`
-      z-index: 120;
-    `};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     &:hover > div {

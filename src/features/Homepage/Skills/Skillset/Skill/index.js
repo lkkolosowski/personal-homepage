@@ -1,19 +1,27 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Card from "../../../Card";
-import { Text, StyledSkill, SkillBody, SkillWrapper, Backdrop } from "./styled";
+import {
+  Text,
+  StyledSkill,
+  Body,
+  BodyWrapper,
+  SkillWrapper,
+  Radio,
+  Label,
+} from "./styled";
 
-const Skill = ({ name, Icon, color, level, description }) => {
-  const [isBodyHidden, setIsBodyHidden] = useState(true);
-
+const Skill = ({
+  selected,
+  handleChange,
+  name,
+  Icon,
+  color,
+  level,
+  description,
+}) => {
   const item = {
     hidden: { opacity: 0, y: 50 },
     show: { opacity: 1, y: 0 },
-    transition: {
-      type: "spring",
-      duration: 0.9,
-      bounce: 0.45,
-    },
   };
 
   return (
@@ -24,48 +32,61 @@ const Skill = ({ name, Icon, color, level, description }) => {
         once: true,
       }}
     >
-      <Card
-        highlighted={!isBodyHidden}
-        handleOnClick={() => setIsBodyHidden(!isBodyHidden)}
-        contentFront={
-          <>
-            <Icon />
-            <Text>{name}</Text>
-          </>
-        }
-        contentBack={
-          <>
-            {!level && <Icon />}
-            <Text>{level ? level : name}</Text>
-          </>
-        }
-        backgroundFront={color}
-        backgroundBack={color}
-        withPadding={true}
-        brightening={true}
-      />
-
-      {description && !isBodyHidden && (
-        <SkillWrapper>
-          <Backdrop onClick={() => setIsBodyHidden(!isBodyHidden)} />
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 75,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              type: "spring",
-              duration: 0.9,
-              bounce: 0.45,
-            }}
-          >
-            <SkillBody variant={color}>{description}</SkillBody>
-          </motion.div>
-        </SkillWrapper>
+      <SkillWrapper
+        as={motion.div}
+        initial={{ y: 0 }}
+        animate={{ y: selected ? 8 : 0 }}
+        transition={{
+          type: "spring",
+          duration: 0.75,
+          bounce: 0.45,
+          stiffness: 500,
+          damping: 20,
+        }}
+      >
+        <Radio
+          id={name}
+          value={name}
+          name="cards"
+          type="radio"
+          checked={selected}
+          onChange={handleChange}
+        />
+        <Label htmlFor={name}>
+          <Card
+            contentFront={
+              <>
+                <Icon />
+                <Text>{name}</Text>
+              </>
+            }
+            contentBack={
+              <>
+                {!level && <Icon />}
+                <Text>{level ? level : name}</Text>
+              </>
+            }
+            backgroundFront={color}
+            backgroundBack={color}
+            withPadding={true}
+            brightening={true}
+          />
+        </Label>
+      </SkillWrapper>
+      {selected && (
+        <BodyWrapper
+          as={motion.div}
+          initial={{
+            y: 20,
+            opacity: 0,
+          }}
+          animate={{
+            y: 8,
+            opacity: 1,
+          }}
+        >
+          <Body variant={color}>{description}</Body>
+        </BodyWrapper>
       )}
     </StyledSkill>
   );

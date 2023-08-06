@@ -7,7 +7,13 @@ export const Text = styled.span`
   line-height: 1;
 `;
 
+export const SkillWrapper = styled.div`
+  position: relative;
+  /* z-index: 200; */
+`;
+
 export const StyledSkill = styled.li`
+  position: relative;
   width: calc((100% / 4) - (((4 - 1) / 4) * 16px));
 
   @media (max-width: ${({ theme }) => theme.breakpoint.large}px) {
@@ -19,19 +25,18 @@ export const StyledSkill = styled.li`
   }
 `;
 
-export const Backdrop = styled.div`
-  position: fixed;
-  inset: 0;
-  background-color: ${({ theme }) => theme.backdrop.background};
-  opacity: 0.67;
+export const Radio = styled.input`
+  position: absolute;
+  visibility: hidden;
 `;
 
-export const SkillWrapper = styled.div`
+export const BodyWrapper = styled.div`
   z-index: 111;
   position: relative;
 `;
 
-export const SkillBody = styled.div`
+export const Body = styled.div`
+  z-index: 160;
   position: absolute;
   padding: 25px;
   margin-top: 16px;
@@ -51,4 +56,9 @@ export const SkillBody = styled.div`
       background-color ${({ theme }) => theme.themeAnimation},
       color ${({ theme }) => theme.themeAnimation};
   }
+`;
+
+export const Label = styled.label`
+  position: relative;
+  /* z-index: 110; */
 `;

@@ -1,6 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Skills = styled.ul`
+  position: relative;
+  z-index: 120;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,4 +36,29 @@ export const styledRating = (Rating) => styled(Rating)`
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     height: 18px;
   }
+`;
+
+export const Fieldset = styled.fieldset`
+  padding: 0;
+  border: none;
+  margin: 0;
+`;
+
+export const Backdrop = styled.div`
+  position: fixed;
+  backdrop-filter: blur(8px);
+  inset: 0;
+  background-color: ${({ theme }) => theme.backdrop.background}80;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility ${({ theme }) => theme.animation},
+    opacity ${({ theme }) => theme.animation};
+
+  ${({ visible }) =>
+    visible &&
+    css`
+      visibility: visible;
+      opacity: 1;
+    `};
 `;
