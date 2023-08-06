@@ -21,14 +21,21 @@ export const useOnLoadImages = (ref) => {
 
     imagesLoaded.forEach((image) => {
       image.addEventListener("load", () => updateStatus(imagesLoaded), {
-        once: true
+        once: true,
       });
       image.addEventListener("error", () => updateStatus(imagesLoaded), {
-        once: true
+        once: true,
       });
     });
 
-    return;
+    return imagesLoaded.forEach((image) => {
+      image.removeEventListener("load", () => updateStatus(imagesLoaded), {
+        once: true,
+      });
+      image.removeEventListener("error", () => updateStatus(imagesLoaded), {
+        once: true,
+      });
+    });
   }, [ref]);
 
   return status;
