@@ -4,7 +4,7 @@ import { Wrapper, Paragraph, StyledLoader } from "./styled";
 const Loader = () => {
   return (
     <Wrapper>
-      <Paragraph>Please wait, projects are being loaded...</Paragraph>
+      <Paragraph>Please wait, projects are being loaded…</Paragraph>
       <motion.div
         initial={{
           opacity: 0,
@@ -18,7 +18,6 @@ const Loader = () => {
         }}
         transition={{
           duration: 1,
-          delay: 0.5,
         }}
       >
         <StyledLoader />
