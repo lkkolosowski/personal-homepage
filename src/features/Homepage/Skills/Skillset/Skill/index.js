@@ -13,6 +13,7 @@ import {
 const Skill = ({
   selected,
   handleChange,
+  handleClick,
   name,
   Icon,
   color,
@@ -75,6 +76,7 @@ const Skill = ({
       </SkillWrapper>
       {selected && (
         <BodyWrapper
+          onClick={handleClick}
           as={motion.div}
           initial={{
             y: 20,

@@ -12,6 +12,10 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
     setIsSelected(event.target.value);
   };
 
+  const handleClick = () => {
+    setIsSelected(false);
+  };
+
   const container = {
     hidden: {
       opacity: 0,
@@ -36,7 +40,7 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
   return (
     <Section>
       <Header icon={icon} title={title} subtitle={subtitle} />
-      <Backdrop visible={selected} onClick={() => setIsSelected(false)} />
+      <Backdrop visible={selected} onClick={handleClick} />
       <Fieldset>
         <Skills
           as={motion.ul}
@@ -49,11 +53,11 @@ const Skillset = ({ title, icon, subtitle, skills }) => {
             once: true,
           }}
         >
-          {mapSkills(skills, selected, handleChange).slice(0, 3)}
+          {mapSkills(skills, selected, handleChange, handleClick).slice(0, 3)}
           <Break />
-          {mapSkills(skills, selected, handleChange).slice(3, 7)}
+          {mapSkills(skills, selected, handleChange, handleClick).slice(3, 7)}
           <Break />
-          {mapSkills(skills, selected, handleChange).slice(7)}
+          {mapSkills(skills, selected, handleChange, handleClick).slice(7)}
           <Break />
           <Break />
         </Skills>
