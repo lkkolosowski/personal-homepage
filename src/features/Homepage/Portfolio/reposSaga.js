@@ -8,7 +8,7 @@ import getRepos from "./getRepos";
 
 function* fetchReposHandler() {
   try {
-    yield delay(2000);
+    yield delay(3000);
     const repos = yield call(getRepos);
     yield put(fetchReposSuccess(repos));
   } catch (error) {
