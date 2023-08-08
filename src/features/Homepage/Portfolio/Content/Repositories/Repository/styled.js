@@ -126,8 +126,3 @@ export const CodeIcon = styled(Code)`
   position: relative;
   top: 3px;
 `;
-
-export const styledIcon = (Icon) => styled(Icon)`
-  width: 24px;
-  height: auto;
-`;

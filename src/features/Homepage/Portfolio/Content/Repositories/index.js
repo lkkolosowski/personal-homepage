@@ -1,12 +1,11 @@
 import { useRef } from "react";
 import { useOnLoadImages } from "./useOnLoadImages";
 import Repository from "./Repository";
-import { StyledRepositories } from "./styled";
-import Loader from "../Loader";
+import { InlineLoader, Paragraph, StyledRepositories, Wrapper } from "./styled";
 import { transformedRepositories } from "./utils";
 import { motion } from "framer-motion";
 
-const Repositories = ({ repositories }) => {
+const Repositories = ({ projects, repositories }) => {
   const wrapperRef = useRef(null);
   const imagesLoaded = useOnLoadImages(wrapperRef);
 
@@ -24,8 +23,20 @@ const Repositories = ({ repositories }) => {
   };
 
   return (
-    <>
-      {!imagesLoaded && <Loader />}
+    <Wrapper>
+      {!imagesLoaded && (
+        <>
+          <Paragraph
+            as={motion.p}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.75, delay: 0.5 }}
+          >
+            Please wait, projects are being loaded…
+            <InlineLoader />
+          </Paragraph>
+        </>
+      )}
       <StyledRepositories
         as={imagesLoaded ? motion.div : "div"}
         variants={container}
@@ -40,6 +51,7 @@ const Repositories = ({ repositories }) => {
         {transformedRepositories(repositories).map(
           ({ name, description, homepage, html_url }) => (
             <Repository
+              projects={projects}
               key={name}
               name={name}
               description={description}
@@ -49,7 +61,7 @@ const Repositories = ({ repositories }) => {
           )
         )}
       </StyledRepositories>
-    </>
+    </Wrapper>
   );
 };
 export default Repositories;

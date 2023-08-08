@@ -14,12 +14,11 @@ import {
 } from "./styled";
 import { capitalizeWords } from "./utils";
 import { name as fullname, nick } from "../../../../nameplate";
-import { projects } from "./projects";
 import placeholderImage from "../../../../../../images/placeholderImage.svg";
 import Card from "../../../../Card";
 import useWindowSize from "react-use/lib/useWindowSize";
 
-const Repository = ({ name, description, homepage, html_url }) => {
+const Repository = ({ projects, name, description, homepage, html_url }) => {
   const { width } = useWindowSize();
 
   const item = {
@@ -78,7 +77,8 @@ const Repository = ({ name, description, homepage, html_url }) => {
             <ButtonLink text target={"_blank"} href={homepage || html_url}>
               {projects.find((project) => project.name === name) ? (
                 projects.map(
-                  (project) => project.name === name && <project.Icon key={project.name}/>
+                  (project) =>
+                    project.name === name && <project.Icon key={project.name} />
                 )
               ) : (
                 <EarthIcon />
