@@ -28,7 +28,13 @@ I tried to make the appearance of the site elegant and slick ✨ and I hope that
 
 I'm slowly trying to translate the application into **TypeScript**, which is not easy for me so far 😅
 
+## Call to action
+
 ![form preview](form.gif)
+
+### Let's Talk!
+
+If you have any questions, do not hesitate to send me a message! ✅ I also invite you to visit my social media profiles 🔍 See you!
 
 ## Technologies
 
@@ -57,10 +63,6 @@ I'm slowly trying to translate the application into **TypeScript**, which is not
 - TypeScript
 - localStorage
 - API
-
-## Call to action
-
-If you have any questions, do not hesitate to send me a message! ✅ I also invite you to visit my social media profiles 🔍 See you!
 
 ## Available Scripts
 
