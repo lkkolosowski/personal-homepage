@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/personal-homepage/static/js/main.d96d9bda.js",
+    "main.js": "/personal-homepage/static/js/main.f1d6116d.js",
     "static/js/787.162bc9a0.chunk.js": "/personal-homepage/static/js/787.162bc9a0.chunk.js",
     "static/media/Inter-Black.ttf": "/personal-homepage/static/media/Inter-Black.143c28420846d45c5834.ttf",
     "static/media/Inter-Bold.ttf": "/personal-homepage/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
@@ -46,17 +46,17 @@
     "static/media/tailwind.svg": "/personal-homepage/static/media/tailwind.9512c76e3872bd965f00bfaee310f5c4.svg",
     "static/media/code.svg": "/personal-homepage/static/media/code.044e02242e2aaaa62a48d16710075fca.svg",
     "static/media/css.svg": "/personal-homepage/static/media/css.8be595612207191743030813dab7cbff.svg",
-    "static/media/message.svg": "/personal-homepage/static/media/message.26211eaaaa6c65af54e458abaff54c3e.svg",
+    "static/media/message.svg": "/personal-homepage/static/media/message.41ebf6846f83336656a1ee7ab3992658.svg",
     "static/media/javascript.svg": "/personal-homepage/static/media/javascript.acc4642f682cd93a4c20a8a02c0cfa21.svg",
     "static/media/user.svg": "/personal-homepage/static/media/user.149e1811ba612c3689c4e28218a3a608.svg",
     "static/media/play.svg": "/personal-homepage/static/media/play.c268f68c6446d7177ec18e96e2c69a3a.svg",
     "static/media/html.svg": "/personal-homepage/static/media/html.f318c8b1d5945fa9adc827ae94849cb1.svg",
     "static/media/react.svg": "/personal-homepage/static/media/react.928f956d9c8ebcffb98a8e917154a81a.svg",
     "static/media/nextjs.svg": "/personal-homepage/static/media/nextjs.783068fa314aeb1a4f97d6f125fda843.svg",
-    "main.d96d9bda.js.map": "/personal-homepage/static/js/main.d96d9bda.js.map",
+    "main.f1d6116d.js.map": "/personal-homepage/static/js/main.f1d6116d.js.map",
     "787.162bc9a0.chunk.js.map": "/personal-homepage/static/js/787.162bc9a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.d96d9bda.js"
+    "static/js/main.f1d6116d.js"
   ]
 }
