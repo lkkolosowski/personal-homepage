@@ -1,12 +1,10 @@
-## DEMO
+#### DEMO: https://lkkolosowski.github.io/personal-homepage/
 
-https://lkkolosowski.github.io/personal-homepage/
+# Personal Homepage
 
-## My Personal Homepage
+![skills preview](thumbnail.jpg)
 
-![hero preview](hero.gif)
-
-### Homepage – my virtual business card.
+### My virtual business card
 
 I'm a Software Developer specialized in React, based in Wrocław. Working towards creating aesthetic projects that makes life easier and more meaningful.
 
@@ -24,12 +22,19 @@ The application was based on the **[Create React App](https://github.com/faceboo
 
 **Formik** helped me a lot in creating the contact form, and **YUP** took care of the validation, so I was sure that everything was in its place.
 
-The website is fully responsive which will ↔️ resize ↔️ itself to maintain user experience and look and feel across all devices.
-
-I tried to make the appearance of the site elegant and slick ✨ and I hope that I succeeded and it is not a triumph of form over content 😉
-
 I'm slowly trying to translate the application into **TypeScript**, which is not easy for me so far 😅
 
+## Design
+
+![skills preview](skills.gif)
+
+### User experience
+
+The website is fully responsive which will ↔️ resize ↔️ itself to maintain user experience and look and feel across all devices. **CSS media queries** are used for this.
+
+The main framework that helped me in building the UI is **Framer Motion**, which I liked very much and I will definitely use it in my next projects 😃
+
+I tried to make the appearance of the site elegant and slick ✨ and I hope that I succeeded and it is not a triumph of form over content 😉
 ## Call to action
 
 ![form preview](form.gif)
@@ -54,6 +59,7 @@ I also invite you to visit my social media profiles 🔍 See you!
 - styled-normalize
 - Redux-Saga
 - Redux (Toolkit)
+- Framer Motion
 - Formik
 - YUP
 
