@@ -15,6 +15,7 @@ import {
   PersonNameIcon,
   PersonSurnameIcon,
   Message,
+  ErrorMessage,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
 import { schema } from "./schema";
@@ -78,7 +79,7 @@ const Form = () => {
         }, 1000);
       }}
     >
-      {({ isSubmitting, setFieldValue }) => (
+      {({ isSubmitting, setFieldValue, touched, errors }) => (
         <StyledForm ref={form}>
           <Pair>
             <CustomInput
@@ -139,7 +140,7 @@ const Form = () => {
           <ButtonLink
             as="button"
             formStatus={formStatus}
-            disabled={!captchaIsDone || isSubmitting}
+            disabled={isSubmitting}
             type="submit"
             formButton
             wide
@@ -159,6 +160,10 @@ const Form = () => {
               }}
             />
           )}
+          {touched["g-recaptcha-response"] &&
+            errors["g-recaptcha-response"] && (
+              <ErrorMessage>{errors["g-recaptcha-response"]}</ErrorMessage>
+            )}
         </StyledForm>
       )}
     </Formik>

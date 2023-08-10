@@ -24,5 +24,5 @@ export const schema = object().shape({
   message: string()
     .matches(stringRegex, "This field cannot contain only blankspaces")
     .required("Required"),
-  "g-recaptcha-response": string().required(),
+  "g-recaptcha-response": string().required("Required"),
 });
