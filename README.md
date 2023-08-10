@@ -2,16 +2,33 @@
 
 https://lkkolosowski.github.io/personal-homepage/
 
-## Preview
+## My Personal Homepage
 
-![personal homepage preview](preview.gif)
+![hero preview](hero.gif)
+
+### Homepage – my virtual business card.
+
+I'm a Software Developer specialized in React, based in Wrocław. Working towards creating aesthetic projects that makes life easier and more meaningful.
+
+This website was created to showcase my programming skills. It all started last year when I started a course for frontend developers at YouCode. I didn't know then that it would be so much fun!
 
 ## Description
 
-Here is my personal homepage – virtual business card. If you have any questions, do not hesitate to send me a message! I also
-invite you to visit my social media profiles.
+![repos preview](repos.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### The story of app creation
+
+The application was based on the **[Create React App](https://github.com/facebook/create-react-app)** tool, which allowed me to easily start my project. Everything was wrapped in theme provider from **styled-components**. 🫡
+
+**Redux** has also proven to be a very useful tool. The list of repositories was pulled directly from Github using their **API**, which was handled by **Redux Saga**.
+
+**Formik** helped me a lot in creating the contact form, and **YUP** took care of the validation, so I was sure that everything was in its place.
+
+I tried to make the appearance of the site elegant and slick ✨ and I hope that I succeeded and it is not an exaggeration of form over substance 😉
+
+I'm slowly trying to translate the application into **TypeScript**, which is not easy for me so far 😅
+
+![form preview](form.gif)
 
 ## Technologies
 
@@ -26,20 +43,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - WebPack
 - styled-components
 - styled-normalize
+- Redux-Saga
+- Redux (Toolkit)
+- Formik
+- YUP
 
 ### React
 - Create React App
-- useState, useEffect
+- React Hooks
 - Custom Hooks
-- React-Redux
-
-### Redux
-- Redux-Saga
-- Redux (Toolkit)
 
 ### Others
+- TypeScript
 - localStorage
-- Generator function*
+- API
+
+## Call to action
+
+If you have any questions, do not hesitate to send me a message! ✅ I also invite you to visit my social media profiles 🔍 See you!
 
 ## Available Scripts
 
