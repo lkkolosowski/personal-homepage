@@ -21,8 +21,6 @@ export const Paragraph = styled.p`
 `;
 
 export const BikeIcon = styled(Bike)`
-  --steps: 90;
-
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -36,8 +34,9 @@ export const BikeIcon = styled(Bike)`
   .bike__spokes,
   .bike__spokes-spin,
   .bike__tire {
-    animation: bikeBody 3s steps(var(--steps), end) forwards;
+    animation: bikeBody 3s ease-in-out forwards;
     stroke: ${({ theme }) => theme.primary};
+    transition: stroke 0.3s;
   }
   .bike__front {
     animation-name: bikeFront;
@@ -107,12 +106,12 @@ export const BikeIcon = styled(Bike)`
   }
   @keyframes bikePedals {
     from {
-      animation-timing-function: steps(var(--steps), end);
+      animation-timing-function: ease-in;
       stroke-dashoffset: -25.133;
     }
     33%,
     67% {
-      animation-timing-function: steps(var(--steps), end);
+      animation-timing-function: ease-out;
       stroke-dashoffset: -21.991;
     }
     to {
@@ -141,12 +140,12 @@ export const BikeIcon = styled(Bike)`
   }
   @keyframes bikeSpokes {
     from {
-      animation-timing-function: steps(var(--steps), end);
+      animation-timing-function: ease-in;
       stroke-dashoffset: -31.416;
     }
     33%,
     67% {
-      animation-timing-function: steps(var(--steps), end);
+      animation-timing-function: ease-out;
       stroke-dashoffset: -23.562;
     }
     to {
@@ -163,7 +162,7 @@ export const BikeIcon = styled(Bike)`
   }
   @keyframes bikeTire {
     from {
-      animation-timing-function: steps(var(--steps), end);
+      animation-timing-function: ease-in;
       stroke-dashoffset: 56.549;
       transform: rotate(0);
     }
@@ -172,7 +171,7 @@ export const BikeIcon = styled(Bike)`
       transform: rotate(0.33turn);
     }
     67% {
-      animation-timing-function: steps(var(--steps), end);
+      animation-timing-function: ease-out;
       stroke-dashoffset: 0;
       transform: rotate(0.67turn);
     }
