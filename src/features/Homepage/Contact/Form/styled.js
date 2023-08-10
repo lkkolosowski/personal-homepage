@@ -109,6 +109,7 @@ export const InfoParagraph = styled.div`
 export const ErrorMessage = styled.p`
   margin: -7px 0 0;
   font-size: 13px;
+  min-height: 13px;
   line-height: 1;
   color: ${({ theme }) => theme.error};
 `;

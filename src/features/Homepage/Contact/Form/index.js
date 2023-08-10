@@ -160,10 +160,9 @@ const Form = () => {
               }}
             />
           )}
-          {touched["g-recaptcha-response"] &&
-            errors["g-recaptcha-response"] && (
-              <ErrorMessage>{errors["g-recaptcha-response"]}</ErrorMessage>
-            )}
+          
+              <ErrorMessage>{touched["g-recaptcha-response"] &&
+            errors["g-recaptcha-response"] ? errors["g-recaptcha-response"] : ""}</ErrorMessage>
         </StyledForm>
       )}
     </Formik>
