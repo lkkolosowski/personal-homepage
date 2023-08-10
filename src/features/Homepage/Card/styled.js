@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledCard = styled.div`
+  user-select: none;
   perspective: 800px;
   cursor: pointer;
 
