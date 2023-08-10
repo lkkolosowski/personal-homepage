@@ -47,7 +47,6 @@ export const InlineLoader = styled.span`
   width: 27px;
   height: 27px;
   margin: 12px auto;
-  -webkit-animation: spin 0.5s linear infinite; /* Safari */
   animation: spin 0.5s linear infinite;
 
   @keyframes spin {
