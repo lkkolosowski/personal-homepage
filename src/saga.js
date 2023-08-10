@@ -1,7 +1,7 @@
 import { all } from "redux-saga/effects";
-import themeSaga from "./common/ThemeSwitch/themeSaga";
+import utilsSaga from "./features/Homepage/utilsSaga";
 import reposSaga from "./features/Homepage/Portfolio/reposSaga";
 
 export default function* saga() {
-  yield all([reposSaga(), themeSaga()]);
+  yield all([reposSaga(), utilsSaga()]);
 }

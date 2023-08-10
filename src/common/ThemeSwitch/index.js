@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { toggleTheme } from "./themeSlice";
+import { toggleTheme } from "../../features/Homepage/utilsSlice";
 import {
   StyledThemeSwitch,
   ThemeSwitchWrapper,
