@@ -34,7 +34,8 @@ I'm slowly trying to translate the application into **TypeScript**, which is not
 
 ### Let's Talk!
 
-If you have any questions, do not hesitate to send me a message! ✅ I also invite you to visit my social media profiles 🔍 See you!
+If you have any questions, do not hesitate to send me a message!  
+I also invite you to visit my social media profiles 🔍 See you!
 
 ## Technologies
 
