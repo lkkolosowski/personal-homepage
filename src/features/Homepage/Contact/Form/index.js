@@ -3,6 +3,7 @@ import { Formik } from "formik";
 import emailjs from "@emailjs/browser";
 import { useWindowScroll, useWindowSize } from "react-use";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useDispatch, useSelector } from "react-redux";
 import {
   MessageIcon,
   PhoneIcon,
@@ -13,17 +14,19 @@ import {
   EnvelopeIcon,
   PersonNameIcon,
   PersonSurnameIcon,
+  Message,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
-import Confetti from "react-confetti";
 import { schema } from "./schema";
 import CustomInput from "./CustomInput";
+import { selectFormStatus, setFormStatus } from "../../utilsSlice";
 
 const Form = () => {
+  const dispatch = useDispatch();
+  const formStatus = useSelector(selectFormStatus);
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [isChaptchaVisible, setIsCaptchaVisible] = useState(false);
-  const [numberOfPieces, setNumberOfPieces] = useState(0);
-  const [success, setSuccess] = useState(null);
+  const [message, setMessage] = useState();
   const { width, height } = useWindowSize();
   const { y } = useWindowScroll();
 
@@ -39,29 +42,23 @@ const Form = () => {
       (result) => {
         console.log(result.text);
         actions.resetForm();
-        setSuccess(true);
+        dispatch(setFormStatus("success"));
+        setMessage("The message has been sent! :)");
         actions.setSubmitting(false);
       },
       (error) => {
         console.log(error.text);
-        setSuccess(false);
-        alert("Something went wrong with your message :(");
+        dispatch(setFormStatus("error"));
+        setMessage("Something went wrong! the message has not been sent :(");
       }
     );
   };
 
   useEffect(() => {
-    if (success) {
-      setNumberOfPieces(300);
-      setTimeout(() => setNumberOfPieces(0), 3000);
-    }
-  }, [success]);
-
-  useEffect(() => {
     if (y >= height && !isChaptchaVisible) {
       setIsCaptchaVisible(true);
     }
-  }, [y, height, isChaptchaVisible]);
+  }, [dispatch, y, height, isChaptchaVisible]);
 
   return (
     <Formik
@@ -83,12 +80,6 @@ const Form = () => {
     >
       {({ isSubmitting, setFieldValue }) => (
         <StyledForm ref={form}>
-          <Confetti
-            numberOfPieces={numberOfPieces}
-            style={{ position: "fixed" }}
-            width={width}
-            height={height}
-          />
           <Pair>
             <CustomInput
               label="user_name"
@@ -143,20 +134,20 @@ const Form = () => {
             id="message"
             type="text"
             placeholder="Message"
-            withTextArea
             required
           />
           <ButtonLink
             as="button"
-            success={success}
+            formStatus={formStatus}
             disabled={!captchaIsDone || isSubmitting}
             type="submit"
             formButton
             wide
           >
             <MessageIcon />
-            {success ? "Sent!" : "Send"}
+            {formStatus === "success" ? "Sent!" : "Send"}
           </ButtonLink>
+          {message && <Message formStatus={formStatus}>{message}</Message>}
           {isChaptchaVisible && (
             <ReCAPTCHA
               size={width < 768 ? "compact" : "normal"}
