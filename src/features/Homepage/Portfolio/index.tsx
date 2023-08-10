@@ -13,7 +13,7 @@ const Portfolio = () => {
   const status = useSelector(selectReposStatus);
 
   useEffect(() => {
-    dispatch(fetchReposStart());
+    dispatch(fetchReposStart({}));
   }, [dispatch]);
 
   return (
