@@ -150,19 +150,24 @@ const Form = () => {
           </ButtonLink>
           {message && <Message formStatus={formStatus}>{message}</Message>}
           {isChaptchaVisible && (
-            <ReCAPTCHA
-              size={width < 768 ? "compact" : "normal"}
-              name="g-recaptcha-response"
-              sitekey={CAPTCHA_KEY}
-              onChange={(response) => {
-                setFieldValue("g-recaptcha-response", response);
-                setCaptchaIsDone(!captchaIsDone);
-              }}
-            />
+            <div style={{ visibility: isSubmitting ? "hidden" : "unset" }}>
+              <ReCAPTCHA
+                size={width < 768 ? "compact" : "normal"}
+                name="g-recaptcha-response"
+                sitekey={CAPTCHA_KEY}
+                onChange={(response) => {
+                  setFieldValue("g-recaptcha-response", response);
+                  setCaptchaIsDone(!captchaIsDone);
+                }}
+              />
+            </div>
           )}
-          
-              <ErrorMessage>{touched["g-recaptcha-response"] &&
-            errors["g-recaptcha-response"] ? errors["g-recaptcha-response"] : ""}</ErrorMessage>
+
+          <ErrorMessage>
+            {touched["g-recaptcha-response"] && errors["g-recaptcha-response"]
+              ? errors["g-recaptcha-response"]
+              : ""}
+          </ErrorMessage>
         </StyledForm>
       )}
     </Formik>
