@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { Form } from "formik";
-import { ReactComponent as Message } from "../../../../icons/message.svg";
+import { ReactComponent as Msg } from "../../../../icons/message.svg";
 import { ReactComponent as User } from "../../../../icons/user.svg";
 import { ReactComponent as Phone } from "../../../../icons/phone.svg";
 import { ReactComponent as Topic } from "../../../../icons/font.svg";
@@ -23,13 +23,34 @@ export const Pair = styled.div`
     flex-direction: column;
   }
 `;
+
+export const Message = styled.p`
+  margin-top: 0;
+  line-height: 1;
+
+  ${({ formStatus }) => {
+    switch (formStatus) {
+      case "success":
+        return css`
+          color: ${({ theme }) => theme.success};
+        `;
+      case "error":
+        return css`
+          color: ${({ theme }) => theme.error};
+        `;
+      default:
+        return css``;
+    }
+  }}
+`;
+
 export const FormSet = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
 `;
 
-export const MessageIcon = styled(Message)`
+export const MessageIcon = styled(Msg)`
   position: relative;
   top: 1px;
 `;
