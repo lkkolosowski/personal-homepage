@@ -11,8 +11,8 @@ export const StyledFormItem = styled.div`
   margin-bottom: 16px;
   height: calc(1.15em + 18px);
 
-  ${({ withTextArea }) =>
-    withTextArea &&
+  ${({ textarea }) =>
+    textarea &&
     css`
       height: calc(5.75em + 18px);
     `}
@@ -90,7 +90,7 @@ export const Input = styled.input`
   ${({ isError }) =>
     isError &&
     css`
-      border-color: ${({ theme }) => theme.tile.error}cc;
+      border-color: ${({ theme }) => theme.error}cc;
     `}
 
   ${({ as }) =>
@@ -105,6 +105,6 @@ export const ErrorMessage = styled.p`
   margin: 3px 0 0;
   font-size: 13px;
   line-height: 1;
-  color: ${({ theme }) => theme.tile.error};
+  color: ${({ theme }) => theme.error};
   grid-area: message;
 `;

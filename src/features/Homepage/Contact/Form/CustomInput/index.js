@@ -9,9 +9,10 @@ import {
 
 const CustomInput = ({ withTextArea, label, required, icon, ...props }) => {
   const [field, meta] = useField(props);
+  const { as } = props;
 
   return (
-    <StyledFormItem withTextArea={withTextArea}>
+    <StyledFormItem textarea={as === "textarea"}>
       <Label htmlFor={label}>
         <LabelContent required={required}>{icon}</LabelContent>
       </Label>
