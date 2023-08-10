@@ -39,7 +39,7 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const InlineLoader = styled.div`
+export const InlineLoader = styled.span`
   display: block;
   border: 3px solid ${({ theme }) => theme.border};
   border-radius: 50%;
