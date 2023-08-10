@@ -2,7 +2,7 @@
 
 # Personal Homepage
 
-![skills preview](thumbnail.jpg)
+![hero preview](hero.gif)
 
 ### My virtual business card
 
