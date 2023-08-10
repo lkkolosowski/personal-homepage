@@ -24,7 +24,7 @@ The application was based on the **[Create React App](https://github.com/faceboo
 
 **Formik** helped me a lot in creating the contact form, and **YUP** took care of the validation, so I was sure that everything was in its place.
 
-I tried to make the appearance of the site elegant and slick ✨ and I hope that I succeeded and it is not an exaggeration of form over substance 😉
+I tried to make the appearance of the site elegant and slick ✨ and I hope that I succeeded and it is not a triumph of form over content 😉
 
 I'm slowly trying to translate the application into **TypeScript**, which is not easy for me so far 😅
 
