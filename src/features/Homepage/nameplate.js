@@ -20,6 +20,6 @@ export const welcomePhrases = [
 ];
 export const goodbyePhrases = [
   "Let's talk!",
-  "Contact me.",
-  "Send me a message :)",
+  "Send me a message.",
+  "See you :)",
 ];
