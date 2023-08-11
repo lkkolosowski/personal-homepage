@@ -21,5 +21,5 @@ export const welcomePhrases = [
 export const goodbyePhrases = [
   "Let's talk!",
   "Send me a message.",
-  "See you :)",
+  "See you soon :)",
 ];
