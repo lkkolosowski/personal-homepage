@@ -11,7 +11,7 @@ export const Main = styled.main`
   position: relative;
   max-width: 1232px;
   margin: 0 auto;
-  padding: 120px 16px;
+  padding: 120px 16px 60px;
   overflow-x: hidden;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
