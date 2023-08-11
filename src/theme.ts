@@ -31,7 +31,7 @@ const color = {
 
 const common = {
   breakpoint: {
-    medium: 768,
+    medium: 767,
     large: 1200,
   },
   shadow: {
