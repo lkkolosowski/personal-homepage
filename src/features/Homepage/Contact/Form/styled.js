@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { Form } from "formik";
+import GoogleReCAPTCHA from "react-google-recaptcha";
 import { ReactComponent as Msg } from "../../../../icons/message.svg";
 import { ReactComponent as User } from "../../../../icons/user.svg";
 import { ReactComponent as Phone } from "../../../../icons/phone.svg";
@@ -8,6 +9,46 @@ import { ReactComponent as Envelope } from "../../../../icons/envelope.svg";
 import { ReactComponent as PersonName } from "../../../../icons/personName.svg";
 import { ReactComponent as PersonSurname } from "../../../../icons/personSurname.svg";
 import { ReactComponent as SpeechBubble } from "../../../../icons/speechBubble.svg";
+
+export const ReCAPTCHA = styled(GoogleReCAPTCHA)`
+  overflow: hidden;
+  position: relative;
+  border: 2px solid ${({ theme }) => theme.tile.border};
+  border-radius: 8px;
+  transition: border-color ${({ theme }) => theme.animation};
+
+  ${({ size }) =>
+    size === "normal" &&
+    css`
+      width: 298px; //original recaptcha width: 304px
+      height: 72px; //original recaptcha height: 78px
+    `}
+
+  ${({ size }) =>
+    size === "compact" &&
+    css`
+      width: 154px; //original recaptcha width: 164px
+      height: 134px; //original recaptcha height: 144px
+    `}
+
+  & > div {
+    position: relative;
+    top: -2px;
+    left: -2px;
+  }
+
+  ${({ hidden }) =>
+    hidden &&
+    css`
+      visibility: hidden;
+    `}
+
+  ${({ error }) =>
+    error &&
+    css`
+      border: 2px solid ${({ theme }) => theme.error};
+    `}
+`;
 
 export const StyledForm = styled(Form)`
   display: grid;
@@ -107,7 +148,7 @@ export const InfoParagraph = styled.div`
 `;
 
 export const ErrorMessage = styled.p`
-  margin: -7px 0 0;
+  margin: -5px 0 0;
   font-size: 13px;
   min-height: 13px;
   line-height: 1;

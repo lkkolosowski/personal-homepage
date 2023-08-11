@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { Formik } from "formik";
 import emailjs from "@emailjs/browser";
 import { useWindowScroll, useWindowSize } from "react-use";
-import ReCAPTCHA from "react-google-recaptcha";
 import { useDispatch, useSelector } from "react-redux";
 import {
   MessageIcon,
@@ -16,6 +15,7 @@ import {
   PersonSurnameIcon,
   Message,
   ErrorMessage,
+  ReCAPTCHA,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
 import { schema } from "./schema";
@@ -27,6 +27,7 @@ const Form = () => {
   const formStatus = useSelector(selectFormStatus);
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [isChaptchaVisible, setIsCaptchaVisible] = useState(false);
+  const [dimensionsOnLoad, setDimensionsOnLoad] = useState({});
   const [message, setMessage] = useState();
   const { width, height } = useWindowSize();
   const { y } = useWindowScroll();
@@ -54,6 +55,10 @@ const Form = () => {
       }
     );
   };
+
+  useEffect(() => {
+    setDimensionsOnLoad({ width: width, height: height });
+  }, []); // eslint-disable-line
 
   useEffect(() => {
     if (y >= height && !isChaptchaVisible) {
@@ -150,17 +155,20 @@ const Form = () => {
           </ButtonLink>
           {message && <Message formStatus={formStatus}>{message}</Message>}
           {isChaptchaVisible && (
-            <div style={{ visibility: isSubmitting ? "hidden" : "unset" }}>
-              <ReCAPTCHA
-                size={width < 768 ? "compact" : "normal"}
-                name="g-recaptcha-response"
-                sitekey={CAPTCHA_KEY}
-                onChange={(response) => {
-                  setFieldValue("g-recaptcha-response", response);
-                  setCaptchaIsDone(!captchaIsDone);
-                }}
-              />
-            </div>
+            <ReCAPTCHA
+              hidden={isSubmitting}
+              error={
+                touched["g-recaptcha-response"] &&
+                errors["g-recaptcha-response"]
+              }
+              size={dimensionsOnLoad.width < 768 ? "compact" : "normal"}
+              name="g-recaptcha-response"
+              sitekey={CAPTCHA_KEY}
+              onChange={(response) => {
+                setFieldValue("g-recaptcha-response", response);
+                setCaptchaIsDone(!captchaIsDone);
+              }}
+            />
           )}
 
           <ErrorMessage>
