@@ -28,7 +28,7 @@ const Form = () => {
   const [captchaIsDone, setCaptchaIsDone] = useState(false);
   const [isChaptchaVisible, setIsCaptchaVisible] = useState(false);
   const [dimensionsOnLoad, setDimensionsOnLoad] = useState({});
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("");
   const { width, height } = useWindowSize();
   const { y } = useWindowScroll();
 
@@ -46,7 +46,6 @@ const Form = () => {
         actions.resetForm();
         dispatch(setFormStatus("success"));
         setMessage("The message has been sent! :)");
-        actions.setSubmitting(false);
       },
       (error) => {
         console.log(error.text);
@@ -153,10 +152,8 @@ const Form = () => {
             <MessageIcon />
             {formStatus === "success" ? "Sent!" : "Send"}
           </ButtonLink>
-          {message && <Message formStatus={formStatus}>{message}</Message>}
           {isChaptchaVisible && (
             <ReCAPTCHA
-              hidden={isSubmitting}
               error={
                 touched["g-recaptcha-response"] &&
                 errors["g-recaptcha-response"]
@@ -170,12 +167,12 @@ const Form = () => {
               }}
             />
           )}
-
           <ErrorMessage>
             {touched["g-recaptcha-response"] && errors["g-recaptcha-response"]
               ? errors["g-recaptcha-response"]
               : ""}
           </ErrorMessage>
+          <Message formStatus={formStatus}>{message}</Message>
         </StyledForm>
       )}
     </Formik>

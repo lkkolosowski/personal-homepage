@@ -37,12 +37,6 @@ export const ReCAPTCHA = styled(GoogleReCAPTCHA)`
     left: -2px;
   }
 
-  ${({ hidden }) =>
-    hidden &&
-    css`
-      visibility: hidden;
-    `}
-
   ${({ error }) =>
     error &&
     css`
@@ -68,6 +62,7 @@ export const Pair = styled.div`
 export const Message = styled.p`
   margin-top: 0;
   line-height: 1;
+  min-height: 18px;
 
   ${({ formStatus }) => {
     switch (formStatus) {
@@ -83,6 +78,10 @@ export const Message = styled.p`
         return css``;
     }
   }}
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
+    min-height: 14px;
+  }
 `;
 
 export const FormSet = styled.div`
@@ -129,22 +128,6 @@ export const PersonSurnameIcon = styled(PersonSurname)`
 export const SpeechBubbleIcon = styled(SpeechBubble)`
   width: 24px;
   height: auto;
-`;
-
-export const InfoParagraph = styled.div`
-  padding: 0.75rem 1.25rem;
-  margin: 0 auto;
-
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-  ${({ success }) =>
-    success &&
-    css`
-      color: #155724;
-      background-color: #d4edda;
-      border-color: #c3e6cb;
-    `}
 `;
 
 export const ErrorMessage = styled.p`
