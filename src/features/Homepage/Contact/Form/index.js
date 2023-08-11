@@ -50,7 +50,7 @@ const Form = () => {
       (error) => {
         console.log(error.text);
         dispatch(setFormStatus("error"));
-        setMessage("Something went wrong! the message has not been sent :(");
+        setMessage("Something went wrong :( Refresh the page and try again!");
       }
     );
   };
@@ -150,7 +150,11 @@ const Form = () => {
             wide
           >
             <MessageIcon />
-            {formStatus === "success" ? "Sent!" : "Send"}
+            {formStatus === "success"
+              ? "Sent!"
+              : formStatus === "error"
+              ? "Not Sent"
+              : "Send"}
           </ButtonLink>
           {isChaptchaVisible && (
             <ReCAPTCHA
