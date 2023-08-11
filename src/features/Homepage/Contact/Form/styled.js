@@ -20,15 +20,15 @@ export const ReCAPTCHA = styled(GoogleReCAPTCHA)`
   ${({ size }) =>
     size === "normal" &&
     css`
-      width: 298px; //original recaptcha width: 304px
-      height: 72px; //original recaptcha height: 78px
+      width: 302px; //original recaptcha width: 304px
+      height: 76px; //original recaptcha height: 78px
     `}
 
   ${({ size }) =>
     size === "compact" &&
     css`
-      width: 154px; //original recaptcha width: 164px
-      height: 134px; //original recaptcha height: 144px
+      width: 158px; //original recaptcha width: 164px
+      height: 138px; //original recaptcha height: 144px
     `}
 
   & > div {
