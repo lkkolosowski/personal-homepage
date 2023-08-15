@@ -11,7 +11,7 @@ const utilsSlice = createSlice({
   reducers: {
     toggleTheme: (state) => {
       state.isDarkTheme = !state.isDarkTheme;
-      state.toggleKey = state.toggleKey + 1;
+      state.toggleKey++;
     },
     setFormStatus: (state, { payload: status }) => {
       state.formStatus = status;
@@ -24,8 +24,6 @@ export const { toggleTheme, setFormStatus } = utilsSlice.actions;
 export const selectSliceState = (state) => state.utils;
 export const selectIsDarkTheme = (state) => selectSliceState(state).isDarkTheme;
 export const selectToggleKey = (state) => selectSliceState(state).toggleKey;
-export const selectNumberOfConfettiPieces = (state) =>
-  selectSliceState(state).numberOfConfettiPieces;
 export const selectFormStatus = (state) => selectSliceState(state).formStatus;
 
 export default utilsSlice.reducer;
