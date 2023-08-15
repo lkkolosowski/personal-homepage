@@ -6,7 +6,6 @@ const utilsSlice = createSlice({
   initialState: {
     isDarkTheme: getThemeFromLocalStorage(),
     toggleKey: 0,
-    numberOfConfettiPieces: 0,
     formStatus: "unset",
   },
   reducers: {
@@ -14,17 +13,13 @@ const utilsSlice = createSlice({
       state.isDarkTheme = !state.isDarkTheme;
       state.toggleKey = state.toggleKey + 1;
     },
-    setNumberOfConfettiPieces: (state, { payload: amount }) => {
-      state.numberOfConfettiPieces = amount;
-    },
     setFormStatus: (state, { payload: status }) => {
       state.formStatus = status;
     },
   },
 });
 
-export const { toggleTheme, setNumberOfConfettiPieces, setFormStatus } =
-  utilsSlice.actions;
+export const { toggleTheme, setFormStatus } = utilsSlice.actions;
 
 export const selectSliceState = (state) => state.utils;
 export const selectIsDarkTheme = (state) => selectSliceState(state).isDarkTheme;
