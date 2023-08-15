@@ -15,12 +15,12 @@ import {
   PersonSurnameIcon,
   Message,
   ErrorMessage,
-  ReCAPTCHA,
 } from "./styled";
 import { ButtonLink } from "../../../../common/Link";
 import { schema } from "./schema";
 import CustomInput from "./CustomInput";
 import { selectFormStatus, setFormStatus } from "../../utilsSlice";
+import ReCaptcha from "./ReCaptcha";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -31,10 +31,8 @@ const Form = () => {
   const [message, setMessage] = useState("");
   const { width, height } = useWindowSize();
   const { y } = useWindowScroll();
-
   const form = useRef();
 
-  const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
   const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
   const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
   const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
@@ -157,15 +155,13 @@ const Form = () => {
               : "Send"}
           </ButtonLink>
           {isChaptchaVisible && (
-            <ReCAPTCHA
+            <ReCaptcha
               error={
                 touched["g-recaptcha-response"] &&
                 errors["g-recaptcha-response"]
               }
               size={dimensionsOnLoad.width < 768 ? "compact" : "normal"}
-              name="g-recaptcha-response"
-              sitekey={CAPTCHA_KEY}
-              onChange={(response) => {
+              handleChange={(response) => {
                 setFieldValue("g-recaptcha-response", response);
                 setCaptchaIsDone(!captchaIsDone);
               }}
