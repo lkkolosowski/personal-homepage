@@ -52,7 +52,8 @@ export const Backdrop = styled.div`
   z-index: 100;
   visibility: hidden;
   opacity: 0;
-  transition: visibility ${({ theme }) => theme.animation},
+  transition: background-color ${({ theme }) => theme.themeAnimation},
+    visibility ${({ theme }) => theme.animation},
     opacity ${({ theme }) => theme.animation};
 
   ${({ visible }) =>
