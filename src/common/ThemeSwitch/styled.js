@@ -5,6 +5,7 @@ export const Positioned = styled.div`
   position: absolute;
   top: 120px;
   right: 16px;
+  z-index: 300;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.medium}px) {
     top: 20px;
