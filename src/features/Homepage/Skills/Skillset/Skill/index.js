@@ -63,8 +63,8 @@ const Skill = ({
             }
             contentBack={
               <>
-                {!level && <Icon />}
-                <Text>{level ? level : name}</Text>
+                <Icon />
+                <Text>{level}</Text>
               </>
             }
             backgroundFront={color}
