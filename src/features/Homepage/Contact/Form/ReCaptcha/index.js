@@ -7,7 +7,7 @@ const ReCaptcha = ({ error, size, handleChange }) => {
   const isDarkTheme = useSelector(selectIsDarkTheme);
   const toggleKey = useSelector(selectToggleKey);
 
-  const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY;
+  const CAPTCHA_KEY = process.env.REACT_APP_CAPTCHA_KEY; //change captcha key
 
   return (
     <StyledReCaptcha error={error} size={size}>
